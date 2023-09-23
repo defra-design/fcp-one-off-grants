@@ -6,6 +6,14 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 
 
+{% block header %}
+{{ govukHeader({
+  serviceName: "Apply for a farming grant",
+  serviceUrl: "/ftf/agreement/index"
+}) }}
+{% endblock %}
+
+
 {% block footer %}
  {{ govukFooter({
    meta: {
