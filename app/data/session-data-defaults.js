@@ -12,7 +12,7 @@ module.exports = {
 
   'ftf-grant-name': 'Water Management Grant - Round 3',
   'ftf-project-name': 'Browns Hill Farm reservoir',
-  'ftf-project-reference': 'WM-VMW-1234',
+  'ftf-project-reference': 'WM-VMA-1234',
 
   // FETF application data
   'fetf-grant-name': 'Farming Equipment and Technology Fund 2023',
