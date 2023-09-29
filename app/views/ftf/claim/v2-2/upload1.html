@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Home" %}
+{% set pageName="Upload 1" %}
 
 {% block content %}
 
@@ -10,7 +10,7 @@
       Alpha
     </strong>
     <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
     </span>
   </p>
 </div>
@@ -43,15 +43,16 @@
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="file-upload-1">
-        Upload a file
+        <strong>Upload a file</strong>
       </label>
       <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
     </div>
 
-    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Upload file
-    </button>
-
+    <a href="upload2.html">
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Upload file
+      </button>
+    </a>
 
     <div style="width: 630px; height: 0px; border: 0.5px #B1B4B6 solid"></div>
 <br><br>
@@ -61,13 +62,15 @@
 
     <br>
 
-    <div class="govuk-warning-text">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-warning-text__assistive">Warning</span>
-        You must add evidence for each item you are claiming for.
-      </strong>
-    </div>
+
+
+    <p class="govuk-body">To make a claim, you must provide evidence that each item you are claiming for:<br>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>has been purchased (for example, invoices)</li>
+        <li>has been paid for in full (for example, receipts and bank statements)</li>
+        <li>is in place (for example, photos, videos)</li>
+      </ul>
+    </p>
 
 
 
@@ -75,6 +78,8 @@
 
 
 
+
+<br><br>
 
 
     <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
@@ -82,11 +87,11 @@
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
-              Proof items have been purchased
+              Financial evidence
             </span>
           </h2>
           <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
-            For example, invoices
+            For example, invoices, receipts and bank statements (you can cross out other transactions)
           </div>
         </div>
         <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
@@ -99,7 +104,7 @@
             <div style="width: 120px; height: 40px; padding-top: 30px; padding-bottom: 6px; left: 240px; top: 102px; position: absolute; background: #ffffff; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
               
             <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                Upload file
+              Choose file
               </button>
             
             </div>
@@ -113,11 +118,11 @@
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-2">
-              Proof items have been paid for
+              Visual evidence
             </span>
           </h2>
           <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
-            For example, receipts and bank statements (you can cross out other transactions)
+            For example, photos and videos
           </div>
         </div>
         <div id="accordion-with-summary-sections-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-2">
@@ -130,7 +135,7 @@
             <div style="width: 120px; height: 40px; padding-top: 30px; padding-bottom: 6px; left: 240px; top: 102px; position: absolute; background: #ffffff; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
               
             <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                Upload file
+              Choose file
               </button>
             
             </div>
@@ -145,11 +150,11 @@
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
-              Proof items are in place
+              Written evidence
             </span>
           </h2>
           <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
-            For example, photos and videos
+            For example, emails and letters
           </div>
         </div>
         <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
@@ -164,7 +169,7 @@
             <div style="width: 120px; height: 40px; padding-top: 30px; padding-bottom: 6px; left: 240px; top: 102px; position: absolute; background: #ffffff; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
               
             <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                Upload file
+              Choose file
               </button>
             
             </div>
@@ -180,7 +185,7 @@
         <div class="govuk-accordion__section-header">
           <h2 class="govuk-accordion__section-heading">
             <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-4">
-              Proof conditions and outputs have been met
+              Outcomes evidence
             </span>
           </h2>
           <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4">
@@ -198,7 +203,7 @@
             <div style="width: 120px; height: 40px; padding-top: 30px; padding-bottom: 6px; left: 240px; top: 102px; position: absolute; background: #ffffff; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
               
             <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                Upload file
+                Choose file
               </button>
             
             </div>

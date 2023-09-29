@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Home" %}
+{% set pageName="Submit" %}
 
 {% block content %}
 
@@ -10,7 +10,7 @@
       Alpha
     </strong>
     <span class="govuk-phase-banner__text">
-      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
     </span>
   </p>
 </div>
@@ -24,11 +24,13 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-
     <span class="govuk-caption-xl">Claim for a Water Management Grant</span>
-    <h1 class="govuk-heading-xl">Submit claim</h1>
-    <h2 class="govuk-body">Read and agree to submit your claim.</h2>
-    
+    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Submit claim</h1>
+    <span class="govuk-body">Read and agree to submit your claim.</span>
+
+<br><br><br>
+
+
     <h2 class="govuk-heading-m">Declaration</h2>
 
     <h2 class="govuk-body">By submitting this claim form, you are signing up to the declaration and undertakings set out below.</h2>
@@ -58,26 +60,17 @@
 
 <br><br><br>
 
-<button class="govuk-button" data-module="govuk-button">
-      Submit claim
-    </button>
+    <a href="confirmation.html">
+      <button class="govuk-button" data-module="govuk-button">
+        Submit claim
+      </button>
+    </a>
 
     <span style="margin-right: 20px;"></span>
 
     <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
       Cancel
     </button>
-
-
-
-
-
-
-
-
-
-
-
 
 </main>
 
