@@ -26,8 +26,8 @@
 
 
     <span class="govuk-caption-xl">Upload evidence</span>
-    <h1 class="govuk-heading-xl">Proof items have been paid for</h1>
-    <h2 class="govuk-body" style="margin-top: -20px;">For example, receipts and bank statements (you can cross out other transactions)</h2>
+    <h1 class="govuk-heading-xl">Visual evidence</h1>
+    <h2 class="govuk-body" style="margin-top: -20px;">For example, photos and videos</h2>
   
     <div style="width: 609px; color: #505A5F; font-size: 19px; font-family: GDS Transport Website; font-weight: 300; line-height: 30px; word-wrap: break-word">Supported file types are PDF, DOC, DOCX, MP4 or JPG. Maximum file size is 20MB.</div>
 
@@ -51,18 +51,44 @@
     <button id="navigateButton" class="govuk-button govuk-button--secondary" data-module="govuk-button">
       Choose file
     </button>
+ 
+      <script>
+      // Get a reference to the button
+      const navigateButton = document.getElementById('navigateButton');
+    
+      // Add a click event listener to the button
+      navigateButton.addEventListener('click', function () {
+        // Define the URL of the page you want to navigate to
+        const nextPageURL = 'visual2.html';
+    
+        // Navigate to the specified page
+        window.location.href = nextPageURL;
+      });
+    </script>
+    
+
+
+<!--
+ 
+ 
     <input type="file" id="fileInput" style="display: none;" onchange="handleFileSelection(this)">
     <script>
     function handleFileSelection(input) {
       if (input.files.length > 0) {
         const selectedFile = input.files[0];
-        window.location.href = 'paid2.html';
+        window.location.href = 'financial2.html';
       }
     }
     document.getElementById('navigateButton').addEventListener('click', function () {
       document.getElementById('fileInput').click();
     });
     </script>
+
+-->
+
+
+
+
 
 </main>
 
