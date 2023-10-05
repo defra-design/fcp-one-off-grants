@@ -31,7 +31,7 @@
   
     <p class="govuk-body" style="color: #505A5F;">Supported file types are PDF, DOC, DOCX, MP4 or JPG. Maximum file size is 20MB.</p>
 
-  <br>
+
 
     <div class="govuk-warning-text">
       <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -48,23 +48,11 @@
   <div style="width: 630px; height: 164px; left: 0px; top: 38px; position: absolute; border: 3px black dotted"></div>
   <div style="width: 120px; height: 40px; padding-top: 30px; padding-bottom: 6px; left: 240px; top: 102px; position: absolute; background: #ffffff; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
 
-    <button id="navigateButton" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Choose file
-    </button>
- 
-      <script>
-      // Get a reference to the button
-      const navigateButton = document.getElementById('navigateButton');
-    
-      // Add a click event listener to the button
-      navigateButton.addEventListener('click', function () {
-        // Define the URL of the page you want to navigate to
-        const nextPageURL = 'financial2.html';
-    
-        // Navigate to the specified page
-        window.location.href = nextPageURL;
-      });
-    </script>
+    <a href="financial2.html">
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Choose file
+      </button>
+    </a>
     
 
 
