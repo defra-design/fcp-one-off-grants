@@ -40,19 +40,29 @@
         Do not upload scanned copies or PDFs of this form.
       </strong>
     </div>
-
     <div class="govuk-form-group">
       <label class="govuk-label" for="file-upload-1">
         <strong>Upload a file</strong>
       </label>
-      <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+    <!--  <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">  -->
+
+
+      <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file" onclick="redirectToPage()">
+     
+     <script>
+        function redirectToPage() {
+          // Get the URL of the page you want to navigate to
+          const nextPageURL = 'upload1b.html';
+      
+          // Redirect to the next page
+          window.location.href = nextPageURL;
+        }
+      </script>
     </div>
 
-    <a href="upload2.html">
-      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Upload file
-      </button>
-    </a>
+    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Upload file
+    </button>
 
     <div style="width: 630px; height: 0px; border: 0.5px #B1B4B6 solid"></div>
 <br><br>
@@ -71,12 +81,6 @@
         <li>is in place and operational (for example, photos, videos)</li>
       </ul>
     </p>
-
-
-
-
-
-
 
 
 <br><br>
