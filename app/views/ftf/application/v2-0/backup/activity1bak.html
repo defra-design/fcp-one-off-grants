@@ -11,6 +11,7 @@
 
 
 
+
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -21,6 +22,7 @@
     </span>
   </p>
 </div>
+
 
 
 
@@ -62,7 +64,6 @@
       </div>
 
 
-     
       <ol class="govuk-prototype-kit-task-list">
         <li>
           <h2 class="govuk-prototype-kit-task-list__section">
@@ -165,21 +166,30 @@
             <span class="govuk-prototype-kit-task-list__section-number">4. </span> Submit first claim
           </h2>
           <ul class="govuk-prototype-kit-task-list__items">
+            {% if (data['04-01'] == "ready") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="#" aria-describedby="eligibility-status">
+                <a href="download.html" aria-describedby="eligibility-status">
                   Download claim form
                 </a>
               </span>
-              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="read-declaration-status">Completed</strong>
+              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
             </li>
+            {% elif (data['04-01'] == "complete") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="upload1.html" aria-describedby="eligibility-status">
-                  Upload claim form and evidence
+                <a href="download.html" aria-describedby="eligibility-status">
+                  Download claim form
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            {% endif %}
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                  Upload claim form and evidence
+              </span>
+              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="download-claim-form">Cannot start yet</strong>
             </li>
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
