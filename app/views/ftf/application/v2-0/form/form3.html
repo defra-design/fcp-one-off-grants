@@ -1,4 +1,4 @@
-{% extends "layouts/main-claim-round-2.html" %}
+{% extends "layouts/main-application-round-2.html" %}
 
 {% set pageName="Form2" %}
 
@@ -44,26 +44,15 @@
     <p class="govuk-body" style="color: #505A5F;">Supported file types are DOC and DOCX. Maximum file size is 20MB.</p>
 
 
-    <div style="width: 397px; height: 68px; position: relative">
-      <div style="width: 107px; height: 31px; left: 0px; top: 37px; position: absolute">
-        <div style="width: 107px; height: 31px; left: 0px; top: 0px; position: absolute; background: #F3F2F1; border-radius: 2px; border: 1px #8D8C8A solid"></div>
-        <div style="width: 105px; height: 24px; left: 1px; top: 6px; position: absolute; text-align: center; color: black; font-size: 18px; font-family: Arial; font-weight: 400; line-height: 20px; word-wrap: break-word">Choose file</div>
+    <div style="width: 630px; height: 111px; position: relative">
+      <div style="width: 357px; left: 0px; top: 0px; position: absolute; color: black; font-size: 19px; font-family: Arial, Helvetica; font-weight: 700; line-height: 30px; word-wrap: break-word">File uploaded</div>
+      <div style="width: 630px; height: 50px; left: 0px; top: 61px; position: absolute">
+        <div style="width: 468px; left: 0px; top: 0px; position: absolute; color: black; font-size: 19px; font-family: Arial, Helvetica; font-weight: 300; line-height: 30px; word-wrap: break-word">Application form - Water Management grant - FTF.docx , 235KB</div>
+        <div style="width: 102px; left: 530px; top: 0px; position: absolute; text-align: right; color: #1D70B8; font-size: 19px; font-family: Arial, Helvetica; font-weight: 300; text-decoration: underline; line-height: 30px; word-wrap: break-word">Delete file</div>
       </div>
-      <div style="width: 285px; height: 25px; left: 112px; top: 39px; position: absolute; color: black; font-size: 18px; font-family: Arial, Helvetica; font-weight: 300; line-height: 30px; word-wrap: break-word">Application_Water_Ma..FTF.docx</div>
-      <div style="width: 192px; height: 25px; left: 0px; top: 0px; position: absolute; color: black; font-size: 19px; font-family: Arial, Helvetica; font-weight: 700; line-height: 30px; word-wrap: break-word">Upload a file</div>
     </div>
 
-<br><br>
-
-
-
-
-<a href="form3">
-  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-    Upload file
-  </button>
-</a>
-
+    <br><br>
 
     <div style="width: 630px; height: 0px; border: 0.5px #B1B4B6 solid"></div>
 <br><br>
@@ -84,7 +73,7 @@
      <script>
         function redirectToPage() {
           // Get the URL of the page you want to navigate to
-          const nextPageURL = 'form3.html';
+          const nextPageURL = 'form4.html';
       
           // Redirect to the next page
           window.location.href = nextPageURL;
@@ -102,10 +91,11 @@
 
 <br><br><br>
  
-<button class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-    </a>
+<a href="/ftf/application/v2-0/form/upload1?01=progress">
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+</a>
 
 
 
