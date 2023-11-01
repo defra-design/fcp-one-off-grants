@@ -111,30 +111,17 @@
           <ul class="govuk-prototype-kit-task-list__items">
             
             
-            {% if (data['02-01'] == "ready") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="download.html" aria-describedby="eligibility-status">
+                <a href="download.html" aria-describedby="read-declaration-status">
                   Download application form
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="read-declaration-status">Completed</strong>
             </li>
-            
-           
-            {% elif (data['02-01'] == "complete") %}
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="download.html" aria-describedby="eligibility-status">
-                  Download application form
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
-            </li>
-            {% endif %}
 
 
-
+            {% if (data['02-02'] == "ready") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
                 <a href="upload.html" aria-describedby="eligibility-status">
@@ -143,6 +130,30 @@
               </span>
               <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
             </li>
+            
+            {% elif (data['02-02'] == "progress") %}
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="upload.html" aria-describedby="eligibility-status">
+                  Upload application forms and evidence
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue govuk-prototype-kit-task-list__tag" id="list-convictions-status">In progress</strong>
+            </li>
+
+            {% elif (data['02-02'] == "complete") %}
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="upload.html" aria-describedby="eligibility-status">
+                  Upload application forms and evidence
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            {% endif %}
+
+
+
 
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">

@@ -50,33 +50,71 @@
         
         <li style="list-style: none; margin: 0; padding: 0;">
           <ul class="govuk-prototype-kit-task-list__items" style="padding-left: 0;">
-                  
-       
 
 
 
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/ftf/application/v2-0/form/form1.html" aria-describedby="eligibility-status">
+                <a href="/ftf/application/v2-0/form/form5.html" aria-describedby="eligibility-status">
                   Application form and appendix
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
             </li>
 
 
+
+            {% if (data['02'] == "ready") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/ftf/application/v2-0/financial/financial1.html" aria-describedby="eligibility-status">
+                <a href="/ftf/application/v2-0/financial/financial1a.html" aria-describedby="eligibility-status">
                   Financial accounts
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
             </li>
+            
+            
+            {% elif (data['02'] == "progress") %}
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/ftf/application/v2-0/financial/financial3a.html" aria-describedby="eligibility-status">
+                  Financial accounts
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue govuk-prototype-kit-task-list__tag" id="list-convictions-status">In progress</strong>
+            </li>
+            
+            
+            {% elif (data['02'] == "complete") %}
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/ftf/application/v2-0/financial/financial3a.html" aria-describedby="eligibility-status">
+                  Financial accounts
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            
+            {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/_common/not-testing.html" aria-describedby="eligibility-status">
+                <a href="/ftf/application/v2-0/linked/linkedq.html" aria-describedby="eligibility-status">
                   Linked business accounts
                 </a>
               </span>
@@ -193,47 +231,14 @@
 
 
 
-    
-    <!-- Include JavaScript here -->
-    <script>
-        // Function to change tag state
-        function changeTagState(taskNumber) {
-            const tag = document.getElementById(`list-convictions-status-${taskNumber}`);
-            const currentState = tag.textContent.trim();
-    
-            // Define your logic to change the state
-            if (currentState === "Not started") {
-                tag.textContent = "In progress";
-            } else if (currentState === "In progress") {
-                tag.textContent = "Completed";
-            } else if (currentState === "Completed") {
-                tag.textContent = "Not started";
-            }
-    
-            // Store the state in memory (e.g., using localStorage)
-            localStorage.setItem(`task-${taskNumber}-status`, tag.textContent);
-        }
-    
-        // Retrieve and apply saved states
-        for (let i = 1; i <= 1; i++) {
-            const savedState = localStorage.getItem(`task-${i}-status`);
-            if (savedState) {
-                const tag = document.getElementById(`list-convictions-status-${i}`);
-                tag.textContent = savedState;
-            }
-        }
-    </script>
 
-
-
-
-
-
-      <a href="activity">
+      <a href="/ftf/application/v2-0/activity2?02-02=progress">
         <button class="govuk-button">
           Continue
         </button>
       </a>
+
+
 
   {% include "../../../_includes/details-block_application-questions-contact.html" %}
 
