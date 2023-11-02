@@ -122,38 +122,47 @@
 
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="download.html" aria-describedby="read-declaration-status">
+                <a href="#" aria-describedby="read-declaration-status">
                   Upload application forms and evidence
                 </a>
               </span>
               <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="read-declaration-status">Completed</strong>
             </li>
 
-            {% if (data['02-03'] == "ready") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="check" aria-describedby="eligibility-status">
+                <a href="#" aria-describedby="read-declaration-status">
                   Check business information
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="read-declaration-status">Completed</strong>
+            </li>
+
+            {% if (data['02-04'] == "ready") %}
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="submit" aria-describedby="eligibility-status">
+                  Submit application
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
             </li>
             
-            {% elif (data['02-03'] == "progress") %}
+            {% elif (data['02-04'] == "progress") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="check" aria-describedby="eligibility-status">
-                  Check business information
+                <a href="submit" aria-describedby="eligibility-status">
+                  Submit application
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--blue govuk-prototype-kit-task-list__tag" id="list-convictions-status">In progress</strong>
             </li>
 
-            {% elif (data['02-03'] == "complete") %}
+            {% elif (data['02-04'] == "complete") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="check" aria-describedby="eligibility-status">
-                  Check business information
+                <a href="submit" aria-describedby="eligibility-status">
+                  Submit application
                 </a>
               </span>
               <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
@@ -161,14 +170,7 @@
             {% endif %}
 
 
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                  Submit application
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="download-claim-form">Cannot start yet</strong>
-            </li>
-
-
+          
 
 
           </ul>

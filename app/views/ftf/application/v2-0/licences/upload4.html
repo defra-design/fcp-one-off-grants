@@ -71,43 +71,17 @@
               <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
             </li>
 
-
-            {% if (data['03'] == "ready") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/ftf/application/v2-0/linked/linkedq.html" aria-describedby="eligibility-status">
-                  Linked business accounts
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
-            </li>
-            
-            
-            {% elif (data['03'] == "progress") %}
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/ftf/application/v2-0/linked/list.html" aria-describedby="eligibility-status">
-                  Linked business accounts
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--blue govuk-prototype-kit-task-list__tag" id="list-convictions-status">In progress</strong>
-            </li>
-            
-            
-            {% elif (data['03'] == "complete") %}
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/ftf/application/v2-0/linked/list2.html" aria-describedby="eligibility-status">
+                <a href="/ftf/application/v2-0/form/form5.html" aria-describedby="eligibility-status">
                   Linked business accounts
                 </a>
               </span>
               <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
             </li>
-            
-            {% endif %}
 
 
-            
+            {% if (data['04'] == "ready") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
                 <a href="/ftf/application/v2-0/licences/licences1.html" aria-describedby="eligibility-status">
@@ -117,9 +91,34 @@
               <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
             </li>
             
+            
+            {% elif (data['04'] == "progress") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/_common/not-testing.html" aria-describedby="eligibility-status">
+                <a href="/ftf/application/v2-0/licences/licences3.html" aria-describedby="eligibility-status">
+                  Licences and permissions
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--blue govuk-prototype-kit-task-list__tag" id="list-convictions-status">In progress</strong>
+            </li>
+            
+            
+            {% elif (data['04'] == "complete") %}
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/ftf/application/v2-0/licences/licences3.html" aria-describedby="eligibility-status">
+                  Licences and permissions
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+            
+            {% endif %}
+
+            
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/ftf/application/v2-0/project/project1.html" aria-describedby="eligibility-status">
                   Project funding
                 </a>
               </span>

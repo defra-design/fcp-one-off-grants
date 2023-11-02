@@ -33,6 +33,7 @@
       </h1>
       <h2 class="govuk-body" style="margin-top: -20px;">Add accounts for each linked business.</h2>
   
+
       <br>
 
       <ol class="govuk-prototype-kit-task-list">
@@ -41,48 +42,18 @@
           <ul class="govuk-prototype-kit-task-list__items" style="padding-left: 0;">
                   
        
-
-
-            {% if (data['01'] == "ready") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/ftf/application/v2-0/financial/financial1a.html" aria-describedby="eligibility-status">
-                  Linked business 1 Ltd
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
-            </li>
-            
-            
-            {% elif (data['01'] == "progress") %}
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/ftf/application/v2-0/financial/financial3a.html" aria-describedby="eligibility-status">
-                  Linked business 1 Ltd
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--blue govuk-prototype-kit-task-list__tag" id="list-convictions-status">In progress</strong>
-            </li>
-            
-            
-            {% elif (data['01'] == "complete") %}
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/ftf/application/v2-0/financial/financial3a.html" aria-describedby="eligibility-status">
+                <a href="#" aria-describedby="eligibility-status">
                   Linked business 1 Ltd
                 </a>
               </span>
               <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
             </li>
-            
-            {% endif %}
-
-
-
 
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/ftf/application/v2-0/financial/financial1.html" aria-describedby="eligibility-status">
+                <a href="#" aria-describedby="eligibility-status">
                   Linked business 2 Ltd
                 </a>
               </span>
@@ -97,15 +68,15 @@
 
 
 
-<a href="page2.html">
+
   <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
     Edit businesses
   </button>
-</a>
+
 <br>
 
 
-      <a href="activity">
+      <a href="upload3?03=complete">
         <button class="govuk-button">
           Continue
         </button>

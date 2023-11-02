@@ -71,34 +71,79 @@
               <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
             </li>
 
-
-            {% if (data['03'] == "ready") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/ftf/application/v2-0/linked/linkedq.html" aria-describedby="eligibility-status">
+                <a href="/ftf/application/v2-0/form/form5.html" aria-describedby="eligibility-status">
                   Linked business accounts
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/ftf/application/v2-0/form/form5.html" aria-describedby="eligibility-status">
+                  Licences and permissions
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/ftf/application/v2-0/form/form5.html" aria-describedby="eligibility-status">
+                  Project funding
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/ftf/application/v2-0/form/form5.html" aria-describedby="eligibility-status">
+                  Quotes and tenders
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/ftf/application/v2-0/form/form5.html" aria-describedby="eligibility-status">
+                  VAT in project costs
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
+            </li>
+
+
+            {% if (data['08'] == "ready") %}
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/ftf/application/v2-0/plans/plans1.html" aria-describedby="eligibility-status">
+                  Plans and drawings
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
             </li>
             
             
-            {% elif (data['03'] == "progress") %}
+            {% elif (data['08'] == "progress") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/ftf/application/v2-0/linked/list.html" aria-describedby="eligibility-status">
-                  Linked business accounts
+                <a href="/ftf/application/v2-0/plans/plans3.html" aria-describedby="eligibility-status">
+                  Plans and drawings
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--blue govuk-prototype-kit-task-list__tag" id="list-convictions-status">In progress</strong>
             </li>
             
             
-            {% elif (data['03'] == "complete") %}
+            {% elif (data['08'] == "complete") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/ftf/application/v2-0/linked/list2.html" aria-describedby="eligibility-status">
-                  Linked business accounts
+                <a href="/ftf/application/v2-0/plans/plans3.html" aria-describedby="eligibility-status">
+                  Plans and drawings
                 </a>
               </span>
               <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
@@ -106,56 +151,10 @@
             
             {% endif %}
 
-
             
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/ftf/application/v2-0/licences/licences1.html" aria-describedby="eligibility-status">
-                  Licences and permissions
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
-            </li>
-            
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/_common/not-testing.html" aria-describedby="eligibility-status">
-                  Project funding
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
-            </li>
-
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/_common/not-testing.html" aria-describedby="eligibility-status">
-                  Quotes and tenders
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
-            </li>
-
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/_common/not-testing.html" aria-describedby="eligibility-status">
-                  VAT in project costs
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
-            </li>
-
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/_common/not-testing.html" aria-describedby="eligibility-status">
-                  Plans and drawings
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
-            </li>
-
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/_common/not-testing.html" aria-describedby="eligibility-status">
+                <a href="/ftf/application/v2-0/third/third1.html" aria-describedby="eligibility-status">
                   Third-party agreements
                 </a>
               </span>
