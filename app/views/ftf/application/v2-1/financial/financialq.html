@@ -29,50 +29,67 @@
 <br>   
 
 
-<form class="form" id="accountsForm" action="/v2-1/financial/financial1a.html" method="post">
 
-  {{ govukRadios({
-    name: "accounts",
-    value: data['accounts'],
-    fieldset: {
-      legend: {
-        text: "Do you have full accounts for the last 3 years?",
-        isPageHeading: true,
-        classes: "govuk-fieldset__legend--l"
-      }
-    },
-    items: [
-      {
-        value: "Yes",
-        text: "Yes"
-      },
-      {
-        value: "No",
-        text: "No"
-      }
-    ]
-  }) }}
 
-  {{ govukButton({
-    text: "Continue",
-    type: "button",
-    id: "continueButton"
-  }) }}
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Do you have full accounts for the last 3 years?
+      </h1>
+    </legend>
 
-</form>
+    <br>
+
+    <p class="govuk-body">The accounts must include:<br>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>business turnover</li>
+        <li>balance sheet total (the total of all assets)</li>
+        <li>the financial year end date</li>
+      </ul>
+    </p>
+    <br>
+
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="yes" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          Yes
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="no" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+          No
+        </label>
+      </div>
+      
+    </div>
+  </fieldset>
+</div>
+
+<br>
+
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+
+
 
 <script>
-  document.getElementById("continueButton").addEventListener("click", function() {
-    var selectedValue = document.querySelector('input[name="accounts"]:checked').value;
-    if (selectedValue === "Yes") {
-      // Redirect to page1.html
+  document.querySelector("button[data-module='govuk-button']").addEventListener("click", function () {
+    var selectedValue = document.querySelector('input[name="contact"]:checked').value;
+    if (selectedValue === "yes") {
+      // Redirect to page 1 when "Yes" is selected
       window.location.href = "/ftf/application/v2-1/financial/financial1a.html";
-    } else {
-      // Redirect to page2.html
+    } else if (selectedValue === "no") {
+      // Redirect to page 2 when "No" is selected
       window.location.href = "/ftf/application/v2-1/financial/financial1b.html";
     }
   });
 </script>
+
 
 
 
