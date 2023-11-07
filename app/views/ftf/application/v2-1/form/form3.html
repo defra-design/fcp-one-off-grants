@@ -52,7 +52,7 @@
       </div>
     </div>
 
-<br><br>
+    <br><br>
 
     <div style="width: 630px; height: 0px; border: 0.5px #B1B4B6 solid"></div>
 <br><br>
@@ -60,25 +60,43 @@
     <p class="govuk-body" style="color: #505A5F;">Supported file types are XLS or XLSX. Maximum file size is 20MB.</p>
 
 
-    <div style="width: 630px; height: 111px; position: relative">
-      <div style="width: 357px; left: 0px; top: 0px; position: absolute; color: black; font-size: 19px; font-family: Arial, Helvetica; font-weight: 700; line-height: 30px; word-wrap: break-word">File uploaded</div>
-      <div style="width: 630px; height: 50px; left: 0px; top: 61px; position: absolute">
-        <div style="width: 468px; left: 0px; top: 0px; position: absolute; color: black; font-size: 19px; font-family: Arial, Helvetica; font-weight: 300; line-height: 30px; word-wrap: break-word">Application appendix - Water Management grant - FTF.xls , 209KB</div>
-        <div style="width: 102px; left: 530px; top: 0px; position: absolute; text-align: right; color: #1D70B8; font-size: 19px; font-family: Arial, Helvetica; font-weight: 300; text-decoration: underline; line-height: 30px; word-wrap: break-word">Delete file</div>
-      </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-1">
+        <strong>Upload a file</strong>
+      </label>
+    <!--  <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">  -->
+
+
+      <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file" onclick="redirectToPage()">
+     
+     <script>
+        function redirectToPage() {
+          // Get the URL of the page you want to navigate to
+          const nextPageURL = 'form4.html';
+      
+          // Redirect to the next page
+          window.location.href = nextPageURL;
+        }
+      </script>
     </div>
 
+    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Upload file
+    </button>
 
 
 
-    <br><br><br><br><br><br>
+
+
+<br><br><br>
  
-<a href="upload1?01=complete">
+<a href="/ftf/application/v2-0/form/upload1?01=progress">
   <button class="govuk-button" data-module="govuk-button">
     Continue
   </button>
 </a>
-    
+
 
 
 
