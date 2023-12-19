@@ -1,6 +1,8 @@
 # Changelog
 
-## Unreleased
+## v1.1.3
+
+- [#10 - Deprecate the plugin](https://github.com/alphagov/govuk-prototype-kit-task-list/pull/10)
 
 ## v1.1.2
 
