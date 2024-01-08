@@ -21,7 +21,7 @@ Water Management Grant - Round 3
 
 
 
-{% include "../../_includes/activity-list_status-block_eoi.html" %}
+{% include "../../_includes/activity-list_status-block.html" %}
 
 
 
@@ -29,185 +29,21 @@ Water Management Grant - Round 3
 
 
 <ol class="govuk-prototype-kit-task-list">
+
   {% include "../../_includes/activity-list_task-section_eoi.html" %}
   {% include "../../_includes/activity-list_task-section_apply.html" %}
   {% include "../../_includes/activity-list_task-section_agreement.html" %}
   {% include "../../_includes/activity-list_task-section_claim-01.html" %}
-  {% if (data['04-03'] == "complete") %}
+  {% if (data['status'] == "04") or (data['status'] == "05") or (data['status'] == "06") %}
   {% include "../../_includes/activity-list_task-section_claim-02.html" %}
   {% include "../../_includes/activity-list_task-section_claim-03.html" %}
   {% endif %}
 
-
-  <h1 class="govuk-heading-xl">UNUSED</h1>
-
-
-  <li>
-    <h2 class="govuk-prototype-kit-task-list__section">
-      <span class="govuk-prototype-kit-task-list__section-number">1. </span> Expression of interest
-    </h2>
-    <ul class="govuk-task-list">
-      <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-1-status">Check eligibility and scoring</a>
-        </div>
-        <div class="govuk-task-list__status" id="application-details-1-status">
-          Completed
-        </div>
-      </li>
-      <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Check your business and personal details</a>
-        </div>
-        <!-- <div class="govuk-task-list__status" id="application-details-2-status">
-          <strong class="govuk-tag govuk-tag--light-blue">
-            In progress
-          </strong>
-        </div> -->
-        <div class="govuk-task-list__status" id="application-details-4-status">
-          <strong class="govuk-tag govuk-tag--blue">
-            Not yet started
-          </strong>
-        </div>
-      </li>
-      <li class="govuk-task-list__item">
-        <div class="govuk-task-list__name-and-hint">
-          <div>Register your interest</div>
-        </div>
-        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
-          Cannot start yet
-        </div>
-      </li>
-      <!-- <li class="govuk-task-list__item govuk-task-list__item--with-link">
-        <div class="govuk-task-list__name-and-hint">
-          <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-4-status">Your expression of interest outcome</a>
-        </div>
-        <div class="govuk-task-list__status" id="application-details-4-status">
-          <strong class="govuk-tag govuk-tag--blue">
-            Not yet started
-          </strong>
-        </div>
-      </li> -->
-    </ul>
-  </li>
-
-  <li>
-    <h2 class="govuk-prototype-kit-task-list__section">
-      <span class="govuk-prototype-kit-task-list__section-number">2. </span> Apply
-    </h2>
-    <ul class="govuk-task-list">
-      <li class="govuk-task-list__item">
-        <div class="govuk-task-list__name-and-hint">
-          <div>Download application forms</div>
-        </div>
-        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
-          Cannot start yet
-        </div>
-      </li>
-      <li class="govuk-task-list__item">
-        <div class="govuk-task-list__name-and-hint">
-          <div>Upload application forms and evidence</div>
-        </div>
-        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
-          Cannot start yet
-        </div>
-      </li>
-      <li class="govuk-task-list__item">
-        <div class="govuk-task-list__name-and-hint">
-          <div>Check your business details</div>
-        </div>
-        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
-          Cannot start yet
-        </div>
-      </li>
-      <li class="govuk-task-list__item">
-        <div class="govuk-task-list__name-and-hint">
-          <div>Submit application</div>
-        </div>
-        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
-          Cannot start yet
-        </div>
-      </li>
-      <!-- <li class="govuk-task-list__item">
-        <div class="govuk-task-list__name-and-hint">
-          <div>Your application outcome</div>
-        </div>
-        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
-          Cannot start yet
-        </div>
-      </li> -->
-    </ul>
-  </li>
-
-  <li>
-    <h2 class="govuk-prototype-kit-task-list__section">
-      <span class="govuk-prototype-kit-task-list__section-number">3. </span> Sign agreement
-    </h2>
-    <ul class="govuk-task-list">
-      <li class="govuk-task-list__item">
-        <div class="govuk-task-list__name-and-hint">
-          <div>Read agreement</div>
-        </div>
-        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
-          Cannot start yet
-        </div>
-      </li>
-      <li class="govuk-task-list__item">
-        <div class="govuk-task-list__name-and-hint">
-          <div>Read terms and conditions</div>
-        </div>
-        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
-          Cannot start yet
-        </div>
-      </li>
-      <li class="govuk-task-list__item">
-        <div class="govuk-task-list__name-and-hint">
-          <div>Sign and accept agreement</div>
-        </div>
-        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
-          Cannot start yet
-        </div>
-      </li>
-    </ul>
-  </li>
-
-  <li>
-    <h2 class="govuk-prototype-kit-task-list__section">
-      <span class="govuk-prototype-kit-task-list__section-number">4. </span> Submit first claim
-    </h2>
-    <ul class="govuk-task-list">
-      <li class="govuk-task-list__item">
-        <div class="govuk-task-list__name-and-hint">
-          <div>Download claim form</div>
-        </div>
-        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
-          Cannot start yet
-        </div>
-      </li>
-      <li class="govuk-task-list__item">
-        <div class="govuk-task-list__name-and-hint">
-          <div>Upload claim form and evidence</div>
-        </div>
-        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
-          Cannot start yet
-        </div>
-      </li>
-      <li class="govuk-task-list__item">
-        <div class="govuk-task-list__name-and-hint">
-          <div>Submit claim</div>
-        </div>
-        <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
-          Cannot start yet
-        </div>
-      </li>
-    </ul>
-  </li>
-
 </ol>
 
-
-<p class="govuk-body"><a href="../../../_common/not-testing">Withdraw grant application</a></p>
-
+{% if (data['status'] == "01b") or (data['status'] == "02a") or (data['status'] == "02b") or (data['status'] == "02c") or (data['status'] == "03") or (data['status'] == "04") or (data['status'] == "05") or (data['status'] == "06") %}
+<p class="govuk-body withdraw-link"><a href="../../../_common/not-testing">Withdraw grant application</a></p>
+{% endif %}
 
 
 

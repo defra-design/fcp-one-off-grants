@@ -18,25 +18,13 @@ module.exports = {
   'fetf-grant-name': 'Farming Equipment and Technology Fund 2023',
   'fetf-project-reference': 'FETF-VMA-1234',
 
-
-  '01-01': 'ready',
-  '01-02': 'ready',
-  '01-03': 'ready',
-
-  '02-01': 'ready',
-  '02-02': 'ready',
-  '02-03': 'ready',
-  '02-04': 'ready',
-  
-  '03-01': 'ready',
-  '03-02': 'ready',
-  '03-03': 'ready',
-
-  '04-01': 'ready',
-  '04-02': 'ready',
-  '04-03': 'ready',
-  '04-04': 'ready'
-
   // Activity List statuses
+  'status': '01a',
+  'eoi': '01',
+  'apply': '01',
+  'agree': '01',
+  'claim-01': '01',
+  'claim-02': '01',
+  'claim-03': '01'
 
 }

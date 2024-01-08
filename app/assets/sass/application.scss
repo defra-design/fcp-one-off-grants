@@ -21,12 +21,12 @@
   color: govuk-colour("dark-grey") ;}
 
 .download-thumbnail{
-  padding: 0 24px 24px 0;
+  padding: 0 20px 20px 0;
   float: left;
 }
 
 .content-section{
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   display: block;
   @include govuk-media-query($from: tablet) {
   margin-bottom: 60px;
@@ -35,6 +35,10 @@
 
 .section-break{
   margin: 40px 0;
+}
+
+.withdraw-link{
+  padding-top: 40px;
 }
 
 
