@@ -26,10 +26,9 @@
 }
 
 .content-section{
-  margin-bottom: 30px;
   display: block;
   @include govuk-media-query($from: tablet) {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   }
 }
 

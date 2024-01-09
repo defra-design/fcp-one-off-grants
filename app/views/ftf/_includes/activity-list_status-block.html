@@ -13,6 +13,12 @@
 </div>
 
 
+{% elif (data['status'] == "01c") %}
+
+<h3 class="govuk-heading-m">Expression of interest not accepted</h3>
+<p class="govuk-body">You have not been invited to submit a full application.</p>
+
+
 {% elif (data['status'] == "02a") %}
 <!-- EOI approved, application ready to start -->
 
@@ -40,6 +46,12 @@
     RPA should complete the review by <strong>30 April 2024</strong>
 </div>
 
+
+{% elif (data['status'] == "02d") %}
+<!-- Application under review -->
+
+<h3 class="govuk-heading-m">Application unsuccessful</h3>
+<p class="govuk-body">Your <a href="">application outcome</a> explains in detail why your project was not successful.</p>
 
 
 {% elif (data['status'] == "03") %}
