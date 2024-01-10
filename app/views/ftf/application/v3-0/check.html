@@ -35,14 +35,19 @@
 
 
 <h2 class="govuk-heading-l">Rural Payment Service details</h2>
+{% if (data['progress'] == "submitted") %}
+<p class="govuk-body">Details submitted as part of your application.</p>{% else %}
 <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p>
+{% endif %}
     
 <br>
 <dl class="govuk-summary-list">
 
   <div style="display: flex; justify-content: space-between; align-items: center;">
     <h2 class="govuk-heading-m" style="margin: 0;">Applicant details</h2>
+    {% if (data['progress'] == "submitted") %}{% else %}
     <a href="#" style="margin-left: auto;">Change (opens in a new tab)</a>
+    {% endif %}
   </div>
   
 </dl>
@@ -119,7 +124,9 @@
 
   <div style="display: flex; justify-content: space-between; align-items: center;">
     <h2 class="govuk-heading-m" style="margin: 0;">Business details</h2>
+    {% if (data['progress'] == "submitted") %}{% else %}
     <a href="#" style="margin-left: auto;">Change (opens in a new tab)</a>
+    {% endif %}
   </div>
   
 </dl>
