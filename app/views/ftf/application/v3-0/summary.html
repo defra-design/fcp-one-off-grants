@@ -26,7 +26,8 @@
 
     <span class="govuk-caption-xl">Apply for a Water Management Grant</span>
     <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Check your application forms and evidence</h1>
-    <span class="govuk-body">Review you have uploaded your application form, appendix and evidence.</span>
+    {% if (data['progress'] == "submitted") %}<span class="govuk-body">Application form, appendix and evidence submitted as part of your application.</span>{% else %}
+    <span class="govuk-body">Review you have uploaded your application form, appendix and evidence.</span>{% endif %}
 
 <br><br><br>
 
@@ -42,11 +43,13 @@
           <dd class="govuk-summary-list__value">
             Application form - Water Management grant - FTF.docx , 235KB
           </dd>
+          {% if (data['progress'] == "submitted") %}{% else %}
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
               Change<span class="govuk-visually-hidden"> name</span>
             </a>
           </dd>
+          {% endif %}
         </div>
 
         <div class="govuk-summary-list__row">
@@ -56,11 +59,13 @@
           <dd class="govuk-summary-list__value">
             Application appendix - Water Management grant - FTF.xls , 209KB
           </dd>
+          {% if (data['progress'] == "submitted") %}{% else %}
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
               Change<span class="govuk-visually-hidden"> name</span>
             </a>
           </dd>
+          {% endif %}
         </div>
 
       </dl>
@@ -83,12 +88,13 @@
             <dd class="govuk-summary-list__value">
               Yes
             </dd>
-
+            {% if (data['progress'] == "submitted") %}{% else %}
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change<span class="govuk-visually-hidden"> address</span>
               </a>
             </dd>
+            {% endif %}
           </div>
                    
           <div class="govuk-summary-list__row">
@@ -101,12 +107,13 @@
               Financial accounts year 2.pdf , 3MB<br>
               Financial accounts year 2.pdf , 3MB
             </dd>
-
+            {% if (data['progress'] == "submitted") %}{% else %}
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change<span class="govuk-visually-hidden"> name</span>
               </a>
             </dd>
+            {% endif %}
           </div>
         </dl>
 
@@ -141,12 +148,13 @@
             <dd class="govuk-summary-list__value">
               Yes
             </dd>
-
+            {% if (data['progress'] == "submitted") %}{% else %}
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change<span class="govuk-visually-hidden"> address</span>
               </a>
             </dd>
+            {% endif %}
           </div>
                    
           <div class="govuk-summary-list__row">
@@ -159,12 +167,13 @@
               Accounts Y2 - Linked business 1 Ltd.pdf , 1MB<br>
               Accounts Y3 - Linked business 1 Ltd.pdf , 1MB
             </dd>
-
+            {% if (data['progress'] == "submitted") %}{% else %}
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change<span class="govuk-visually-hidden"> name</span>
               </a>
             </dd>
+            {% endif %}
           </div>
 
 
@@ -178,12 +187,13 @@
               Accounts Y2 - Linked business 2 Ltd.pdf , 1MB<br>
               Accounts Y3 - Linked business 2 Ltd.pdf , 1MB
             </dd>
-
+            {% if (data['progress'] == "submitted") %}{% else %}
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change<span class="govuk-visually-hidden"> name</span>
               </a>
             </dd>
+            {% endif %}
           </div>
         </dl>
 
@@ -208,12 +218,13 @@
               Licences.pdf , 100KB<br>
               Permissions.pdf , 50KB
             </dd>
-
+            {% if (data['progress'] == "submitted") %}{% else %}
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change<span class="govuk-visually-hidden"> name</span>
               </a>
             </dd>
+            {% endif %}
           </div>
         </dl>
 
@@ -238,12 +249,13 @@
               Project funding 1.pdf , 100KB<br>
               Project funding 2.pdf , 100KB
             </dd>
-
+            {% if (data['progress'] == "submitted") %}{% else %}
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change<span class="govuk-visually-hidden"> name</span>
               </a>
             </dd>
+            {% endif %}
           </div>
         </dl>
 
@@ -267,12 +279,13 @@
             <dd class="govuk-summary-list__value">
               Yes
             </dd>
-
+            {% if (data['progress'] == "submitted") %}{% else %}
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change<span class="govuk-visually-hidden"> address</span>
               </a>
             </dd>
+            {% endif %}
           </div>
 
 
@@ -287,12 +300,13 @@
               Quote 2.pdf , 100KB<br>
               Quote 3.pdf , 100KB<br>
             </dd>
-
+            {% if (data['progress'] == "submitted") %}{% else %}
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change<span class="govuk-visually-hidden"> name</span>
               </a>
             </dd>
+            {% endif %}
           </div>
         </dl>
 
@@ -319,12 +333,13 @@
               Accountant letter.pdf , 50KB<br>
               Confirmation.pdf , 100KB
             </dd>
-
+            {% if (data['progress'] == "submitted") %}{% else %}
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change<span class="govuk-visually-hidden"> name</span>
               </a>
             </dd>
+            {% endif %}
           </div>
         </dl>
 
@@ -350,12 +365,13 @@
               Plans.pdf , 7MB<br>
               Drawings.pdf , 10MB
             </dd>
-
+            {% if (data['progress'] == "submitted") %}{% else %}
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change<span class="govuk-visually-hidden"> name</span>
               </a>
             </dd>
+            {% endif %}
           </div>
         </dl>
 
@@ -383,12 +399,13 @@
               Agreement 1.pdf , 100KB<br>
               Agreement 2.pdf , 100KB
             </dd>
-
+            {% if (data['progress'] == "submitted") %}{% else %}
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change<span class="govuk-visually-hidden"> name</span>
               </a>
             </dd>
+            {% endif %}
           </div>
         </dl>
 
@@ -418,12 +435,13 @@
             <dd class="govuk-summary-list__value">
               Yes
             </dd>
-
+            {% if (data['progress'] == "submitted") %}{% else %}
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change<span class="govuk-visually-hidden"> address</span>
               </a>
             </dd>
+            {% endif %}
           </div>
 
 
@@ -438,12 +456,13 @@
               Letter of support 2.pdf , 100KB<br>
               Agreement terms.pdf , 50KB<br>
             </dd>
-
+            {% if (data['progress'] == "submitted") %}{% else %}
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change<span class="govuk-visually-hidden"> name</span>
               </a>
             </dd>
+            {% endif %}
           </div>
         </dl>
 
