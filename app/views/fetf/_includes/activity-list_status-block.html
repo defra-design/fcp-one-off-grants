@@ -1,0 +1,53 @@
+{% if (data['fetf-status'] == "01a") %}
+<!-- Application ready to start -->
+
+<h3 class="govuk-heading-m">You can start your application</h3>
+<div class="govuk-inset-text">
+    Application deadline is 11:59pm on <strong>31 January 2024</strong>.
+</div>
+
+
+{% elif (data['fetf-status'] == "01b") %}
+<!-- Application in progress after downloading forms -->
+
+<h3 class="govuk-heading-m">Application in progess</h3>
+<div class="govuk-inset-text">
+    Application deadline is 11:59pm on <strong>31 January 2024</strong>.
+</div>
+
+
+{% elif (data['fetf-status'] == "01c") %}
+<!-- Application under review -->
+
+<h3 class="govuk-heading-m">Application under review</h3>
+<div class="govuk-inset-text">
+    RPA should complete the review by <strong>28 February 2024</strong>.
+</div>
+
+
+{% elif (data['fetf-status'] == "01d") %}
+<!-- Application under review -->
+
+<h3 class="govuk-heading-m">Application unsuccessful</h3>
+<!-- <p class="govuk-body">Your <a href="">application outcome</a> explains why your project was not successful.</p> -->
+
+
+{% elif (data['fetf-status'] == "02") %}
+<!-- Application successful, agreement ready to read and sign -->
+
+<h3 class="govuk-heading-m">Read and sign your grant funding agreement</h3>
+<div class="govuk-inset-text">
+    Your agreement offer will expire at 11:59pm on <strong>31 March 2024</strong>.
+</div>
+
+
+{% elif (data['fetf-status'] == "03") %}
+<!-- First claim window open -->
+
+<h3 class="govuk-heading-m">You can submit your claim</h3>
+<div class="govuk-inset-text">
+    Your claim is due by 11:59pm on <strong>31 June 2024</strong>.
+</div>
+
+
+{% endif %}
