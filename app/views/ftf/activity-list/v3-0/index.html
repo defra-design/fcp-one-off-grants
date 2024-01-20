@@ -25,23 +25,38 @@ Water Management Grant - Round 3
 </span>
 
 
-
-
-
 <ol class="govuk-prototype-kit-task-list">
 
   {% include "../../_includes/activity-list_task-section_eoi.html" %}
   {% include "../../_includes/activity-list_task-section_apply.html" %}
   {% include "../../_includes/activity-list_task-section_agreement.html" %}
   {% include "../../_includes/activity-list_task-section_claim-01.html" %}
-  {% if (data['status'] == "04") or (data['status'] == "05") or (data['status'] == "06") %}
+  {% if (data['status'] == "04") or (data['status'] == "05") or (data['status'] == "06") or (data['status'] == "07a") or (data['status'] == "07b") or (data['status'] == "07c") or (data['status'] == "07d") or (data['status'] == "07e") %}
   {% include "../../_includes/activity-list_task-section_claim-02.html" %}
   {% include "../../_includes/activity-list_task-section_claim-03.html" %}
   {% endif %}
 
+  {% if (data['status'] == "07a") or (data['status'] == "07b") or (data['status'] == "07c") or (data['status'] == "07d") or (data['status'] == "07e") %} 
+  {% include "../../_includes/activity-list_task-section_monitoring-01.html" %}
+  {% endif %}
+  {% if (data['status'] == "07b") or (data['status'] == "07c") or (data['status'] == "07d") or (data['status'] == "07e") %} 
+  {% include "../../_includes/activity-list_task-section_monitoring-02.html" %}
+  {% endif %}
+  {% if (data['status'] == "07c") or (data['status'] == "07d") or (data['status'] == "07e") %} 
+  {% include "../../_includes/activity-list_task-section_monitoring-03.html" %}
+  {% endif %}
+  {% if (data['status'] == "07d") or (data['status'] == "07e") %} 
+  {% include "../../_includes/activity-list_task-section_monitoring-04.html" %}
+  {% endif %}
+  {% if (data['status'] == "07e") %} 
+  {% include "../../_includes/activity-list_task-section_monitoring-05.html" %}
+  {% endif %}
+  
 </ol>
 
-{% if (data['status'] == "01b") or (data['status'] == "02a") or (data['status'] == "02b") or (data['status'] == "02c") or (data['status'] == "03") or (data['status'] == "04") or (data['status'] == "05") or (data['status'] == "06") %}
+
+
+{% if (data['status'] == "01b") or (data['status'] == "02a") or (data['status'] == "02b") or (data['status'] == "02c") or (data['status'] == "03") or (data['status'] == "04") %}
 <p class="govuk-body withdraw-link"><a href="../../../_common/not-testing">Withdraw grant application</a></p>
 {% endif %}
 

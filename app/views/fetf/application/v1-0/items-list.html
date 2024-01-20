@@ -1,0 +1,78 @@
+
+{% extends "../../../layouts/main.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+
+{% block beforeContent %}
+
+  <!-- {{ govukPhaseBanner({
+    tag: {
+      text: "prototype"
+    },
+    html: 'This is a prototype of an internal tool – your <a class="govuk-link" href="mailto:planetcentreddesign@defra.gov.uk" subject="Sustainable Service Principles - User feedback">feedback</a> will help us to improve it.'
+  }) }} -->
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-width-container">
+      <h1 class="govuk-heading-xl">Principles</h1>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      {% include "includes/filters/filters-panel.html" %}
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+{% if data.filteredResults.length %}
+
+{% set data = data.filteredResults %}
+
+{% else %}
+
+{% set data = allData %}
+
+{% endif %}
+
+
+
+{% for item in data %}
+
+<span class="govuk-caption-m">{{ item.section }}</span>
+<h3 id="linked-data" tabindex="-1" class="govuk-heading-m">
+  <a href="{{ item.termName | lower | replace(' ', '-') }}" class="govuk-link">{{ item.title }}</a>
+</h3>
+
+<p> {{ item.subHeader }} </p>
+
+{% for item in item.disciplines %}
+<span style="display: inline-block;">
+  {{govukTag({
+    text: item,
+    classes: item | tagStatusColour
+  })}}
+</span>
+{% endfor %}
+
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+{% endfor %}
+
+
+
+
+{% endblock %}

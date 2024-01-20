@@ -1,0 +1,25 @@
+{
+      "principleUrl": "example-equipment-item",
+      "sectionNumber": "000",
+      "title": "Example Equipment Item",
+      "id": "123",
+      "value": "259",
+      "subHeader": "afsg f asfdgsag afg",
+      "category": {
+        "categoryForestry": "Forestry",
+        "categoryGeneral": "General",
+        "categoryHorticultural": "Horticultural",
+        "categoryLivestock": "Livestock",
+        "categoryPrecision": "Precision and analysis",
+        "categoryResource": "Resource management"
+      },
+      "summary": "adfd  adfssf a afsg",
+      "description": {
+        "descriptionText01": "afadf adf adfda fadf ad fda"
+      },
+
+      "eligibility": {
+        "eligibilityText01": "adsg afggs ",
+        "eligibilityText02": "agfgfas fags ags a"
+      }
+}

@@ -1,0 +1,43 @@
+{
+      "principleUrl": "",
+      "sectionNumber": "000",
+      "section": "",
+      "title": "",
+      "id": "",
+      "value": "",
+      "subHeader": "",
+      "category": {
+        "categoryForestry": "Forestry",
+        "categoryGeneral": "General",
+        "categoryHorticultural": "Horticultural",
+        "categoryLivestock": "Livestock",
+        "categoryPrecision": "Precision and analysis",
+        "categoryResource": "Resource management"
+      },
+      "summary": "",
+      "description": {
+        "descriptionText01": "",
+        "descriptionText02": "",
+        "descriptionText03": "",
+        "descriptionText04": "",
+        "descriptionText05": "",
+        "descriptionBullet01": "",
+        "descriptionBullet02": "",
+        "descriptionBullet03": "",
+        "descriptionBullet04": "",
+        "descriptionBullet05": ""
+      },
+
+      "eligibility": {
+        "eligibilityText01": "",
+        "eligibilityText02": "",
+        "eligibilityText03": "",
+        "eligibilityText04": "",
+        "eligibilityText05": "",
+        "eligibilityText06": "",
+        "eligibilityText07": "",
+        "eligibilityText08": "",
+        "eligibilityText09": "",
+        "eligibilityText10": ""
+      }
+}
