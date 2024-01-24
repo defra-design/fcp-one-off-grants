@@ -34,4 +34,7 @@ module.exports = {
   'fetf-agree': '01',
   'fetf-claim': '01'
 
+  // FTF Claim upload statuses
+  'fetf-claim-upload': '01',
+
 }
