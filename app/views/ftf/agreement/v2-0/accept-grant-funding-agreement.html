@@ -15,15 +15,22 @@ Accept grant funding agreement
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <form method="post" action="agreement-accepted">
-
-
         <span class="govuk-caption-xl">Sign agreement</span>
+
+        {% if data['progress'] == "submitted" %}
+        <h1 class="govuk-heading-xl">Grant funding agreement accepted</h1>
+        {% else %}
         <h1 class="govuk-heading-xl">Accept grant funding agreement</h1>
+        {% endif %}
 
         {% include "../../_includes/body-content_accept-agreement-main-block.html" %}
 
 
+
+
+
+        {% if data['progress'] == "submitted" %}
+        {% else %}
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -37,13 +44,26 @@ Accept grant funding agreement
             </div>
           </fieldset>
         </div>
-
-          {{govukButton({
-              text: "Accept and send"
-          })}}
-        
-        </form>
+        {% endif %}
       
+      
+
+        {% if data['progress'] == "submitted" %}
+
+        <a href="activity">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </a>
+        
+        {% else %}
+        <a href="agreement-accepted">
+          <button class="govuk-button" data-module="govuk-button">
+            Accept and continue
+          </button>
+        </a>
+        
+        {% endif %}
       
       </div>
       <div class="govuk-grid-column-one-third">

@@ -125,8 +125,9 @@
           <table class="govuk-table">
             <h3 class="govuk-heading-m">Your answers</h3>
 
+            {% if (data['submitted'] == "yes") %}{% else %}
             <p class="govuk-body">You can go back to change scoring questions as many times as you like but you can only submit your details once.</p>
-
+            {% endif %}
 
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
@@ -236,7 +237,7 @@
 
 <br><br>
 
-  <a href="login">
+  <a href="#">
           <button class="govuk-button" data-module="govuk-button" style="margin-bottom: 40px;">
             Continue
           </button>

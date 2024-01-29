@@ -25,8 +25,9 @@
 
 
     <span class="govuk-caption-xl">Apply for a Water Management Grant</span>
-    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Check your application forms and evidence</h1>
-    {% if (data['progress'] == "submitted") %}<span class="govuk-body">Application form, appendix and evidence submitted as part of your application.</span>{% else %}
+    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Your application forms and evidence</h1>
+    {% if (data['progress'] == "submitted") %}
+    <span class="govuk-body">Application form, appendix and evidence submitted as part of your application.</span>{% else %}
     <span class="govuk-body">Review you have uploaded your application form, appendix and evidence.</span>{% endif %}
 
 <br><br><br>
