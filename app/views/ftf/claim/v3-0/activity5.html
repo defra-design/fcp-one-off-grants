@@ -1,10 +1,14 @@
-{% extends "layouts/main-application-round-2.html" %}
+{% extends "layouts/main-claim-round-2.html" %}
 
 {% block pageTitle %}
   Task list – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
+
+
+
+
 
 
 
@@ -18,6 +22,8 @@
     </span>
   </p>
 </div>
+
+
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper" style="padding-top: 0px; padding-bottom: 0px;">
@@ -36,19 +42,23 @@
 
 <br><br>
 
+
+
+
+
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-
-      <span class="govuk-caption-xl">Apply for a Water Management Grant</span>
+      <span class="govuk-caption-xl">Claim for a Water Management Grant</span>
       <h1 class="govuk-heading-xl">
         Water Management Grant – Round 3
       </h1>
 
-      <h2 class="govuk-heading-m govuk-!-margin-bottom-2">You can start your full application.</h2>
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-2">First claim under review</h2>
 
       <div class="govuk-inset-text">
-        Application deadline is 11:59pm on<strong> 31 March 2024</strong>.
+        The RPA aims to process claims within <strong>30 working days</strong>.
       </div>
 
 
@@ -58,9 +68,6 @@
           <h2 class="govuk-prototype-kit-task-list__section">
             <span class="govuk-prototype-kit-task-list__section-number">1. </span> Expression of interest
           </h2>
-
-
-
           <ul class="govuk-prototype-kit-task-list__items">
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
@@ -89,98 +96,53 @@
           </ul>
         </li>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <li>
           <h2 class="govuk-prototype-kit-task-list__section">
             <span class="govuk-prototype-kit-task-list__section-number">2. </span> Apply
           </h2>
-          
           <ul class="govuk-prototype-kit-task-list__items">
-            
-            
-            {% if (data['02-01'] == "ready") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="download2.html" aria-describedby="eligibility-status">
+                <a href="/_common/not-testing.html" aria-describedby="company-information-status">
                   Download application forms
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="read-declaration-status">Completed</strong>
             </li>
-            
-           
-            {% elif (data['02-01'] == "complete") %}
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="download2.html" aria-describedby="eligibility-status">
-                  Download application forms
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="list-convictions-status">Completed</strong>
-            </li>
-            {% endif %}
-
-
-
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="/ftf/application/v3-0/upload?01=n&02=n&03=n&04=n&05=n&06=n&07=n&08=n&09=n&10=n" aria-describedby="eligibility-status">
+                <a href="/_common/not-testing.html" aria-describedby="contact-details-status">
                   Upload application forms and evidence
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="read-declaration-status">Completed</strong>
             </li>
-
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                Check your business details
+                <a href="/_common/not-testing.html" aria-describedby="list-convictions-status">
+                  Check your business details
+                </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="download-claim-form">Cannot start yet</strong>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="read-declaration-status">Completed</strong>
             </li>
-
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/_common/not-testing.html" aria-describedby="list-convictions-status">
                   Submit application
+                </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="download-claim-form">Cannot start yet</strong>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="read-declaration-status">Completed</strong>
             </li>
-
-
-
-
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/_common/not-testing.html" aria-describedby="list-convictions-status">
+                  Your application outcome
+                </a>
+               </span>
+               <strong class="govuk-tag govuk-prototype-kit-task-list__tag govuk-tag--green" id="register-interest-status">Successful</strong>
+              </li>
           </ul>
         </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       
 
         <li>
           <h2 class="govuk-prototype-kit-task-list__section">
@@ -189,41 +151,72 @@
           <ul class="govuk-prototype-kit-task-list__items">
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
-                Read and sign agreement
+                <a href="/_common/not-testing.html" aria-describedby="list-convictions-status">
+                  Read and sign agreement
+                </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="download-claim-form">Cannot start yet</strong>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="read-declaration-status">Completed</strong>
             </li>
           </ul>
         </li>
 
-
-
         <li>
           <h2 class="govuk-prototype-kit-task-list__section">
-            <span class="govuk-prototype-kit-task-list__section-number">4. </span> Submit third claim
+            <span class="govuk-prototype-kit-task-list__section-number">4. </span> Submit first claim
           </h2>
           <ul class="govuk-prototype-kit-task-list__items">
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="#" aria-describedby="eligibility-status">
                   Download claim form
+                </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="download-claim-form">Cannot start yet</strong>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="read-declaration-status">Completed</strong>
             </li>
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="#" aria-describedby="eligibility-status">
                   Upload claim form and evidence
+                </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="download-claim-form">Cannot start yet</strong>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="read-declaration-status">Completed</strong>
             </li>
             <li class="govuk-prototype-kit-task-list__item">
               <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="#" aria-describedby="eligibility-status">
                   Submit claim
+                </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="download-claim-form">Cannot start yet</strong>
+              <strong class="govuk-tag govuk-prototype-kit-task-list__tag" id="read-declaration-status">Completed</strong>
             </li>
+
+
+            {% if (data['claim'] == "success") %}
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/_common/not-testing.html" aria-describedby="list-convictions-status">
+                  Your claim outcome
+                </a>
+               </span>
+               <strong class="govuk-tag govuk-prototype-kit-task-list__tag govuk-tag--green" id="register-interest-status">Successful</strong>
+              </li>
+            
+              {% elif (data['claim'] == "nosuccess") %}
+            <li class="govuk-prototype-kit-task-list__item">
+              <span class="govuk-prototype-kit-task-list__task-name">
+                <a href="/_common/not-testing.html" aria-describedby="list-convictions-status">
+                  Your claim outcome
+                </a>
+               </span>
+               <strong class="govuk-tag govuk-prototype-kit-task-list__tag govuk-tag--red" id="register-interest-status">Unsuccessful</strong>
+              </li>
+
+
+            {% endif %}
+
+
           </ul>
         </li>
-
 
         <li>
           <h2 class="govuk-prototype-kit-task-list__section">
@@ -281,10 +274,13 @@
 
 
 
+
+
+
+
       </ol>
     </div>
   </div>
- 
 
 
 </main>

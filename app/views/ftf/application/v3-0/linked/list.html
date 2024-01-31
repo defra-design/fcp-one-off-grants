@@ -78,14 +78,102 @@
             {% endif %}
 
 
-            <li class="govuk-prototype-kit-task-list__item">
-              <span class="govuk-prototype-kit-task-list__task-name">
-                <a href="list2" aria-describedby="eligibility-status">
-                  Linked business 2 Ltd
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey govuk-prototype-kit-task-list__tag" id="list-convictions-status">Not started</strong>
+     
+
+
+
+
+
+
+
+
+
+
+            {% if (data['01'] == "n") %}
+
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="/ftf/application/v3-0/linked/linkedbiz" aria-describedby="application-details-2-status">Linked business 1 Ltd</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                <strong class="govuk-tag govuk-tag--blue">
+                  Not yet started
+                </strong>
+            </div>
             </li>
+  
+            {% elif (data['01'] == "i") %}
+  
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="/ftf/application/v3-0/linked/linkedbiz" aria-describedby="application-details-2-status">Linked business 1 Ltd</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                <strong class="govuk-tag govuk-tag--light-blue">
+                  In progress
+                </strong>
+            </div>
+            </li>
+  
+            {% elif (data['01'] == "c") %}
+  
+              <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                <div class="govuk-task-list__name-and-hint">
+                  <a class="govuk-link govuk-task-list__link" href="/ftf/application/v3-0/linked/linkedbiz3" aria-describedby="application-details-2-status">Linked business 1 Ltd</a>
+                </div>
+                <div class="govuk-task-list__status" id="application-details-4-status">
+                  Completed
+              </div>
+              </li>
+  
+            {% endif %}
+
+
+
+
+
+
+
+            {% if (data['02'] == "n") %}
+
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="/ftf/application/v3-0/linked/list?01=c&02=c" aria-describedby="application-details-2-status">Linked business 2 Ltd</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                <strong class="govuk-tag govuk-tag--blue">
+                  Not yet started
+                </strong>
+            </div>
+            </li>
+  
+            {% elif (data['02'] == "i") %}
+  
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <div class="govuk-task-list__name-and-hint">
+                <a class="govuk-link govuk-task-list__link" href="/ftf/application/v3-0/linked/list?01=c&02=c" aria-describedby="application-details-2-status">Linked business 2 Ltd</a>
+              </div>
+              <div class="govuk-task-list__status" id="application-details-4-status">
+                <strong class="govuk-tag govuk-tag--light-blue">
+                  In progress
+                </strong>
+            </div>
+            </li>
+  
+            {% elif (data['02'] == "c") %}
+  
+              <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                <div class="govuk-task-list__name-and-hint">
+                  <a class="govuk-link govuk-task-list__link" href="/ftf/application/v3-0/linked/list?01=c&02=c" aria-describedby="application-details-2-status">Linked business 2 Ltd</a>
+                </div>
+                <div class="govuk-task-list__status" id="application-details-4-status">
+                  Completed
+              </div>
+              </li>
+  
+            {% endif %}
+
+
 
 
 
@@ -104,7 +192,7 @@
 <br>
 
 
-      <a href="activity">
+      <a href="/ftf/application/v3-0/upload?01=c&02=c&03=c&04=n&05=n&06=n&07=n&08=n&09=n&10=n">
         <button class="govuk-button">
           Continue
         </button>
