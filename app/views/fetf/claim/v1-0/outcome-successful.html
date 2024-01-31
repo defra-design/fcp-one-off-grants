@@ -1,7 +1,7 @@
-{% extends "layouts/main-agreement-round-2.html" %}
+{% extends "layouts/main-claim-round-2.html" %}
 
 {% block pageTitle %}
-Application outcome successful
+Claim outcome successful
 {% endblock %}
 
 {% block content %}
@@ -10,32 +10,23 @@ Application outcome successful
   {{ govukBackLink({
     text: "Back",
     href: "javascript:history.back()"
-}) }}
+  }) }}
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
         <form method="post" action="agreement-detail">
 
-
         <span class="govuk-caption-xl">Browns Hill Farm reservoir (WM-VMA-1234)</span>
-        <h1 class="govuk-heading-xl">Your application outcome</h1>
-
-        {% include "../../_includes/body-content_application-outcome-unsuccessful.html" %}
-
-
-
-        </form>
-
-        {% include "../../_includes/details-block_outcome-questions-contact.html" %}
-      
+        <h1 class="govuk-heading-xl">HDJ2123F</h1>
+        <h2 class="govuk-heading-m">Your claim has been approved.</h2>
+        <br>
+        {% include "../../_includes/details-block_claim-questions-contact.html" %}
       
       </div>
-      <div class="govuk-grid-column-one-third">
-        <!-- SIDE COLUMN BLOCK -->
-      </div>
-    </div>
+     </div>
   </main>
+
 </div>
 
 {% endblock %}
