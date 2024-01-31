@@ -25,8 +25,13 @@
 
 
     <span class="govuk-caption-xl">Apply for a Water Management Grant</span>
-    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Check your business details</h1>
 
+
+    {% if (data['progress'] == "submitted") %}
+    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Your business details</h1>
+    {% else %}
+    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Check your business details</h1>
+    {% endif %}
 
     <!--
     <span class="govuk-body">Review and confirm the information below is correct.</span>
