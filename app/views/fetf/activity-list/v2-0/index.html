@@ -1,14 +1,16 @@
-{% extends "layouts/main-agreement-round-2.html" %}
+{% extends "layouts/main-fetf.html" %}
 
 {% block pageTitle %}
-Water Management Grant - Round 3
+{{ data['fetf-grant-type'] }}
 {% endblock %}
 
 
-{% block content %}
-
-
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
 {% include "../../_includes/sub-header_business-applicant-details.html" %}
+{% endblock %}
+
+{% block content %}
 
   <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">

@@ -1,0 +1,77 @@
+<div class="filter-box">
+
+  
+<h2 class="govuk-heading-m govuk-!-margin-bottom-3">Filter by</h2>
+
+     <form  method="post" novalidate action="/items/equipment-list/apply-filters">
+
+      {{ govukInput({
+        id: 'keywords',
+        name: 'keywords',
+        label: {
+          text: 'Keywords',
+          classes: 'govuk-label--s'
+        }
+      }) }}
+       {{ govukCheckboxes({
+        idPrefix: 'category',
+        name: 'category',
+        classes: "govuk-checkboxes--small",
+        fieldset: {
+          legend: {
+            text: 'Category',
+            classes: 'govuk-fieldset__legend--s'
+          }
+        },
+        items: [
+          {
+            value: 'Forestry',
+            text: 'Forestry',
+            checked:  checked("category", "Forestry")
+          },
+          {
+            value: 'General',
+            text: 'General',
+            checked:  checked("category", "General")
+          },
+          {
+            value: 'Horticultural',
+            text: 'Horticultural',
+            checked:  checked("category", "Horticultural")
+          },
+          {
+            value: 'Livestock',
+            text: 'Livestock',
+            checked:  checked("category", "Livestock")
+          },
+          {
+            value: 'Precision and analysis',
+            text: 'Precision and analysis',
+            checked:  checked("category", "Precision and analysis")
+          },
+          {
+            value: 'Resource management',
+            text: 'Resource management',
+            checked:  checked("category", "Resource management")
+          }
+        ]
+      }) }}
+
+
+       <div class="govuk-button-group">
+           {{ govukButton({
+         text: "Apply filters"
+       }) }}
+
+       {{ govukButton({
+           text: "Clear filters",
+           classes: "govuk-button--secondary",
+           name: "clearFilters",
+           value: "true"
+         }) }}
+
+         </div>
+
+</form>
+
+</div>

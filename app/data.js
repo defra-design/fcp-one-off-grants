@@ -1,7 +1,7 @@
 const fs = require('fs')
 const _ = require('underscore')
 
-const files = fs.readdirSync('./app/data/fetf-items/')
+const files = fs.readdirSync('./app/data/equipment/')
 const data = []
 
 
@@ -10,7 +10,7 @@ const data = []
 function getData() {
     // The loop to merge all JSON files together
     _.each(files, (el) => {
-    const file = fs.readFileSync('./app/data/fetf-items/' + el).toString()
+    const file = fs.readFileSync('./app/data/equipment/' + el).toString()
     try {
         const json = JSON.parse(file)
         json.filename = el

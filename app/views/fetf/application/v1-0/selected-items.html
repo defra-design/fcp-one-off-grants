@@ -1,0 +1,76 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Selected items {% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner_alpha.html" %}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">Selected items</h1>
+    <p class="govuk-body">The minimum grant you can apply for is £1,000 and the maximum is £25,000.</p>
+
+
+<!-- <h3 class="govuk-heading-l">Equipment summary</h3> -->
+
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Items summary</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Item name</th>
+      <th scope="col" class="govuk-table__header">Grant amount (item)</th>
+      <th scope="col" class="govuk-table__header">Item score</th>
+      <th scope="col" class="govuk-table__header">Quantity</th>
+      <th scope="col" class="govuk-table__header">Remove</th>
+      <th scope="col" class="govuk-table__header" style="text-align: right;">Grant amount (total)</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" style="width: 30%;">Item title 1</td>
+      <td class="govuk-table__cell">£200.00</td>
+      <td class="govuk-table__cell">60</td>
+      <td class="govuk-table__cell">5&nbsp;&nbsp;&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
+      <td class="govuk-table__cell"><a href="" class="govuk-body-s">Remove<span class="govuk-visually-hidden"> item</span></a></td>
+      <td class="govuk-table__cell" style="text-align: right;">£1,000.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Item title 2</td>
+      <td class="govuk-table__cell">£150.00</td>
+      <td class="govuk-table__cell">50</td>
+      <td class="govuk-table__cell">3&nbsp;&nbsp;&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
+      <td class="govuk-table__cell"><a href="" class="govuk-body-s">Remove<span class="govuk-visually-hidden"> item</span></a></td>
+      <td class="govuk-table__cell" style="text-align: right;">£450.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td colspan="2"></td>
+      <td colspan="3" style="padding: 20px 0; border-bottom: solid 1px #b1b4b6;">Grant total</td>
+      <td style="text-align: right; border-bottom: solid 1px #b1b4b6;"><span class="govuk-body-l" style="font-weight: bold;">£1,450.00</span></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td colspan="2"></td>
+      <td colspan="3" style="padding: 20px 0; border-bottom: solid 1px #b1b4b6;">Score total</td>
+      <td style="text-align: right; border-bottom: solid 1px #b1b4b6;"><span class="govuk-body-l" style="font-weight: bold;">55</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Apply for these items
+</button>
+<br>
+<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  View more items
+</button>
+
+
+</div>
+</div>
+</main>
+
+{% endblock %}

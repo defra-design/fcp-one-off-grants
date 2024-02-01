@@ -1,81 +1,58 @@
 <div class="filter-box">
 
+  
 <h2 class="govuk-heading-m govuk-!-margin-bottom-3">Filter by</h2>
 
-     <form  method="post" novalidate action="/principles-list/apply-filters">
+     <form  method="post" novalidate action="/fetf/application/v1-0/equipment-list/apply-filters">
 
-<!-- 
+      {{ govukInput({
+        id: 'keywords',
+        name: 'keywords',
+        label: {
+          text: 'Keywords',
+          classes: 'govuk-label--m'
+        }
+      }) }}
        {{ govukCheckboxes({
-         idPrefix: 'section',
-         name: 'section',
-         classes: "govuk-checkboxes--small",
-         fieldset: {
-           legend: {
-             text: 'Section',
-             classes: 'govuk-fieldset__legend--s'
-           }
-         },
-         items: [
-           {
-            value: 'Designing (service) journeys', 
-            text: 'Designing (service) journeys',
-             checked:  checked("section", "Designing (service) journeys")
-           },
-           {
-            value: 'Designing (for) user behaviour', 
-            text: 'Designing (for) user behaviour',
-             checked:  checked("section", "Designing (for) user behaviour")
-           },
-           {
-            value: 'Research', 
-            text: 'Research',
-             checked:  checked("section", "Research")
-           },
-           {
-            value: 'Interfaces and interactions',
-            text: 'Interfaces and interactions',
-            checked:  checked("section", "Interfaces and interactions")
-          },
-          {
-            value: 'Content',
-            text: 'Content',
-            checked:  checked("section", "Content")
-          }
-         ]
-       }) }}
- -->
-
-       
-       {{ govukCheckboxes({
-        idPrefix: 'disciplines',
-        name: 'disciplines',
+        idPrefix: 'category',
+        name: 'category',
         classes: "govuk-checkboxes--small",
         fieldset: {
           legend: {
-            text: 'Disciplines',
+            text: 'Category',
             classes: 'govuk-fieldset__legend--s'
           }
         },
         items: [
           {
-            value: 'Content design',
-            text: 'Content design',
-            checked:  checked("disciplines", "Content design")
+            value: 'Forestry',
+            text: 'Forestry',
+            checked:  checked("category", "Forestry")
           },
           {
-            value: 'Interaction design',
-            text: 'Interaction design',
-            checked:  checked("disciplines", "Interaction design")
+            value: 'General',
+            text: 'General',
+            checked:  checked("category", "General")
           },
           {
-            value: 'Service design',
-            text: 'Service design',
-            checked:  checked("disciplines", "Service design")
+            value: 'Horticultural',
+            text: 'Horticultural',
+            checked:  checked("category", "Horticultural")
           },
           {
-            value: 'User research',
-            text: 'User research',
-            checked:  checked("disciplines", "User research")
+            value: 'Livestock',
+            text: 'Livestock',
+            checked:  checked("category", "Livestock")
+          },
+          {
+            value: 'Precision and analysis',
+            text: 'Precision and analysis',
+            checked:  checked("category", "Precision and analysis")
+          },
+          {
+            value: 'Resource management',
+            text: 'Resource management',
+            checked:  checked("category", "Resource management")
           }
         ]
       }) }}
@@ -85,7 +62,6 @@
            {{ govukButton({
          text: "Apply filters"
        }) }}
-
 
        {{ govukButton({
            text: "Clear filters",
