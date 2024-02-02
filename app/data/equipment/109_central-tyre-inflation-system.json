@@ -5,6 +5,7 @@
   "summary": "Central tyre inflation system to regulate the pressure of all tyres on a vehicle.",
   "category": ["General"],
   "value": "3,140.00",
+  "score": "50",
   "description": {
     "descriptionText01": "Central tyre inflation system to regulate the pressure of all tyres on a vehicle.",
     "descriptionText02": "Allows inflation or deflation of tyres from the cab to suit ground conditions and in an emergency maintain air pressure in a tyre if there is a slow leak until the vehicle can be moved to a safe place to fix the leak."

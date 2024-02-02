@@ -43,25 +43,31 @@
 
 {% endif %}
 
-<h2 class="govuk-heading-m">{{data.length}} results found</h2">
-  <hr>
+<h2 class="govuk-heading-m">{{data.length}} results found</h2>
+  <hr style="margin-bottom: 20px;">
 
 {% for item in data %}
 
-
+<span style="clear: both; display: inline-block;">
 <h3 id="linked-data" tabindex="-1" class="govuk-heading-m">
   <a href="{{ item.termName | lower | replace(' ', '-') }}" class="govuk-link">{{ item.title }} (FETF{{ item.sectionNumber }})</a>
 </h3>
 
 <p class="govuk-body">{{ item.summary }}</p>
+<span style="display: inline-block; float: left;">
 <span class="govuk-caption-m">Grant amount per item:</span>
 <p class="govuk-body-l"><strong>£{{ item.value }}</strong></p>
+</span>
+<span style="display: inline-block; float: left; margin-left: 40px;">
+<span class="govuk-caption-m">Item score:</span>
+<p class="govuk-body-l"><strong>{{ item.score }}</strong></p>
+</span>
 
 <!-- <p class="govuk-body-s">Category: {{ item.category }}</p><span class="govuk-caption-s"></span> -->
 
+</span>
 
-
-<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin: 0 0 20px;">
 
 {% endfor %}
 

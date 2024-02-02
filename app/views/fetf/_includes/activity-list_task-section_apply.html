@@ -30,7 +30,7 @@
     
       <li class="govuk-task-list__item">
         <div class="govuk-task-list__name-and-hint">
-          <div>Check your business and contact details</div>
+          <div>Check your business and personal details</div>
         </div>
         <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
           Cannot start yet
@@ -80,7 +80,7 @@
   
     <li class="govuk-task-list__item">
       <div class="govuk-task-list__name-and-hint">
-        <div>Check your business and contact details</div>
+        <div>Check your business and personal details</div>
       </div>
       <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
         Cannot start yet
@@ -99,8 +99,57 @@
     </ul>
 
 
-
     {% elif (data['fetf-apply'] == "02b") %}
+      
+    <h2 class="govuk-prototype-kit-task-list__section">
+      <span class="govuk-prototype-kit-task-list__section-number">1. </span> Apply
+    </h2>
+
+    <ul class="govuk-task-list">
+
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Select your equipment</a>
+      </div>
+      <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+    </li>
+
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">About your equipment</a>
+      </div>
+      <div class="govuk-task-list__status" id="application-details-4-status">
+        <strong class="govuk-tag govuk-tag--blue">
+          Not yet started
+        </strong>
+      </div>
+    </li>
+  
+    <li class="govuk-task-list__item">
+      <div class="govuk-task-list__name-and-hint">
+        <div>Check your business and personal details</div>
+      </div>
+      <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
+        Cannot start yet
+      </div>
+    </li>
+  
+    <li class="govuk-task-list__item">
+      <div class="govuk-task-list__name-and-hint">
+        <div>Submit application</div>
+      </div>
+      <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
+        Cannot start yet
+      </div>
+    </li>
+  
+    </ul> 
+
+    
+
+    {% elif (data['fetf-apply'] == "02c") %}
       
     <h2 class="govuk-prototype-kit-task-list__section">
       <span class="govuk-prototype-kit-task-list__section-number">1. </span> Apply
@@ -130,7 +179,7 @@
   
     <li class="govuk-task-list__item">
       <div class="govuk-task-list__name-and-hint">
-        <div>Check your business and contact details</div>
+        <div>Check your business and personal details</div>
       </div>
       <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
         Cannot start yet
@@ -148,55 +197,6 @@
   
     </ul>    
 
-
-
-    {% elif (data['fetf-apply'] == "02c") %}
-      
-    <h2 class="govuk-prototype-kit-task-list__section">
-      <span class="govuk-prototype-kit-task-list__section-number">1. </span> Apply
-    </h2>
-
-    <ul class="govuk-task-list">
-
-    <li class="govuk-task-list__item govuk-task-list__item--with-link">
-      <div class="govuk-task-list__name-and-hint">
-        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Select your equipment</a>
-      </div>
-      <div class="govuk-task-list__status" id="application-details-4-status">
-          Completed
-      </div>
-    </li>
-
-    <li class="govuk-task-list__item govuk-task-list__item--with-link">
-      <div class="govuk-task-list__name-and-hint">
-        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">About your equipment</a>
-      </div>
-      <div class="govuk-task-list__status" id="application-details-4-status">
-          Completed
-      </div>
-    </li>
-
-    <li class="govuk-task-list__item govuk-task-list__item--with-link">
-      <div class="govuk-task-list__name-and-hint">
-        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Check your business details and contact details</a>
-      </div>
-      <div class="govuk-task-list__status" id="application-details-4-status">
-        <strong class="govuk-tag govuk-tag--blue">
-          Not yet started
-        </strong>
-      </div>
-    </li>
-  
-    <li class="govuk-task-list__item">
-      <div class="govuk-task-list__name-and-hint">
-        <div>Submit application</div>
-      </div>
-      <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
-        Cannot start yet
-      </div>
-    </li>
-  
-    </ul>    
 
 
     {% elif (data['fetf-apply'] == "02d") %}
@@ -227,11 +227,11 @@
 
     <li class="govuk-task-list__item govuk-task-list__item--with-link">
       <div class="govuk-task-list__name-and-hint">
-        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Check your business and contact details</a>
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Check your business and personal details</a>
       </div>
       <div class="govuk-task-list__status" id="application-details-4-status">
-        <strong class="govuk-tag govuk-tag--light-blue">
-          In progress
+        <strong class="govuk-tag govuk-tag--blue">
+          Not yet started
         </strong>
       </div>
     </li>
@@ -245,7 +245,7 @@
       </div>
     </li>
   
-    </ul>
+    </ul>    
 
 
     {% elif (data['fetf-apply'] == "02e") %}
@@ -276,7 +276,56 @@
 
     <li class="govuk-task-list__item govuk-task-list__item--with-link">
       <div class="govuk-task-list__name-and-hint">
-        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Check your business and contact details</a>
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Check your business and personal details</a>
+      </div>
+      <div class="govuk-task-list__status" id="application-details-4-status">
+        <strong class="govuk-tag govuk-tag--light-blue">
+          In progress
+        </strong>
+      </div>
+    </li>
+  
+    <li class="govuk-task-list__item">
+      <div class="govuk-task-list__name-and-hint">
+        <div>Submit application</div>
+      </div>
+      <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
+        Cannot start yet
+      </div>
+    </li>
+  
+    </ul>
+
+
+    {% elif (data['fetf-apply'] == "02f") %}
+      
+    <h2 class="govuk-prototype-kit-task-list__section">
+      <span class="govuk-prototype-kit-task-list__section-number">1. </span> Apply
+    </h2>
+
+    <ul class="govuk-task-list">
+
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Select your equipment</a>
+      </div>
+      <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+    </li>
+
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">About your equipment</a>
+      </div>
+      <div class="govuk-task-list__status" id="application-details-4-status">
+          Completed
+      </div>
+    </li>
+
+    <li class="govuk-task-list__item govuk-task-list__item--with-link">
+      <div class="govuk-task-list__name-and-hint">
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Check your business and personal details</a>
       </div>
       <div class="govuk-task-list__status" id="application-details-4-status">
           Completed
@@ -325,7 +374,7 @@
 
     <li class="govuk-task-list__item govuk-task-list__item--with-link">
       <div class="govuk-task-list__name-and-hint">
-        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Check your business and contact details</a>
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Check your business and personal details</a>
       </div>
       <div class="govuk-task-list__status" id="application-details-4-status">
           Completed
@@ -372,7 +421,7 @@
 
     <li class="govuk-task-list__item govuk-task-list__item--with-link">
       <div class="govuk-task-list__name-and-hint">
-        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Check your business and contact details</a>
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Check your business and personal details</a>
       </div>
       <div class="govuk-task-list__status" id="application-details-4-status">
           Completed
@@ -428,7 +477,7 @@
 
     <li class="govuk-task-list__item govuk-task-list__item--with-link">
       <div class="govuk-task-list__name-and-hint">
-        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Check your business and contact details</a>
+        <a class="govuk-link govuk-task-list__link" href="#" aria-describedby="application-details-2-status">Check your business and personal details</a>
       </div>
       <div class="govuk-task-list__status" id="application-details-4-status">
           Completed

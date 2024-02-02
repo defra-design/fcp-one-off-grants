@@ -32,9 +32,24 @@
     <p class="govuk-body-l">{{ item.summary }}</p>
 
     <p class="govuk-body"><strong>Grant amount per item: </strong>£{{ item.value }}</p>
-    <p class="govuk-body-s"><strong>Average cost of item: </strong>£{{ item.value }}</p>
-    <p class="govuk-body"><strong>Item score: </strong>60</p>
-
+    <p class="govuk-body-s"><strong>Expected average cost of item: </strong>£{{ item.averageValue }}</p>
+    <p class="govuk-body"><strong>Item score: </strong>{{ item.score }}</p>
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Scoring criteria
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">Each item has been assigned a score out of 100 based on certain criteria.</p>
+<p class="govuk-body">For Productivity and Slurry items, this criteria is:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>productivity</li>
+  <li>environmental benefit</li>
+  <li>level of adoption by the industry (items not in widespread use have a higher score)</li>
+</ul>
+      </div>
+    </details>
 
 {% if item.description %}
 
@@ -70,14 +85,14 @@
 {% endif %}
 
 
-<h2 class="govuk-heading-m">Scoring</h2>
+<!-- <h2 class="govuk-heading-m">Scoring</h2>
 <p class="govuk-body">Each item has been assigned a score out of 100 based on certain criteria.</p>
 <p class="govuk-body">For Productivity and Slurry items, this criteria is:</p>
 <ul class="govuk-list govuk-list--bullet">
   <li>productivity</li>
   <li>environmental benefit</li>
   <li>level of adoption by the industry (items not in widespread use have a higher score)</li>
-</ul>
+</ul> -->
 
 
 
