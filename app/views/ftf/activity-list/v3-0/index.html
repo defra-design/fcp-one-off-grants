@@ -67,3 +67,83 @@ Water Management Grant - Round 3
 </main>
 
 {% endblock %}
+
+
+
+<!-- FOOTER BLOCK WITH EXTRA LINKS FOR THE END OF EACH JOURNEY-->
+
+{% block footer %}
+{% if (data['status'] == "01b") %}
+
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "../../eoi/v2-0/email_eoi-submitted.html",
+         text: "Confirmation email"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+
+ {% elif (data['status'] == "02c") %}
+
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "../../application/v3-0/email3.html",
+         text: "Confirmation email"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+
+
+ {% elif (data['status'] == "04") %}
+
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "../../agreement/v2-0/email-agreement-accepted.html",
+         text: "Confirmation email"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+
+
+ {% elif (data['status'] == "05") %}
+
+ {{ govukFooter({
+   meta: {
+     items: [
+       {
+         href: "../../claim/v3-0/email-claim-submitted.html",
+         text: "Confirmation email"
+       }
+     ],
+     visuallyHiddenTitle: "Footer links"
+   }
+ }) }}
+
+ {% else %}
+
+ {{ govukFooter({
+  meta: {
+    items: [
+      {
+        href: "/manage-prototype/clear-data",
+        text: "Clear data"
+      }
+    ],
+    visuallyHiddenTitle: "Footer links"
+  }
+}) }}
+
+ {% endif %}
+{% endblock %}
