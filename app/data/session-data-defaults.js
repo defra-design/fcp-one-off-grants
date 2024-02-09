@@ -10,7 +10,7 @@ module.exports = {
 
   // FTF application data
 
-  'ftf-grant-name': 'Water Management Grant - Round 3',
+  'ftf-grant-name': 'Water Management Grant – Round 3',
   'ftf-project-name': 'Browns Hill Farm reservoir',
   'ftf-project-reference': 'WM-VMA-1234',
 

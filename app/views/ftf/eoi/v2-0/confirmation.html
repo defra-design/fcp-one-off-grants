@@ -29,11 +29,14 @@
               Interest submitted
             </h1>
           <div class="govuk-panel__body">
-            Your reference number<br><strong>HDJ2123F</strong>
+            Your reference number<br><strong>{{ data['ftf-project-reference'] }}</strong>
           </div>
         </div>
               
-          <p class="govuk-body" style="margin: 0;">We have sent you a confirmation email.</p><br>
+          <p class="govuk-body" style="margin: 0;">We have sent you a confirmation email.</p>
+          <br>
+          
+          <!-- <br>
           <p class="govuk-body" style="margin: 0;">If you do not get an email within 72 hours, please call the RPA helpline and follow the options for the Farming Transformation Fund scheme:</p>
                
         <br><br>
@@ -44,10 +47,8 @@
             <a href="/_common/not-testing.html">Find out about call charges (opens in a new tab)</a>
             </p>
           <p class="govuk-body"><strong>Email</strong><br><a href="/_common/not-testing.html">FTF@rpa.gov.uk</a></p>
-     
 
-
-       <br>
+       <br> -->
 
 
 
@@ -88,10 +89,11 @@
 
 
 
+<br>
+
+{% include "../../_includes/details-block_eoi-questions-contact.html" %}
+
 <br><br>
-
-
-
 
        <p class="govuk-body">
         <a href="../../activity-list/v3-0/index?status=01b&eoi=03a&apply=01&agree=01&claim-01=01&claim-02=0&claim-03=0">Go back to task list</a></p>
