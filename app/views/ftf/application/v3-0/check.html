@@ -24,13 +24,13 @@
   <div class="govuk-grid-column-two-thirds">
 
 
-    <span class="govuk-caption-xl">Apply</span>
+    <span class="govuk-caption-l">Apply</span>
 
 
     {% if (data['progress'] == "submitted") %}
-    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Your business details</h1>
+    <h1 class="govuk-heading-l" style="margin-bottom: 20px;">Check your details</h1>
     {% else %}
-    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Check your business details</h1>
+    <h1 class="govuk-heading-l" style="margin-bottom: 20px;">Check your details</h1>
     {% endif %}
 
     <!--
@@ -38,11 +38,11 @@
 -->
 <br><br>
 
-
-<h2 class="govuk-heading-l">Rural Payment Service details</h2>
+<!-- 
+<h2 class="govuk-heading-l">Rural Payment Service details</h2> -->
 {% if (data['progress'] == "submitted") %}
 <p class="govuk-body">Details submitted as part of your application.</p>{% else %}
-<p class="govuk-body">Changes in this section will update your Rural Payments Service account.</p>
+<p class="govuk-body">Changes in this section will update your Rural Payments service account.</p>
 {% endif %}
     
 <br>
@@ -51,7 +51,7 @@
   <div style="display: flex; justify-content: space-between; align-items: center;">
     <h2 class="govuk-heading-m" style="margin: 0;">Applicant details</h2>
     {% if (data['progress'] == "submitted") %}{% else %}
-    <a href="/_common/not-testing.html" style="margin-left: auto;">Change (opens in a new tab)</a>
+    <a href="/_common/not-testing.html" style="margin-left: auto;">Change</a>
     {% endif %}
   </div>
   
@@ -60,32 +60,30 @@
 <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Business name
+              Title
             </dt>
             <dd class="govuk-summary-list__value">
-              Imaginary farms Ltd 
+              Mr 
             </dd>
 
           </div>
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Single Business Identifier (SBI)
+              First name
             </dt>
             <dd class="govuk-summary-list__value">
-              987654321
+              John
             </dd>
 
           </div>
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Business address
+              Surname
             </dt>
             <dd class="govuk-summary-list__value">
-              Address line 1<br>
-              Address line 2<br>
-              Region
+              Smith
             </dd>
 
           </div>
@@ -112,7 +110,7 @@
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Business phone number
+              Landline phone number
             </dt>
             <dd class="govuk-summary-list__value">
               08001234567
@@ -130,13 +128,55 @@
   <div style="display: flex; justify-content: space-between; align-items: center;">
     <h2 class="govuk-heading-m" style="margin: 0;">Business details</h2>
     {% if (data['progress'] == "submitted") %}{% else %}
-    <a href="/_common/not-testing.html" style="margin-left: auto;">Change (opens in a new tab)</a>
+    <a href="/_common/not-testing.html" style="margin-left: auto;">Change</a>
     {% endif %}
   </div>
   
 </dl>
 
 <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Business name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Imaginary farms Ltd 
+    </dd>
+
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Single Business Identifier (SBI)
+    </dt>
+    <dd class="govuk-summary-list__value">
+      987654321
+    </dd>
+
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Business address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Address line 1<br>
+      Address line 2<br>
+      Surrey
+    </dd>
+
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Business postcode
+    </dt>
+    <dd class="govuk-summary-list__value">
+      GU22 9HG
+    </dd>
+
+  </div>
+
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Business legal status
