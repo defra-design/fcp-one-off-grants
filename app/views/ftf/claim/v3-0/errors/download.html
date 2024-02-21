@@ -20,6 +20,37 @@
 
 
 
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#doc1">Download the claim form to continue</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add event listeners to the doc1 and doc2 links
+    document.querySelector('a[href="#doc1"]').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default link behavior
+      // Scroll to the application form link and focus on it
+      document.querySelector('a[href="/public/downloads/ftf/FTF-Claim-Form.docx"]').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.querySelector('a[href="/public/downloads/ftf/FTF-Claim-Form.docx"]').focus();
+    });
+    
+  });
+</script>
+
+
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -30,11 +61,6 @@
 
     
 <br><br>
-
-
-
-
-
 
 <h3 class="govuk-heading-m">What you need to do</h3>
     <span class="govuk-body">Download and complete the claim form.</span>
@@ -55,23 +81,21 @@
       <h3 class="govuk-heading-m">Document</h3>
       <br>
 
+    <div class="govuk-form-group govuk-form-group--error" style="display: flex; align-items: flex-start;">
+      <img src="/public/images/FTF_claim_form.png" alt="Small screenshot showing page one of the grant funding agreement." class="download-thumbnail" style="margin-right: 10px;">
+      <div>
+        <a href="/public/downloads/ftf/FTF-Claim-Form.docx" download="Application form - Water Management grant - FTF.docx" style="font-size: 24px; display: block;">Claim form: Water Management grant</a><br>
+        <p id="whoAreYou-error" class="govuk-error-message">Download the claim form to continue</p>
+        <p class="govuk-body-s sbi-number">DOCX, 97.3 KB, 7 pages</p>
+      </div>
+    </div>
 
 
+<br>
 
-    <!-- <span class="govuk-body-l"> <a href="/public/downloads/ftf/FTF-Claim-Form.pdf" target="_blank">Grant claim form</a>  -->
-      <span class="govuk-body-l"> <a href="/public/downloads/ftf/FTF-Claim-Form.docx" download="FTF-Claim-Form.docx">Claim form: Water Management grant</a>
-
-    <img src="/public/images/FTF_claim_form.png" alt="Small screenshot showing page one of the grant funding agreement." class="download-thumbnail">
-        <br><br>
-      <p class="govuk-body-s sbi-number">DOCX, 97.3 KB, 7 pages</p>
-    </span>
-
-    <br><br><br> 
-
-    <p></p>
 
     
-    {% include "../../_includes/details-block_request-accessible-format.html" %}
+    {% include "../../../_includes/details-block_request-accessible-format.html" %}
 
 
 
@@ -104,7 +128,7 @@
 
 
 
-    {% include "../../_includes/details-block_claim-questions-contact.html" %}
+    {% include "../../../_includes/details-block_claim-questions-contact.html" %}
 
 
 
