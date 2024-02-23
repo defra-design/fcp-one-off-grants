@@ -22,7 +22,7 @@ Error
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#check">You must check the box to continue</a>
+          <a href="#check">Select the box to agree and continue</a>
         </li>
       </ul>
     </div>
@@ -62,8 +62,10 @@ Error
         </style>
         </head>
         <body>
-        
+        <br>
         <div class="govuk-form-group govuk-form-group--error">
+          <p id="whoAreYou-error" class="govuk-error-message">Select to agree and continue</p>
+
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="check" name="waste" type="checkbox" value="carcasses">
           <label class="govuk-label govuk-checkboxes__label" for="check">

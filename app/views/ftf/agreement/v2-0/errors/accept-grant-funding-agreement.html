@@ -1,7 +1,7 @@
 {% extends "layouts/main-agreement-round-2.html" %}
 
 {% block pageTitle %}
-Accept grant funding agreement
+Error
 {% endblock %}
 
 {% block content %}
@@ -23,7 +23,7 @@ Accept grant funding agreement
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#check">You must check the box to continue</a>
+          <a href="#check">Select the box to accept and continue</a>
         </li>
       </ul>
     </div>
@@ -54,8 +54,10 @@ Accept grant funding agreement
         </style>
         </head>
         <body>
-        
+        <br>
         <div class="govuk-form-group govuk-form-group--error">
+          <p id="whoAreYou-error" class="govuk-error-message">Select to accept and continue</p>
+
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="check" name="waste" type="checkbox" value="carcasses">
           <label class="govuk-label govuk-checkboxes__label" for="check">

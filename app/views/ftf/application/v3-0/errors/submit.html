@@ -29,7 +29,7 @@
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#check">You must check the box to submit your application</a>
+          <a href="#check">Select the box to agree and submit your application</a>
         </li>
       </ul>
     </div>
@@ -105,6 +105,11 @@
 <br>
 
 
+
+
+
+
+
 <style>
   /* CSS to change the color of the checkbox border */
   .govuk-checkboxes__input + .govuk-checkboxes__label::before {
@@ -115,6 +120,7 @@
 <body>
 
 <div class="govuk-form-group govuk-form-group--error">
+  <p id="whoAreYou-error" class="govuk-error-message">Select to agree and submit your application</p>
 <div class="govuk-checkboxes__item">
   <input class="govuk-checkboxes__input" id="check" name="waste" type="checkbox" value="carcasses">
   <label class="govuk-label govuk-checkboxes__label" for="check">
