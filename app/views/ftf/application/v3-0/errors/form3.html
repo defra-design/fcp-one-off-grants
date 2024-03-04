@@ -30,10 +30,10 @@
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#doc1" id="doc1">The file must be smaller than 20MB</a>
+          <a href="#doc1" id="doc1">The selected file must be smaller than 20MB</a>
         </li>
         <li>
-          <a href="#doc2" id="doc2">The file could not be uploaded – please try again</a>
+          <a href="#doc2" id="doc2">The selected file contains a virus</a>
         </li>
       </ul>
     </div>
@@ -71,7 +71,7 @@
         <strong>Upload a file</strong>
       </label>
       <p id="file-upload-1-error" class="govuk-error-message">
-        <span class="govuk-visually-hidden">Error:</span> The file must be smaller than 20MB
+        <span class="govuk-visually-hidden">Error:</span> The selected file must be smaller than 20MB
       </p>
       <input class="govuk-file-upload govuk-file-upload--error" id="file-upload-1" name="fileUpload1" type="file" aria-describedby="file-upload-1-error">
      
@@ -102,7 +102,7 @@
         <strong>Upload a file</strong>
       </label>
       <p id="file-upload-2-error" class="govuk-error-message">
-        <span class="govuk-visually-hidden">Error:</span> The file could not be uploaded – please try again
+        <span class="govuk-visually-hidden">Error:</span> The selected file contains a virus
       </p>
       <input class="govuk-file-upload govuk-file-upload--error" id="file-upload-2" name="fileUpload2" type="file" aria-describedby="file-upload-2-error">
     </div>
@@ -138,7 +138,7 @@ document.getElementById('doc2').addEventListener('click', function(event) {
 
 
  
-<a href="/ftf/application/v3-0/upload?01=n&02=n&03=n&04=n&05=n&06=n&07=n&08=n&09=n&10=n">
+<a href="#">
   <button class="govuk-button" data-module="govuk-button">
     Continue
   </button>
