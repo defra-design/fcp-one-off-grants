@@ -3,7 +3,8 @@
   
 <h2 class="govuk-heading-m govuk-!-margin-bottom-3">Filter by</h2>
 
-     <form  method="post" novalidate action="/fetf/application/v1-0/equipment-list/apply-filters">
+     <!-- <form  method="post" novalidate action="/fetf/application/v1-0/equipment-list/apply-filters"> -->
+      <form method="post" novalidate action="/fetf/application/v1-0/equipment-list/apply-filters">
 
       {{ govukInput({
         id: 'keywords',
@@ -25,6 +26,11 @@
         },
         items: [
           {
+            value: 'Arable',
+            text: 'Arable',
+            checked:  checked("category", "Arable")
+          },
+          {
             value: 'Forestry',
             text: 'Forestry',
             checked:  checked("category", "Forestry")
@@ -35,8 +41,8 @@
             checked:  checked("category", "General")
           },
           {
-            value: 'Horticultural',
-            text: 'Horticultural',
+            value: 'Horticulture',
+            text: 'Horticulture',
             checked:  checked("category", "Horticultural")
           },
           {
@@ -45,14 +51,14 @@
             checked:  checked("category", "Livestock")
           },
           {
-            value: 'Precision and analysis',
-            text: 'Precision and analysis',
-            checked:  checked("category", "Precision and analysis")
+            value: 'Resource and energy management',
+            text: 'Resource and energy management',
+            checked:  checked("category", "Resource and energy management")
           },
           {
-            value: 'Resource management',
-            text: 'Resource management',
-            checked:  checked("category", "Resource management")
+            value: 'Water and irrigation',
+            text: 'Water and irrigation',
+            checked:  checked("category", "Water and irrigation")
           }
         ]
       }) }}

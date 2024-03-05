@@ -1,22 +1,28 @@
 {
   "termName": "Weather station",
   "sectionNumber": "118",
+  "itemCode": "118",
   "title": "Digital weather station",
-  "summary": "A station that records weather information.",
-  "category": ["General"],
-  "value": "575.00",
-  "score": "55",
-  "description": {
-    "descriptionText01": "A system/station that has the minimum functionality to record:",
-    "descriptionText02": "Nullam at risus et justo porttitor vehicula. Pellentesque congue laoreet lorem vitae malesuada. Nullam interdum ante vel risus blandit laoreet. Aliquam eget rhoncus libero, ut lacinia felis.",
-    "descriptionBullet01": "barometric pressure",
-    "descriptionBullet02": "temperature",
-    "descriptionBullet03": "humidity",
-    "descriptionBullet04": "rainfall",
-    "descriptionBullet05": "wind speed and direction"
+  "summary": "Wirelessly links to a computer to measure and record weather.",
+  "category": ["Water and irrigation"],
+  "grantValue": "902.00",
+  "grantPercentage": "50",
+  "averageValue": "1,804.00",
+  "score": "67",
+  "serialNumber": "yes",
+  "eligible": {
+    "eligibleBullet01": "barometric pressure",
+    "eligibleBullet02": "temperature",
+    "eligibleBullet03": "humidity",
+    "eligibleBullet04": "rainfall",
+    "eligibleBullet05": "wind speed and direction",
+    "eligibleBullet06": "UV levels",
+    "eligibleBullet07": "soil moisture",
+    "eligibleBullet08": "soil temperature"
   },
-  "eligibility": {
-    "eligibiltyBullet01": "Must be able to link wirelessly to a computer.",
-    "eligibiltyBullet02": "The cost includes the station, mounting facilities and sensors for above functionality and excludes installation costs, service costs, annual licence fee for software and calibration."
+  "notEligible": {
+    "notEligibleBullet01": "installation costs",
+    "notEligibleBullet02": "service costs",
+    "notEligibleBullet03": "annual licence fee for software and calibration"
   }
 }

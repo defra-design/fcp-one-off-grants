@@ -18,7 +18,7 @@
       <span class="govuk-caption-xl">Improving Farm Productivity Grant 2024 - Round 1</span>
       <h1 class="govuk-heading-xl" style="margin-bottom:30px;">Select items</h1>
       <div class="govuk-inset-text">
-        The minimum grant you can apply for is £1,000 and the maximum grant is £25,000.
+        The minimum grant you can apply for is £1,000 and the maximum grant is £50,000.
       </div>
     </div>
     <div class="govuk-grid-column-one-third">
@@ -26,7 +26,7 @@
   </div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-third">
-      {% include "includes/filters/filters-panel.html" %}
+      {% include "../../../_includes/filters/filters-panel.html" %}
       {% include "../../../_includes/selected-items-panel.html" %}
     </div>
     <div class="govuk-grid-column-two-thirds">
@@ -50,15 +50,15 @@
 
 <span style="clear: both; display: inline-block;">
 <h3 id="linked-data" tabindex="-1" class="govuk-heading-m">
-  <a href="{{ item.termName | lower | replace(' ', '-') }}" class="govuk-link">{{ item.title }} (FETF{{ item.sectionNumber }})</a>
+  <a href="{{ item.termName | lower | replace(' ', '-') }}" class="govuk-link">{{ item.title }} (FETF{{ item.itemCode }})</a>
 </h3>
 
 <p class="govuk-body">{{ item.summary }}</p>
-<span style="display: inline-block; float: left;">
+<span style="display: inline-block;">
 <span class="govuk-caption-m">Grant amount per item:</span>
-<p class="govuk-body-l"><strong>£{{ item.value }}</strong></p>
+<p class="govuk-body-l"><strong>£{{ item.grantValue }}</strong></p>
 </span>
-<span style="display: inline-block; float: left; margin-left: 40px;">
+<span style="display: inline-block; margin-left: 40px;">
 <span class="govuk-caption-m">Item score:</span>
 <p class="govuk-body-l"><strong>{{ item.score }}</strong></p>
 </span>
