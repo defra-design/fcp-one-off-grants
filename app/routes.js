@@ -127,7 +127,7 @@ for (i of allData) {
   }
 }
 
-console.log(disciplinesFilter);
+console.log(categoryFilter);
 
 
 
@@ -156,6 +156,7 @@ console.log(disciplinesFilter);
 }
   res.redirect('/fetf/application/v1-0/items/equipment-list') 
 })
+
 
 
 
