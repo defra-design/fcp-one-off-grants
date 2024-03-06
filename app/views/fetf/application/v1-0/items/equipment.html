@@ -31,12 +31,11 @@
 
     <p class="govuk-body-l">{{ item.summary }}</p>
 
-
-    <p class="govuk-body"><strong>Grant amount per item: </strong>£{{ item.grantValue }}</p>
+    <p class="govuk-body-l"><strong>Grant amount per item: </strong>£{{ item.grantValue }}</p>
     <p class="govuk-body-s"><strong>Expected average cost of item: </strong>£{{ item.averageValue }}</p>
     <p class="govuk-body-s"><strong>Percentage paid towards item: </strong>{{ item.grantPercentage }}%</p>
-    <hr>
-    <p class="govuk-body"><strong>Item score: </strong>{{ item.score }}</p>
+    <hr style="margin-bottom: 20px; margin-top: 20px;">
+    <p class="govuk-body-l"><strong>Item score: </strong>{{ item.score }}</p>
     <details class="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
@@ -66,7 +65,7 @@
 </ul> -->
       </div>
     </details>
-    <hr>
+    <hr style="margin-bottom: 20px;">
 <!--     
 {% if item.description %}
 
@@ -133,7 +132,7 @@
 
 
 {% if item.serialNumber %}
-<p class="govuk-body">You must provide this item’s serial number when you submit your claim for payment.</p>
+<p class="govuk-body"><strong>Serial number:</strong> You must provide this item’s serial number when you submit your claim for payment.</p>
 {% endif %}
 
 
@@ -160,17 +159,19 @@
   </div>
 </div> -->
 
-
+<span>
 <button type="submit" class="govuk-button" data-module="govuk-button">
   Select this item
 </button>
+</span>
 
-<br>
 
+
+<span style="clear: both; display: block;">
 <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
   View other items
 </button>
-
+</span>
 
     
   </div>
