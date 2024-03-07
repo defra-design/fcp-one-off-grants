@@ -24,28 +24,22 @@
   <div class="govuk-grid-column-two-thirds">
 
 
-    <span class="govuk-caption-l">Apply</span>
+    <span class="govuk-caption-xl">Apply</span>
 
 
     {% if (data['progress'] == "submitted") %}
-    <h1 class="govuk-heading-l" style="margin-bottom: 20px;">Check your details</h1>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Check your details</h1>
     {% else %}
-    <h1 class="govuk-heading-l" style="margin-bottom: 20px;">Check your details</h1>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Check your details</h1>
     {% endif %}
 
-    <!--
-    <span class="govuk-body">Review and confirm the information below is correct.</span>
--->
-<br><br>
 
-<!-- 
-<h2 class="govuk-heading-l">Rural Payment Service details</h2> -->
 {% if (data['progress'] == "submitted") %}
 <p class="govuk-body">Details submitted as part of your application.</p>{% else %}
 <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p>
 {% endif %}
     
-<br>
+<br><br>
 <dl class="govuk-summary-list">
 
   <div style="display: flex; justify-content: space-between; align-items: center;">
