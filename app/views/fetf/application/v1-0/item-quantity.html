@@ -13,13 +13,16 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <span class="govuk-caption-l">{{ item.title }}<!-- Will need to be a GET statement pulling data from previous page -->Item title</span>
+    <span class="govuk-caption-l">{{ item.title }}<!-- Will need to be a GET statement pulling data from previous page -->Digital weather station (FETF118)</span>
 <div class="govuk-form-group">
   <h1 class="govuk-label-wrapper">
     <label class="govuk-label govuk-label--l" for="quantity">
       How many do you need?
     </label>
   </h1>
+  <div id="event-name-hint" class="govuk-hint">
+    Maximum quantity for this item is 3
+  </div>
   <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="quantity" name="quantity" type="text" spellcheck="false">
     <div class="govuk-input__suffix" aria-hidden="true">item quantity</div>
   </div>
@@ -37,6 +40,7 @@
   </div>
   <div class="govuk-grid-column-one-third">
     {% include "../../_includes/selected-items-panel.html" %}
+    <p class="govuk-body-s">The minimum grant you can apply for is £1,000 and the maximum grant is £50,000.</p>
   </div>
 
 

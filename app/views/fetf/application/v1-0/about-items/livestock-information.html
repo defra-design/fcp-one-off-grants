@@ -1,0 +1,56 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../../_includes/phase-banner_alpha.html" %}
+<a href="equipment-list" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/fetf-items-livestock-information" method="post">
+
+      <span class="govuk-caption-l">About your equipment</span>
+      <h1 class="govuk-heading-l">Livestock information</h1>
+
+      <div class="govuk-form-group">
+        <h2 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="account-number">
+            Total number of bovine animals
+          </label>
+        </h2>
+        <input class="govuk-input govuk-input--width-10" id="account-number" name="accountNumber" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
+<br><br><br>
+        <h2 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="account-number">
+            County parish holding number
+          </label>
+        </h2>
+        <div id="account-number-hint" class="govuk-hint">
+          Enter the county parish holding (CPH) number where you record animal movements (for example 08/123/4567)
+        </div>
+        <input class="govuk-input govuk-input--width-10" id="account-number" name="accountNumber" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
+      </div>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

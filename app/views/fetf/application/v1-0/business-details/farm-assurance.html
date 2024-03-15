@@ -1,0 +1,103 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../../_includes/phase-banner_alpha.html" %}
+<a href="equipment-list" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/fetf-assurance-schemes" method="post">
+
+      <span class="govuk-caption-l">About your business</span>
+      <h1 class="govuk-heading-l">Farm assurance schemes</h1>
+
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="assurance-scheme-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Which farm assurance schemes do you belong to?
+              </h2>
+            </legend>
+            <div id="assurance-scheme-hint" class="govuk-hint">
+              Select all that apply.
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="assurance-scheme" name="assurance-scheme" type="checkbox" value="none">
+                <label class="govuk-label govuk-checkboxes__label" for="assurance-scheme">
+                  Not part of a farm assurance scheme
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="assurance-scheme-2" name="assurance-scheme" type="checkbox" value="tractor">
+                <label class="govuk-label govuk-checkboxes__label" for="assurance-scheme-2">
+                  Red Tractor
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="assurance-scheme-3" name="assurance-scheme" type="checkbox" value="retailer">
+                <label class="govuk-label govuk-checkboxes__label" for="assurance-scheme-3">
+                  Retailer Scheme
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="assurance-scheme-4" name="assurance-scheme" type="checkbox" value="rspca">
+                <label class="govuk-label govuk-checkboxes__label" for="assurance-scheme-4">
+                  RSPCA Assured
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="assurance-scheme-5" name="assurance-scheme" type="checkbox" value="soil">
+                <label class="govuk-label govuk-checkboxes__label" for="assurance-scheme-5">
+                  Soil Association
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="assurance-scheme-6" name="assurance-scheme" type="checkbox" value="prefer">
+                <label class="govuk-label govuk-checkboxes__label" for="assurance-scheme-6">
+                  Prefer not to say
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="assurance-scheme-7" name="assurance-scheme" type="checkbox" value="other" data-aria-controls="conditional-contact-3">
+                <label class="govuk-label govuk-checkboxes__label" for="assurance-scheme-7">
+                  Other
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-3">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-text">
+                    Please specify which scheme
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contactByText" type="tel" autocomplete="tel">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+      </div>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

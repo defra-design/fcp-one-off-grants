@@ -1,0 +1,49 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Will you store the equipment at the main business address? {% endblock %}
+
+{% block beforeContent %}
+{% include "../../../_includes/phase-banner_alpha.html" %}
+<a href="equipment-list" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/fetf-livestock-schemes" method="post">
+
+      <span class="govuk-caption-l">About your business</span>
+      <h1 class="govuk-heading-l">Livestock health schemes</h1>
+
+      <div class="govuk-form-group">
+        <h2 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="livestock-schemes">
+            Which livestock health or disease prevention schemes do you belong to?
+          </label>
+        </h2>
+        <div id="livestock-schemes-hint" class="govuk-hint">
+          We are collecting details for information purposes only. This may help future scheme design.
+        </div>
+        <textarea class="govuk-textarea" id="livestock-schemes" name="livestockSchemes" aria-describedby="livestock-schemes-hint" rows="3"></textarea>
+      </div>
+
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+</main>
+
+{% endblock %}

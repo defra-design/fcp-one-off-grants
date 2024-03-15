@@ -9,7 +9,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 // Add your routes here
 
 
-// Techspike routes START
+// FETF items individual pages START
 
 const _ = require('underscore')
 const { getData } = require('../app/data')
@@ -39,10 +39,11 @@ router.get('/fetf/application/v1-0/items/:termName', (req, res) => {
     res.render('fetf/application/v1-0/items/equipment.html', { item })
 })
 
+// FETF items individual pages END
 
-// Techspike routes END
 
 
+// FETF items filters START
 
 router.post('/fetf/application/v1-0/items/equipment-list/apply-filters', (req, res) => {
   if (req.session.data.clearFilters == "true") {
@@ -61,52 +62,6 @@ router.post('/fetf/application/v1-0/items/equipment-list/apply-filters', (req, r
 
   // let filteredResults = ''
   // console.log(filteredResults)
-
-
-
-// Working filter for principles section - DO NOT DELETE - START
-
-//   let sectionFilter = req.session.data.section
-//   if (typeof sectionFilter === 'undefined') {
-//     sectionFilter= ""
-//  }
-//  if (typeof sectionFilter.length) {
-//     filteredResults = allData.filter(el => ( sectionFilter.indexOf(el.section) >= 0 ))
-//  }
-
-//   console.log(sectionFilter)
-
-// Working filter for principles section - DON NOT DELETE - END
-
-
-
-// Option 1: Only works for a single UCD discipline (content), doesn't work in conjunction with the section filter
-
-//   let disciplineFilter = req.session.data.disciplineContent
-//   if (typeof disciplineFilter === 'undefined') {
-//     disciplineFilter= ""
-//  }
-//  if (typeof disciplineFilter.length) {
-//     filteredResults = allData.filter(el => ( disciplineFilter.indexOf(el.disciplineContent) >= 0 ))
-//  }
-
-//   console.log(disciplineFilter)
-
-
-
-
-
-
-// Option 2: Chris filter example test
-
-
-//array of objects
-// let foo = [
-//   { items: ["Content design"] },
-//   { items: ["Content design", "Interaction design"] },
-//   { items: ["Content design", "Service design"] },
-//   { items: ["Service design"] }
-// ];
 
 //filters
 let categoryFilter = req.session.data.category
@@ -128,28 +83,6 @@ for (i of allData) {
 }
 
 console.log(categoryFilter);
-
-
-
-// let disciplineFilter = req.session.data.disciplineContent
-// if (typeof disciplineFilter === 'undefined') {
-//   disciplineFilter= ""
-// }
-// if (typeof disciplineFilter.length) {
-//   filteredResults = allData.filter(el => ( disciplineFilter.indexOf(el.disciplineContent) >= 0 ))
-// }
-
-
-
-//   let roleFilter = req.session.data.role
-//   if (typeof roleFilter === 'undefined') {
-//     roleFilter= ""
-//  }
-//  if (typeof roleFilter.length) {
-//     filteredResults = allData.filter(el => ( roleFilter.indexOf(el.role,el.role1,el.role2,el.role3) >= 0 ))
-//  }
-
-
   
   req.session.data.filteredResults = filteredResults
   
@@ -157,7 +90,102 @@ console.log(categoryFilter);
   res.redirect('/fetf/application/v1-0/items/equipment-list') 
 })
 
+// FETF items filters END
 
 
+
+// FETF journey branching START
+
+
+// FETF item selection
+
+router.post('/fetf-items-selection', function(request, response) {
+  response.redirect("/fetf/application/v1-0/item-quantity")
+})
+
+
+// FETF items livestock question
+
+router.post('/fetf-items-livestock-information', function(request, response) {
+  response.redirect("/fetf/application/v1-0/about-items/equipment-address")
+})
+
+
+// FETF items business address question
+
+router.post('/fetf-items-business-address', function(request, response) {
+  var aboutBusinessLocation = request.session.data['willYouStoreAtBusinessAddress']
+  if (aboutBusinessLocation == "yes"){
+      response.redirect("/fetf/application/v1-0/about-items/equipment-contracting")
+  } else {
+      response.redirect("/fetf/application/v1-0/about-items/equipment-location-details")
+  }
+})
+
+
+// FETF items other locations
+
+router.post('/fetf-items-other-locations', function(request, response) {
+  response.redirect("/fetf/application/v1-0/about-items/equipment-contracting")
+})
+
+
+// FETF items contracting question
+
+router.post('/fetf-items-contracting', function(request, response) {
+  var aboutContracting = request.session.data['willYouUseForContracting']
+  if (aboutContracting == "yes"){
+      response.redirect("/fetf/application/v1-0/about-items/equipment-other-contracting")
+  } else {
+      response.redirect("/fetf/application/v1-0/about-items/equipment-summary")
+  }
+})
+
+
+// FETF items contracting other question
+
+
+// FETF items summary
+
+router.post('/fetf-items-summary', function(request, response) {
+  response.redirect("/fetf/activity-list/v2-0/?fetf-status=01b&fetf-apply=02d&fetf-agree=01&fetf-claim=01")
+})
+
+
+// FETF business structure
+
+router.post('/fetf-business-structure', function(request, response) {
+  response.redirect("/fetf/application/v1-0/business-details/land-details")
+})
+
+
+// FETF business structure
+
+router.post('/fetf-land-details', function(request, response) {
+  response.redirect("/fetf/application/v1-0/business-details/farm-assurance")
+})
+
+// FETF farm assurance schemes
+
+router.post('/fetf-assurance-schemes', function(request, response) {
+  response.redirect("/fetf/application/v1-0/business-details/livestock-schemes")
+})
+
+
+// FETF livestock health schemes
+
+router.post('/fetf-livestock-schemes', function(request, response) {
+  response.redirect("/fetf/application/v1-0/business-details/check-your-details")
+})
+
+
+// FETF check business details
+
+router.post('/fetf-check-business-details', function(request, response) {
+  response.redirect("/fetf/activity-list/v2-0/?fetf-status=01b&fetf-apply=02f&fetf-agree=01&fetf-claim=01")
+})
+
+
+// FETF journey branching END
 
 module.exports = router
