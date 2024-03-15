@@ -33,7 +33,7 @@ Error
     <div class="govuk-error-summary__body">
       <ul class="govuk-list govuk-error-summary__list">
         <li>
-          <a href="#fin">Upload evidence to show the item has been bought and paid in full.</a>
+          <a href="#fin">Upload evidence to show the item is in place.</a>
         </li>
       </ul>
     </div>
@@ -66,9 +66,6 @@ Error
 <body>
 
 
-  <div class="govuk-form-group govuk-form-group--error">
-
-
 
 <div class="govuk-grid-row">
 <div class="govuk-grid-column-two-thirds">
@@ -80,19 +77,32 @@ Error
 
 
 
-
-    <p id="numberError" class="govuk-error-message">Upload evidence to show the item has been bought and paid in full.</p>
+  <div id="filesAddedContainer">
+    <p class="govuk-label govuk-label--s">Files added</p><br>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <p class="govuk-body" style="margin-bottom: 0;">Financial evidence 1.pdf , 3MB</p>
+      <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+    </div>
+    <hr style="margin: 20px 0;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <p class="govuk-body" style="margin-bottom: 0;">Financial evidence 2.pdf , 3MB</p>
+      <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+    </div>
+    <hr style="margin: 20px 0;">
+  
+    <br>
+  
 
   <p class="govuk-label govuk-label--s">Upload a file</p>
   <div class="container">
       <p class="govuk-body text" style="margin-bottom: 0;">Drag and drop files here or</p>
       <button type="button" class="govuk-button govuk-button--secondary button" data-module="govuk-button" >Choose file</button>
   </div>
+  
+</div>
 </div>
 </div>
 
-
-</div>
 
 <br><br>
 <hr style="border: 0.5px solid #000; margin: 10px 0;" class="govuk-grid-column-two-thirds">
@@ -101,12 +111,41 @@ Error
 
 
 
-<div class="govuk-grid-row">
-<div class="govuk-grid-column-two-thirds">
 
-<p class="govuk-label govuk-label--m">Visual evidence</p>
-<p class="govuk-body">For example, photos and videos showing the item</p>
-<p class="govuk-body" style="color: #505A5F;">Supported file types are JPG, PNG, PDF, MOV or MP4. Maximum file size is 20MB.</p><br>
+
+
+
+
+
+
+
+<div class="govuk-form-group govuk-form-group--error">
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  
+    <p class="govuk-label govuk-label--m" id="fin">Visual evidence</p>
+    <p class="govuk-body">For example, photos and videos showing the item</p>
+    <p class="govuk-body" style="color: #505A5F;">Supported file types are JPG, PNG, PDF, MOV or MP4. Maximum file size is 20MB.</p><br>
+  
+      <p id="numberError" class="govuk-error-message">Upload evidence to show the item is in place.</p>
+  
+    <p class="govuk-label govuk-label--s">Upload a file</p>
+    <div class="container">
+        <p class="govuk-body text" style="margin-bottom: 0;">Drag and drop files here or</p>
+        <button type="button" class="govuk-button govuk-button--secondary button" data-module="govuk-button" >Choose file</button>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+
 
 
 <style>
@@ -136,34 +175,7 @@ Error
   }
 </style>
 
-<div id="filesAddedContainer">
-  <p class="govuk-label govuk-label--s">Files added</p><br>
-  <div style="display: flex; justify-content: space-between; align-items: center;">
-    <p class="govuk-body" style="margin-bottom: 0;">Financial evidence 1.pdf , 3MB</p>
-    <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
-  </div>
-  <hr style="margin: 20px 0;">
-  <div style="display: flex; justify-content: space-between; align-items: center;">
-    <p class="govuk-body" style="margin-bottom: 0;">Financial evidence 2.pdf , 3MB</p>
-    <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
-  </div>
-  <hr style="margin: 20px 0;">
 
-  <br>
-
-  
-  </div>
-
-
-
-<p class="govuk-label govuk-label--s">Upload a file</p>
-<div class="container">
-  <p class="govuk-body text" style="margin-bottom: 0;">Drag and drop files here or</p>
-  <button type="button" class="govuk-button govuk-button--secondary button" data-module="govuk-button" >Choose file</button>
-</div>
-</div>
-
-</div>
 
 
 
