@@ -1,11 +1,44 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/main-fetf.html" %}
 
 {% block pageTitle %}
-  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+Farming Equipment and Technology Fund
 {% endblock %}
+
+{% set pageName="Home" %}
 
 {% block content %}
 
-<h1>FETF Prototype landing page</h1>
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <span class="govuk-caption-xl">May 2024</span>
+    <h1 class="govuk-heading-l">
+      Farming Equipment and Technology Fund - Improving Productivity Grant
+    </h1>
+
+    <!-- <p class="govuk-body-l">Scenario: Read and sign your grant funding agreement</p> -->
+
+    <p class="govuk-body"><strong>April 2024</strong> Awareness</p>
+    <p class="govuk-body"><a href="awareness/how-to-apply-for-a-farming-equipment-and-technology-fund-fetf-2023-grant">Click to open prototype</a></p>
+    
+    <hr style="margin: 40px 0;">
+    <p class="govuk-body"><strong>June 2024</strong> Application</p>
+    <p class="govuk-body"><a href="application/v1-0/login">Click to open prototype</a></p>
+    
+    <hr style="margin: 40px 0;">
+    <p class="govuk-body"><strong>September 2024</strong> Agreement</p>
+    <p class="govuk-body"><a href="activity-list/v2-0/?fetf-status=02&fetf-apply=03b&fetf-agree=02a&fetf-claim=01">Click to open prototype</a></p>
+
+    <hr style="margin: 40px 0;">
+    <p class="govuk-body"><strong>October 2024</strong> Claim</p>
+    <p class="govuk-body"><a href="activity-list/v2-0/?fetf-status=03&fetf-apply=03b&fetf-agree=03&fetf-claim=02a">Click to open prototype</a></p>
+
+  </div>
+</div>
+
+</main>
 
 {% endblock %}
