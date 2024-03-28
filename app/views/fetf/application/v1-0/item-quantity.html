@@ -13,7 +13,9 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <span class="govuk-caption-l">{{ item.title }}<!-- Will need to be a GET statement pulling data from previous page -->Digital weather station (FETF118)</span>
+    <form action="/fetf-item-quantity" method="post">
+
+    <span class="govuk-caption-l">{{ item.title }}<!-- Will need to be a GET statement pulling data from previous page -->Item title (FETF000)</span>
 <div class="govuk-form-group">
   <h1 class="govuk-label-wrapper">
     <label class="govuk-label govuk-label--l" for="quantity">
@@ -33,9 +35,17 @@
   Add quantity
 </button>
 <br>
-<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  Cancel
-</button>
+
+</form>
+
+
+<span style="clear: both; display: block;">
+  <a href="items/equipment-list">
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="viewOtherItems">
+    Cancel
+  </button>
+  </a>
+</span>
 
   </div>
   <div class="govuk-grid-column-one-third">

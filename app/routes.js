@@ -104,6 +104,33 @@ router.post('/fetf-items-selection', function(request, response) {
 })
 
 
+// FETF item quantity
+
+router.post('/fetf-item-quantity', function(request, response) {
+  response.redirect("/fetf/application/v1-0/selected-items")
+})
+
+
+// FETF item summary
+
+router.post('/selected-items-summary', function(request, response) {
+  response.redirect("/fetf/application/v1-0/select-items-complete")
+})
+
+
+// FETF items section complete question
+
+router.post('/fetf-items-complete', function(request, response) {
+  var sectionComplete = request.session.data['haveYouCompletedThisSection']
+  if (sectionComplete == "yes"){
+      response.redirect("/fetf/activity-list/v2-0/?fetf-status=01b&fetf-apply=02b&fetf-agree=01&fetf-claim=01")
+  } else {
+      response.redirect("/fetf/activity-list/v2-0/?fetf-status=01b&fetf-apply=02a&fetf-agree=01&fetf-claim=01")
+  }
+})
+
+
+
 // FETF items livestock question
 
 router.post('/fetf-items-livestock-information', function(request, response) {
@@ -135,7 +162,7 @@ router.post('/fetf-items-other-locations', function(request, response) {
 router.post('/fetf-items-contracting', function(request, response) {
   var aboutContracting = request.session.data['willYouUseForContracting']
   if (aboutContracting == "yes"){
-      response.redirect("/fetf/application/v1-0/about-items/equipment-other-contracting")
+      response.redirect("/fetf/application/v1-0/about-items/equipment-contractor-details")
   } else {
       response.redirect("/fetf/application/v1-0/about-items/equipment-summary")
   }
@@ -144,6 +171,9 @@ router.post('/fetf-items-contracting', function(request, response) {
 
 // FETF items contracting other question
 
+router.post('/fetf-contractor-details', function(request, response) {
+  response.redirect("/fetf/application/v1-0/about-items/equipment-summary")
+})
 
 // FETF items summary
 
@@ -183,6 +213,12 @@ router.post('/fetf-livestock-schemes', function(request, response) {
 
 router.post('/fetf-check-business-details', function(request, response) {
   response.redirect("/fetf/activity-list/v2-0/?fetf-status=01b&fetf-apply=02f&fetf-agree=01&fetf-claim=01")
+})
+
+// FETF submit application
+
+router.post('/fetf-submit-application', function(request, response) {
+  response.redirect("/fetf/application/v1-0/submit-application/confirmation")
 })
 
 

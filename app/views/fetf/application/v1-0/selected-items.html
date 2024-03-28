@@ -11,8 +11,11 @@
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+
+    <form action="/selected-items-summary" method="post">
+
     <h1 class="govuk-heading-l">Selected items</h1>
-    <p class="govuk-body">The minimum grant you can apply for is £1,000 and the maximum is £25,000.</p>
+    <p class="govuk-body">The minimum grant you can apply for is £1,000 and the maximum is £50,000.</p>
 
 
 <!-- <h3 class="govuk-heading-l">Equipment summary</h3> -->
@@ -63,10 +66,19 @@
 <button type="submit" class="govuk-button" data-module="govuk-button">
   Apply for these items
 </button>
+
 <br>
-<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  View more items
-</button>
+
+</form>
+
+
+<span style="clear: both; display: block;">
+  <a href="items/equipment-list">
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="viewOtherItems">
+    View more items
+  </button>
+  </a>
+</span>
 
 
 </div>
