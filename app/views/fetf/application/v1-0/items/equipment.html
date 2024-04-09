@@ -27,7 +27,7 @@
 
     <!-- <span class="govuk-caption-xl">{{ item.section }}</span> -->
 
-    <form action="/fetf-items-selection" method="post">
+    <form action="/fetf/application/v1-0/item-quantity/{{ item.termName | lower | replace(' ', '-') }}" method="get">
 
     <h1 class="govuk-heading-l">{{ item.title }} (FETF{{ item.itemCode }})</h1>
 
@@ -163,7 +163,7 @@
 </div> -->
 
 <span>
-<button type="submit" class="govuk-button" data-module="govuk-button" name="selectThisItem">
+<button type="submit" class="govuk-button" data-module="govuk-button">
   Select this item
 </button>
 </span>

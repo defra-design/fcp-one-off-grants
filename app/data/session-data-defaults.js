@@ -35,6 +35,9 @@ module.exports = {
   'fetf-claim': '01',
 
   // FTF Claim upload statuses
-  'fetf-claim-upload': '01'
+  'fetf-claim-upload': '01',
+
+  // FETF shopping cart 
+  'selected-items': []
 
 }

@@ -39,6 +39,12 @@ router.get('/fetf/application/v1-0/items/:termName', (req, res) => {
     res.render('fetf/application/v1-0/items/equipment.html', { item })
 })
 
+router.get('/fetf/application/v1-0/item-quantity/:termName', (req, res) => {
+  const { termName } = req.params
+  const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
+  res.render('fetf/application/v1-0/item-quantity.html', { item })
+})
+
 // FETF items individual pages END
 
 
