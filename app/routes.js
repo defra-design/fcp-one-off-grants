@@ -112,7 +112,13 @@ router.post('/fetf-items-selection', function(request, response) {
 
 // FETF item quantity
 
-router.post('/fetf-item-quantity', function(request, response) {
+router.post('/fetf-add-to-selected-items', function(request, response) {
+  var quantity = request.body['quantity']
+  var termName = request.body['termName']
+  const item = _.findWhere(data, {termName: termName})
+  item.quantity = quantity
+  item.grantTotal = Number(item.quantity) * Number(item.grantValue.replace(',',''))
+  request.session.data['selected-items'].push(item)
   response.redirect("/fetf/application/v1-0/selected-items")
 })
 

@@ -34,22 +34,16 @@
     </tr>
   </thead>
   <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell" style="width: 30%;">Item title 1</td>
-      <td class="govuk-table__cell">£200.00</td>
-      <td class="govuk-table__cell">60</td>
-      <td class="govuk-table__cell">5&nbsp;&nbsp;&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
-      <td class="govuk-table__cell"><a href="" class="govuk-body-s">Remove<span class="govuk-visually-hidden"> item</span></a></td>
-      <td class="govuk-table__cell" style="text-align: right;">£1,000.00</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">Item title 2</td>
-      <td class="govuk-table__cell">£150.00</td>
-      <td class="govuk-table__cell">50</td>
-      <td class="govuk-table__cell">3&nbsp;&nbsp;&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
-      <td class="govuk-table__cell"><a href="" class="govuk-body-s">Remove<span class="govuk-visually-hidden"> item</span></a></td>
-      <td class="govuk-table__cell" style="text-align: right;">£450.00</td>
-    </tr>
+    {% for item in data['selected-items'] %}
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell" style="width: 30%;">{{ item.termName }}</td>
+        <td class="govuk-table__cell">£{{ item.grantValue }}</td>
+        <td class="govuk-table__cell">{{ item.score }}</td>
+        <td class="govuk-table__cell">{{ item.quantity }}&nbsp;&nbsp;&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
+        <td class="govuk-table__cell"><a href="" class="govuk-body-s">Remove<span class="govuk-visually-hidden"> item</span></a></td>
+        <td class="govuk-table__cell" style="text-align: right;">£{{ item.grantTotal }}</td>
+      </tr>
+    {% endfor %}
     <tr class="govuk-table__row">
       <td colspan="2"></td>
       <td colspan="3" style="padding: 20px 0; border-bottom: solid 1px #b1b4b6;">Requested grant total</td>

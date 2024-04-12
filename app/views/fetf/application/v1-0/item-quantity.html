@@ -13,7 +13,8 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="/fetf-item-quantity" method="post">
+    <form action="/fetf-add-to-selected-items" method="post">
+      <input type="hidden" name="termName" value="{{ item.termName }}">
 
     <span class="govuk-caption-l">{{ item.title }} (FETF{{ item.itemCode }})</span>
 <div class="govuk-form-group">
@@ -25,7 +26,8 @@
   <div id="event-name-hint" class="govuk-hint">
     Maximum quantity for this item is 3
   </div>
-  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="quantity" name="quantity" type="text" spellcheck="false">
+  <div class="govuk-input__wrapper">
+    <input class="govuk-input govuk-input--width-5" id="quantity" name="quantity" type="text" spellcheck="false">
     <div class="govuk-input__suffix" aria-hidden="true">item quantity</div>
   </div>
 </div>
