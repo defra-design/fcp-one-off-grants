@@ -8,7 +8,7 @@
   "grantValue": "477.60",
   "grantPercentage": "60",
   "averageValue": "796.00",
-  "score": "56",
+  "score": 56,
   "serialNumber": "yes",
   "eligible": {
     "eligibleBullet01": "remotely measure soil moisture at depths of up to 200mm",

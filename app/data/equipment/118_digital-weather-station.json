@@ -8,7 +8,7 @@
   "grantValue": "902.00",
   "grantPercentage": "50",
   "averageValue": "1,804.00",
-  "score": "67",
+  "score": 67,
   "serialNumber": "yes",
   "eligible": {
     "eligibleBullet01": "barometric pressure",

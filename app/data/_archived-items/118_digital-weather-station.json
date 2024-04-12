@@ -5,7 +5,7 @@
   "summary": "A station that records weather information.",
   "category": ["General"],
   "value": "575.00",
-  "score": "55",
+  "score": 55,
   "description": {
     "descriptionText01": "A system/station that has the minimum functionality to record:",
     "descriptionText02": "Nullam at risus et justo porttitor vehicula. Pellentesque congue laoreet lorem vitae malesuada. Nullam interdum ante vel risus blandit laoreet. Aliquam eget rhoncus libero, ut lacinia felis.",
