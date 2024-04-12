@@ -1,2 +1,12 @@
+# Node.js ignores
+node_modules/
 
-app/views/ftf/.DS_Store
+# Prototype ignores - per-user
+.tmp/
+.env
+migrate.log
+usage-data-config.json
+
+# General ignores
+.DS_Store
+.idea

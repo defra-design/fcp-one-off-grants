@@ -41,7 +41,7 @@
         <td class="govuk-table__cell">{{ item.score }}</td>
         <td class="govuk-table__cell">{{ item.quantity }}&nbsp;&nbsp;&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
         <td class="govuk-table__cell"><a href="" class="govuk-body-s">Remove<span class="govuk-visually-hidden"> item</span></a></td>
-        <td class="govuk-table__cell" style="text-align: right;">£{{ item.grantTotal }}</td>
+        <td class="govuk-table__cell" style="text-align: right;">{{ item.grantTotal | currency }}</td>
       </tr>
     {% endfor %}
     <tr class="govuk-table__row">
