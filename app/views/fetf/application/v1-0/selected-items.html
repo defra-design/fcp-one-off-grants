@@ -35,8 +35,10 @@
   </thead>
   <tbody class="govuk-table__body">
     {% set grantTotal = 0 %}
+    {% set scoreTotal = 0 %}
     {% for item in data['selected-items'] %}
       {% set grantTotal = grantTotal + item.grantTotal %}
+      {% set scoreTotal = scoreTotal + item.score %}
       <tr class="govuk-table__row">
         <td class="govuk-table__cell" style="width: 30%;">{{ item.termName }}</td>
         <td class="govuk-table__cell">£{{ item.grantValue }}</td>
@@ -59,7 +61,7 @@
       <td colspan="2"></td>
       <td colspan="3" style="padding: 20px 0; border-bottom: solid 1px #b1b4b6;">Score total</td>
       <td style="text-align: right; border-bottom: solid 1px #b1b4b6;">
-        <span class="govuk-body-l" style="font-weight: bold;">55</span>
+        <span class="govuk-body-l" style="font-weight: bold;">{{ scoreTotal/data['selected-items'].length }}</span>
       </td>
     </tr>
   </tbody>
