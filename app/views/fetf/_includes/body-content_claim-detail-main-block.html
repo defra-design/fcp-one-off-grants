@@ -12,6 +12,7 @@
 <span class="content-section">
   <p class="govuk-body">This table is pre-populated from your grant funding agreement.</p>
 
+
 <p class="govuk-body">You were awarded a grant of <strong>{{ grantTotal | currency }}</strong> for the items:</p>
 
 <!-- TABLE CONTENT -->
@@ -26,13 +27,13 @@
   </thead>
   <tbody class="govuk-table__body">
     {% set grantTotal = 0 %}
-    {% set scoreTotal = 0 %}
-    {% for item in data['selected-items'] %}
-      {% set grantTotal = grantTotal + item.grantTotal %}
-      {% set scoreTotal = scoreTotal + item.score %}
+  {% set scoreTotal = 0 %}
+  {% for item in data['selected-items'] %}
+    {% set grantTotal = grantTotal + item.grantTotal %}
+    {% set scoreTotal = scoreTotal + item.score %}
     <tr class="govuk-table__row">
       <td scope="row" class="govuk-table__cell">{{ item.termName }}</td>
-      <td class="govuk-table__cell">FETF4</td>
+      <td class="govuk-table__cell">FETF{{ item.itemCode }}</td>
       <td class="govuk-table__cell govuk-table__cell--numeric">{{ item.quantity }}</td>
       <td class="govuk-table__cell govuk-table__cell--numeric">£{{ item.grantValue }}</td>
     </tr>
