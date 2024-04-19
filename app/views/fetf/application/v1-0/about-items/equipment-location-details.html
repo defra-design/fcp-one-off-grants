@@ -28,9 +28,18 @@
         <div id="main-location-hint" class="govuk-hint">
           If you are a contractor enter the postcode of where the items are usually located when not in use at a client’s location.
         </div>
-        <input class="govuk-input govuk-input--width-10" id="main-location-postcode" name="mainLocationPostcode" type="text" aria-describedby="main-location-hint">
 
-        <br><br><br>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-postcode">
+            Main postcode
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+        </div>
+
+
+        <!-- <input class="govuk-input govuk-input--width-10" id="main-location-postcode" name="mainLocationPostcode" type="text" aria-describedby="main-location-hint"> -->
+
+        <!-- <br><br><br> -->
 
         <h2 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--m" for="other-location-postcodes">
@@ -40,7 +49,23 @@
         <div id="other-location-hint" class="govuk-hint">
           Enter a maximum of 2 postcodes. If you are a contractor you do not need to answer this question.
         </div>
-        <textarea class="govuk-textarea" id="other-location-postcodes" name="otherLocationPostcodes" rows="3" aria-describedby="other-location-hint"></textarea>
+        
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-postcode">
+            Other postcode 1
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-postcode">
+            Other postcode 2                   
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+        </div>
+
+        
       </div>
 
 
