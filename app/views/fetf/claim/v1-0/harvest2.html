@@ -53,7 +53,10 @@ Upload3
   </p>
 </div>
 
-<a href="#" class="govuk-back-link">Back</a>
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
 
 
 <br><br>

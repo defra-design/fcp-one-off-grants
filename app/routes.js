@@ -134,6 +134,30 @@ router.post('/fetf-add-to-selected-items', function(request, response) {
 })
 
 
+// FETF claims summary
+
+router.post('/fetf-add-to-selected-items-claims', function(request, response) {
+  var quantity = Number(request.body['quantity'])
+  var termName = request.body['termName']
+  var itemExists = false
+  for (var selectedItem of request.session.data['selected-items']){
+    if (selectedItem.termName == termName) {
+      itemExists = true
+      selectedItem.quantity += quantity
+      selectedItem.grantTotal = Number(selectedItem.quantity) * Number(selectedItem.grantValue.replace(',',''))
+    }
+  }
+  if (itemExists == false){
+    const item = _.findWhere(data, {termName: termName})
+    item.quantity = quantity
+    item.grantTotal = Number(item.quantity) * Number(item.grantValue.replace(',',''))
+    request.session.data['selected-items'].push(item)
+  }
+  
+  response.redirect("/fetf/_includes/body-content_claim-detail-main-block")
+})
+
+
 // FETF item summary
 
 router.post('/selected-items-summary', function(request, response) {
