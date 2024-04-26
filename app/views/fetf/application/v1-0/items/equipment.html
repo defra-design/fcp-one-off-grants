@@ -27,7 +27,7 @@
 
     <!-- <span class="govuk-caption-xl">{{ item.section }}</span> -->
 
-    <form action="/fetf/application/v1-0/item-quantity/{{ item.termName | lower | replace(' ', '-') }}" method="get">
+    
 
     <h1 class="govuk-heading-l">{{ item.title }} (FETF{{ item.itemCode }})</h1>
 
@@ -139,45 +139,24 @@
 {% endif %}
 
 
-<!-- <h2 class="govuk-heading-m">Scoring</h2>
-<p class="govuk-body">Each item has been assigned a score out of 100 based on certain criteria.</p>
-<p class="govuk-body">For Productivity and Slurry items, this criteria is:</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>productivity</li>
-  <li>environmental benefit</li>
-  <li>level of adoption by the industry (items not in widespread use have a higher score)</li>
-</ul> -->
-
-
-
-
-<!-- <div class="govuk-form-group">
-  <h1 class="govuk-label-wrapper">
-    <label class="govuk-label govuk-label--m" for="quantity">
-      How many do you need?
-    </label>
-  </h1>
-  <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="quantity" name="quantity" type="text" spellcheck="false">
-    <div class="govuk-input__suffix" aria-hidden="true">quantity</div>
-  </div>
-</div> -->
-
-<span>
-<button type="submit" class="govuk-button" data-module="govuk-button">
-  Select this item
-</button>
-</span>
-
-
-</form>  
-
-<span style="clear: both; display: block;">
-  <a href="equipment-list">
-  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="viewOtherItems">
-    View other items
-  </button>
+<div class="govuk-button-group">
+  <a href="/fetf/application/v1-0/item-quantity/{{ item.termName | lower | replace(' ', '-') }}" method="get">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+    Select this item
+    </button>
   </a>
-</span>
+  <a href="equipment-list">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="viewOtherItems">
+    View other items
+    </button>
+  </a>
+</div>
+
+
+
+
+
+
 
   </div>
 

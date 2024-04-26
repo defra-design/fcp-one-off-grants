@@ -33,6 +33,7 @@
 </div>
 
 
+<div class="govuk-button-group">
 <button type="submit" class="govuk-button" data-module="govuk-button">
   Continue
 </button>
@@ -41,13 +42,17 @@
 </form>
 
 
-<span style="clear: both; display: block;">
-  <a href="items/equipment-list">
-  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="viewOtherItems">
+
+  <a href="/fetf/application/v1-0/items/equipment-list" class="govuk-link">
     Cancel
-  </button>
+  
   </a>
-</span>
+</div>
+
+
+
+
+
 
   </div>
   <div class="govuk-grid-column-one-third">
@@ -63,3 +68,36 @@
 </main>
 
 {% endblock %}
+
+
+
+
+
+
+
+
+<!-- 
+<a href="/fetf/application/v1-0/items/equipment-list" >
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="viewOtherItems">
+    Cancel
+  </button>
+  </a>
+</div> -->
+
+
+
+
+
+<!-- <div class="govuk-button-group">
+  <a action="/fetf-add-to-selected-items" method="post">
+    <input type="hidden" name="termName" value="{{ item.termName }}">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+    Continue
+    </button>
+  </a>
+  <a href="/fetf/application/v1-0/items/equipment-list">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="viewOtherItems">
+    Cancel
+    </button>
+  </a>
+</div> -->
