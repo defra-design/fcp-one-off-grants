@@ -165,7 +165,7 @@ router.post('/selected-items-summary', function(request, response) {
 })
 
 
-// FETF items section complete question
+// FETF items section complete question (not used, bring it back if we want to include the 'Have you completed this section' question)
 
 router.post('/fetf-items-complete', function(request, response) {
   var sectionComplete = request.session.data['haveYouCompletedThisSection']
