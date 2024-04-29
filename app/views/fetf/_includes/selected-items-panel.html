@@ -7,6 +7,7 @@
 {% endfor %}
 
 {% if showPanel %}
+<div class="full-panel">
 <div class="selected-items-panel">
     <h3 class="govuk-heading-s">Your selected items</h3>
     {% set grantTotal = 0 %}
@@ -16,15 +17,18 @@
             {% set grantTotal = grantTotal + item.grantTotal %}
             {% set scoreTotal = scoreTotal + item.score %}
         
-            <p>{{ item.quantity }} × {{ item.termName }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="text-align: right;">{{ item.grantTotal | currency }}</span>
+            <p>{{ item.quantity }} × {{ item.termName }}&nbsp;&nbsp;&nbsp;{{ item.grantTotal | currency }}
                 <a href="/fetf/application/v1-0/item-quantity/{{ item.termName | lower | replace(' ', '-') }}" class="govuk-body-s">Edit</a>
             </p>
         {% endif %}
     {% endfor %}
     <hr>
-    <p>Total amount<p style="text-align: right;">{{ grantTotal | currency }}</p></p>
+    <p>Total amount&nbsp;&nbsp;&nbsp;<b>{{ grantTotal | currency }}</b></p>
 </div>
 <p class="govuk-body-s">The minimum grant you can apply for is £1,000 and the maximum grant is £50,000.</p>
+</div>
+
+
 {% endif %}
 
 
