@@ -17,13 +17,15 @@
             {% set grantTotal = grantTotal + item.grantTotal %}
             {% set scoreTotal = scoreTotal + item.score %}
         
-            <p>{{ item.quantity }} × {{ item.termName }}&nbsp;&nbsp;&nbsp;{{ item.grantTotal | currency }}
+            <p>{{ item.quantity }} × {{ item.termName }}
+                
+                <!-- (£{{ item.grantValue}}) -->
                 <a href="/fetf/application/v1-0/item-quantity/{{ item.termName | lower | replace(' ', '-') }}" class="govuk-body-s">Edit</a>
             </p>
         {% endif %}
     {% endfor %}
     <hr>
-    <p>Total amount&nbsp;&nbsp;&nbsp;<b>{{ grantTotal | currency }}</b></p>
+    <p>Total amount&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>{{ grantTotal | currency }}</b></p>
 </div>
 <p class="govuk-body-s">The minimum grant you can apply for is £1,000 and the maximum grant is £50,000.</p>
 </div>
