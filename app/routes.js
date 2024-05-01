@@ -272,3 +272,11 @@ router.post('/fetf-submit-application', function(request, response) {
 // FETF journey branching END
 
 module.exports = router
+
+// Claims itemt details
+
+router.get('/fetf/application/v1-0/items/:termName', (req, res) => {
+  const { termName } = req.params
+  const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
+  res.render('fetf/claim/v1-0/items/claim-item-detail2.html', { item })
+})

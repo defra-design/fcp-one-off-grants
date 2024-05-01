@@ -17,13 +17,13 @@
   <div class="govuk-grid-column-two-thirds">
 
     <form action="/fetf-check-business-details" method="post">
-
+      <span class="govuk-caption-l">About your business</span>
     <h1 class="govuk-heading-l">Check your details</h1>
 
     <!-- <p class="govuk-body">Changes in this section will update your Rural Payments service account.</p> -->
 
     <h2 class="govuk-heading-m" style="float: left;">Business structure</h2>
-    <p class="govuk-body" style="float: right;"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> business structure</span></a>
+    <p class="govuk-body" style="float: right;"><a class="govuk-link" href="/fetf/application/v1-0/business-details/business-structure">Change<span class="govuk-visually-hidden"> business structure</span></a>
     </p>
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -31,7 +31,7 @@
           Business structure description
         </dt>
         <dd class="govuk-summary-list__value">
-          Landowner
+          {{ data['structure'] }}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -39,7 +39,7 @@
           Number of employees
         </dt>
         <dd class="govuk-summary-list__value">
-          14
+          {{ data['employeesNumber'] }}
         </dd>
       </div>
     </dl>
@@ -54,7 +54,7 @@
           Agriculture - area of farm in hectares
         </dt>
         <dd class="govuk-summary-list__value">
-          40
+          {{ data['agricultureHectares'] }}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -62,7 +62,7 @@
           Horticulture - area of nursery in hectares
         </dt>
         <dd class="govuk-summary-list__value">
-          30
+          {{ data['horticultureHectares'] }}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -70,7 +70,7 @@
           Forestry - area of woodland in hectares
         </dt>
         <dd class="govuk-summary-list__value">
-          20
+          {{ data['forestryHectares'] }}
         </dd>
       </div>
     </dl>
@@ -86,7 +86,7 @@
           Which farm assurance schemes do you belong to?
         </dt>
         <dd class="govuk-summary-list__value">
-          Red Tractor<br>Soil Association
+          {{ data['assurance-scheme'] }}
         </dd>
       </div>
     </dl>
@@ -102,14 +102,14 @@
           Which livestock health or disease prevention schemes do you belong to?
         </dt>
         <dd class="govuk-summary-list__value">
-          Not registered for any schemes.
+          {{ data['livestockSchemes'] }}
         </dd>
       </div>
     </dl>
 
 
 
-    <p class="govuk-body">You must confirm that your business and contact details are correct.</p>
+    <p class="govuk-body">Changes to the following sections will update your Rural Payments service account.</p>
 
     <h2 class="govuk-heading-m" style="float: left;">Applicant details</h2>
     <p class="govuk-body" style="float: right;"><a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> applicant details</span></a>

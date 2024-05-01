@@ -1,3 +1,10 @@
+{% set grantTotal = 0 %}
+      {% set scoreTotal = 0 %}
+      {% for item in data['selected-items'] %}
+        {% set grantTotal = grantTotal + item.grantTotal %}
+        {% set scoreTotal = scoreTotal + item.score %}
+      {% endfor %}
+
 {% extends "layouts/main-fetf.html" %}
 
 {% block pageTitle %}
@@ -30,328 +37,67 @@
 
   <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-two-thirds">
-      
-      <span class="govuk-caption-xl">Claim for a FETF Grant</span>
-      <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
-        Upload claim evidence
-      </h1>
  
-       <p class="govuk-body">Add evidence for each item.</p>
 
 
-      <div class="govuk-inset-text">
-        The RPA aims to pay complete claims within 30 days.
+      <div class="govuk-width-container">
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <span class="govuk-caption-xl">Submit claim</span>
+              <h1 class="govuk-heading-xl">Upload claim evidence</h1>
+              <h2 class="govuk-heading-m">Item description</h2>
+              <ul class="govuk-task-list">
+                {% set grantTotal = 0 %}
+                {% set scoreTotal = 0 %}
+                {% for item in data['selected-items'] %}
+                  {% set grantTotal = grantTotal + item.grantTotal %}
+                  {% set scoreTotal = scoreTotal + item.score %}
+                <li class="govuk-task-list__item govuk-task-list__item--with-link">
+                  <div class="govuk-task-list__name-and-hint">
+                    
+                    <a  id="linked-data" tabindex="-1" class="govuk-link govuk-task-list__link" href="/fetf/claim/v1-0/claim-item-detail.html" aria-describedby="before-you-start-1-status">
+                      {{ item.termName }}&nbsp;(FETF{{ item.itemCode }})
+                    </a>
+
+
+
+                   
+
+
+                  </div>
+                  <div class="govuk-task-list__status" id="before-you-start-1-status">
+                    Completed
+                  </div>
+                </li>
+                {% endfor %}
+                
+              </ul>
+             
+              <a href="summary">
+                <button class="govuk-button">
+                  Save and continue
+                </button>
+              </a>
+            </div>
+          </div>
+        </main>
       </div>
 
- 
 
-     
-
-      <br>
-
-      <p class="govuk-body"><strong>Item description</strong></p>
+      
+      
 
  
 
 
-      <ol class="govuk-prototype-kit-task-list">
-        
-        <li style="list-style: none; margin: 0; padding: 0;">
-          <ul class="govuk-prototype-kit-task-list__items" style="padding-left: 0;">
-           
-          {% if (data['01'] == "n") %}
-
-          <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <div class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href="paper-pot?sn=no" aria-describedby="application-details-2-status">Paper pot transplanter (FETF4)</a>
-            </div>
-            <div class="govuk-task-list__status" id="application-details-4-status">
-              <strong class="govuk-tag govuk-tag--blue">
-                Not yet started
-              </strong>
-          </div>
-          </li>
-
-          {% elif (data['01'] == "i") %}
-
-          <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <div class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href="paper-pot?sn=no" aria-describedby="application-details-2-status">Paper pot transplanter (FETF4)</a>
-            </div>
-            <div class="govuk-task-list__status" id="application-details-4-status">
-              <strong class="govuk-tag govuk-tag--light-blue">
-                In progress
-              </strong>
-          </div>
-          </li>
-
-          {% elif (data['01'] == "c") %}
-
-            <li class="govuk-task-list__item govuk-task-list__item--with-link">
-              <div class="govuk-task-list__name-and-hint">
-                <a class="govuk-link govuk-task-list__link" href="paper-pot?sn=no" aria-describedby="application-details-2-status">Paper pot transplanter (FETF4)</a>
-              </div>
-              <div class="govuk-task-list__status" id="application-details-4-status">
-                Completed
-            </div>
-            </li>
-
-          {% endif %}
-
-          
-
-          {% if (data['02'] == "n") %}
-
-          <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <div class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href="salad?sn=no" aria-describedby="application-details-2-status">Salad leaf harvester (FETF8)</a>
-            </div>
-            <div class="govuk-task-list__status" id="application-details-4-status">
-              <strong class="govuk-tag govuk-tag--blue">
-                Not yet started
-              </strong>
-          </div>
-          </li>
-
-          {% elif (data['02'] == "i") %}
-
-          <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <div class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href="salad?sn=no" aria-describedby="application-details-2-status">Salad leaf harvester (FETF8)</a>
-            </div>
-            <div class="govuk-task-list__status" id="application-details-4-status">
-              <strong class="govuk-tag govuk-tag--light-blue">
-                In progress
-              </strong>
-          </div>
-          </li>
-
-          {% elif (data['02'] == "c") %}
-
-            <li class="govuk-task-list__item govuk-task-list__item--with-link">
-              <div class="govuk-task-list__name-and-hint">
-                <a class="govuk-link govuk-task-list__link" href="salad?sn=no" aria-describedby="application-details-2-status">Salad leaf harvester (FETF8)</a>
-              </div>
-              <div class="govuk-task-list__status" id="application-details-4-status">
-                Completed
-            </div>
-            </li>
-
-          {% endif %}
-
-
-
-          {% if (data['03'] == "n") %}
-
-          <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <div class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href="harvest?sn=yes" aria-describedby="application-details-2-status">Harvesting head (FETF13)</a>
-            </div>
-            <div class="govuk-task-list__status" id="application-details-4-status">
-              <strong class="govuk-tag govuk-tag--blue">
-                Not yet started
-              </strong>
-          </div>
-          </li>
-
-          {% elif (data['03'] == "i") %}
-
-          <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <div class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href="harvest?sn=yes" aria-describedby="application-details-2-status">Harvesting head (FETF13)</a>
-            </div>
-            <div class="govuk-task-list__status" id="application-details-4-status">
-              <strong class="govuk-tag govuk-tag--light-blue">
-                In progress
-              </strong>
-          </div>
-          </li>
-
-          {% elif (data['03'] == "c") %}
-
-            <li class="govuk-task-list__item govuk-task-list__item--with-link">
-              <div class="govuk-task-list__name-and-hint">
-                <a class="govuk-link govuk-task-list__link" href="harvest?sn=yes" aria-describedby="application-details-2-status">Harvesting head (FETF13)</a>
-              </div>
-              <div class="govuk-task-list__status" id="application-details-4-status">
-                Completed
-            </div>
-            </li>
-
-          {% endif %}
-
-
-
-          {% if (data['04'] == "n") %}
-
-          <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <div class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href="slurry?sn=no" aria-describedby="application-details-2-status">Slurry separators (FETF27)</a>
-            </div>
-            <div class="govuk-task-list__status" id="application-details-4-status">
-              <strong class="govuk-tag govuk-tag--blue">
-                Not yet started
-              </strong>
-          </div>
-          </li>
-
-          {% elif (data['04'] == "i") %}
-
-          <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <div class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href="slurry?sn=no" aria-describedby="application-details-2-status">Slurry separators (FETF27)</a>
-            </div>
-            <div class="govuk-task-list__status" id="application-details-4-status">
-              <strong class="govuk-tag govuk-tag--light-blue">
-                In progress
-              </strong>
-          </div>
-          </li>
-
-          {% elif (data['04'] == "c") %}
-
-            <li class="govuk-task-list__item govuk-task-list__item--with-link">
-              <div class="govuk-task-list__name-and-hint">
-                <a class="govuk-link govuk-task-list__link" href="slurry?sn=no" aria-describedby="application-details-2-status">Slurry separators (FETF27)</a>
-              </div>
-              <div class="govuk-task-list__status" id="application-details-4-status">
-                Completed
-            </div>
-            </li>
-
-          {% endif %}
-
-
-
-          {% if (data['05'] == "n") %}
-
-          <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <div class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href="shoe?sn=yes" aria-describedby="application-details-2-status">Trailing shoe slurry system over 8m (FETF37)</a>
-            </div>
-            <div class="govuk-task-list__status" id="application-details-4-status">
-              <strong class="govuk-tag govuk-tag--blue">
-                Not yet started
-              </strong>
-          </div>
-          </li>
-
-          {% elif (data['05'] == "i") %}
-
-          <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <div class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href="shoe?sn=yes" aria-describedby="application-details-2-status">Trailing shoe slurry system over 8m (FETF37)</a>
-            </div>
-            <div class="govuk-task-list__status" id="application-details-4-status">
-              <strong class="govuk-tag govuk-tag--light-blue">
-                In progress
-              </strong>
-          </div>
-          </li>
-
-          {% elif (data['05'] == "c") %}
-
-            <li class="govuk-task-list__item govuk-task-list__item--with-link">
-              <div class="govuk-task-list__name-and-hint">
-                <a class="govuk-link govuk-task-list__link" href="shoe?sn=yes" aria-describedby="application-details-2-status">Trailing shoe slurry system over 8m (FETF37)</a>
-              </div>
-              <div class="govuk-task-list__status" id="application-details-4-status">
-                Completed
-            </div>
-            </li>
-
-          {% endif %}
 
 
 
 
-          {% if (data['06'] == "n") %}
 
-          <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <div class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href="gps?sn=no" aria-describedby="application-details-2-status">GPS light bar (FETF46)</a>
-            </div>
-            <div class="govuk-task-list__status" id="application-details-4-status">
-              <strong class="govuk-tag govuk-tag--blue">
-                Not yet started
-              </strong>
-          </div>
-          </li>
-
-          {% elif (data['06'] == "i") %}
-
-          <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <div class="govuk-task-list__name-and-hint">
-              <a class="govuk-link govuk-task-list__link" href="gps?sn=no" aria-describedby="application-details-2-status">GPS light bar (FETF46)</a>
-            </div>
-            <div class="govuk-task-list__status" id="application-details-4-status">
-              <strong class="govuk-tag govuk-tag--light-blue">
-                In progress
-              </strong>
-          </div>
-          </li>
-
-          {% elif (data['06'] == "c") %}
-
-            <li class="govuk-task-list__item govuk-task-list__item--with-link">
-              <div class="govuk-task-list__name-and-hint">
-                <a class="govuk-link govuk-task-list__link" href="gps?sn=no" aria-describedby="application-details-2-status">GPS light bar (FETF46)</a>
-              </div>
-              <div class="govuk-task-list__status" id="application-details-4-status">
-                Completed
-            </div>
-            </li>
-
-          {% endif %}
-
-          </ul>
-      </ol>
-
-
-
-
-      {% set grantTotal = 0 %}
-      {% set scoreTotal = 0 %}
-      {% for item in data['selected-items'] %}
-        {% set grantTotal = grantTotal + item.grantTotal %}
-        {% set scoreTotal = scoreTotal + item.score %}
-      {% endfor %}
-      
-      
-      
-      <!-- TABLE CONTENT -->
-      <table class="govuk-table">
-        
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Item description</th>
-            <th scope="col" class="govuk-table__header"></th>
-            
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          {% for item in data['selected-items'] %}
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">{{ item.title }}</td>
-              <td class="govuk-table__cell">Completed</td>
-              
-            </tr>
-          {% endfor %}
-          
-        </tbody>
-      </table>
       
 
-
-
-
-
-      <a href="summary">
-        <button class="govuk-button">
-          Save and continue
-        </button>
-      </a>
 
   {% include "../../_includes/details-block_claim-questions-contact.html" %}
 
