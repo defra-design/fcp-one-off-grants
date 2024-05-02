@@ -27,7 +27,7 @@
   <div class="govuk-grid-column-two-thirds">
 
 
-    <span class="govuk-caption-xl">Claim for a FETF Grant</span>
+    <span class="govuk-caption-xl">Submit claim</span>
     <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Check your claim evidence</h1>
     {% if (data['progress'] == "submitted") %}
     <span class="govuk-body">Evidence submitted as part of your claim.</span><br>
@@ -52,7 +52,7 @@
             </dt>
 
             <dd class="govuk-summary-list__value">
-              4
+             4
             </dd>
             {% if (data['progress'] == "submitted") %}{% else %}
             <dd class="govuk-summary-list__actions">
@@ -957,7 +957,8 @@
 
       <a href="index?fetf-status=03&fetf-apply=03b&fetf-agree=03&fetf-claim=02d">
         <button class="govuk-button" data-module="govuk-button">
-          Continue
+          Save and continue
+          
         </button>
       </a>
 

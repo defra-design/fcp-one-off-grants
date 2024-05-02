@@ -165,7 +165,7 @@ router.post('/selected-items-summary', function(request, response) {
 })
 
 
-// FETF items section complete question
+// FETF items section complete question (not used, bring it back if we want to include the 'Have you completed this section' question)
 
 router.post('/fetf-items-complete', function(request, response) {
   var sectionComplete = request.session.data['haveYouCompletedThisSection']
@@ -272,3 +272,11 @@ router.post('/fetf-submit-application', function(request, response) {
 // FETF journey branching END
 
 module.exports = router
+
+// Claims itemt details
+
+router.get('/fetf/application/v1-0/items/:termName', (req, res) => {
+  const { termName } = req.params
+  const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
+  res.render('fetf/claim/v1-0/items/claim-item-detail2.html', { item })
+})

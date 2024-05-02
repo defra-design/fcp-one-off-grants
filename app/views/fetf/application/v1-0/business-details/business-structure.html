@@ -4,7 +4,10 @@
 
 {% block beforeContent %}
 {% include "../../../_includes/phase-banner_alpha.html" %}
-<a href="equipment-list" class="govuk-back-link">Back</a>
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
 {% endblock %}
 
 
@@ -23,31 +26,32 @@
           <fieldset class="govuk-fieldset" aria-describedby="business-structure-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <h2 class="govuk-fieldset__heading">
-                Which of these best describes your business structure?
+                Which of these best describes your business structure? / Who is applying?
               </h2>
             </legend>
-            <div id="business-structure-hint" class="govuk-hint">
+            <!-- <div id="business-structure-hint" class="govuk-hint">
               Select all that apply.
-            </div>
+            </div> -->
             <div class="govuk-checkboxes" data-module="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="structure" name="structure" type="checkbox" value="landowner">
+                <input class="govuk-checkboxes__input" id="structure" name="structure" type="checkbox" value="Landowner">
                 <label class="govuk-label govuk-checkboxes__label" for="structure">
                   Landowner
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="structure-2" name="structure" type="checkbox" value="tenant">
+                <input class="govuk-checkboxes__input" id="structure-2" name="structure" type="checkbox" value="Tenant farmer">
                 <label class="govuk-label govuk-checkboxes__label" for="structure-2">
                   Tenant farmer
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="structure-3" name="structure" type="checkbox" value="contractor">
+                <input class="govuk-checkboxes__input" id="structure-3" name="structure" type="checkbox" value="Contractor">
                 <label class="govuk-label govuk-checkboxes__label" for="structure-3">
                   Contractor
                 </label>
               </div>
+              
             </div>
           </fieldset>
 
@@ -60,7 +64,7 @@
         <div id="employees-number-hint" class="govuk-hint">
           Full-time employees, including the owner.
         </div>
-        <input class="govuk-input govuk-input--width-10" id="employees-number" name="employeesNumber" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric">
+        <input class="govuk-input govuk-input--width-5" id="employees-number" name="employeesNumber" type="text" spellcheck="false" aria-describedby="employees-number-hint" inputmode="numeric">
       </div>
 
 
@@ -79,3 +83,5 @@
 </main>
 
 {% endblock %}
+
+

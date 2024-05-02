@@ -1,7 +1,7 @@
 {% extends "layouts/main-fetf.html" %}
 
 {% block pageTitle %}
-Upload5
+Upload1
 {% endblock %}
 
 {% block content %}
@@ -48,10 +48,7 @@ Upload5
   </p>
 </div>
 
-{{ govukBackLink({
-  text: "Back",
-  href: "javascript:history.back()"
-}) }}
+<a href="#" class="govuk-back-link">Back</a>
 
 
 <br><br>
@@ -60,12 +57,18 @@ Upload5
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
-      <span class="govuk-caption-xl">Item details</span>
+      <span class="govuk-caption-xl">Submit claim</span>
       <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
-        Trailing shoe slurry system over 8m (FETF37)
+        {{ item.title }} (FETF{{ item.itemCode }})
       </h1>
 
-      <p class="govuk-body">Upload evidence to show the item has been bought and paid in full, and is in place.</p>
+      <p class="govuk-body">To make a claim, you must provide evidence that each item you are claming for:
+        <ul class="govuk-list govuk-list--bullet">
+          <li>has been purchased (for example, invoices)</li>
+          <li>has been paid for in full (for example, receipts and bank statements - you can cross out other transactions)</li>
+          <li>is in place and opertational (for example, photos, videos)</li>
+        </ul>
+      </p>
 
 
 
@@ -180,7 +183,7 @@ function showVisualEvidenceSection() {
 
 
 
-     <a href="upload?01=c&02=c&03=c&04=c&05=c&06=n">
+     <a href="upload?01=c&02=n&03=n&04=n&05=n&06=n">
         <button class="govuk-button">
           Save and continue
         </button>
@@ -202,6 +205,14 @@ function showVisualEvidenceSection() {
 
 
 {% endblock %}
+
+
+
+
+
+
+
+
 
 
 

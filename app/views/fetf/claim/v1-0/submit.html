@@ -27,6 +27,8 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+    <form action="/fetf/claim/v1-0/confirmation" method="post">
+
     <span class="govuk-caption-xl">Claim for a FETF Grant</span>
     <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Submit claim</h1>
     <span class="govuk-body">Read and agree to submit your claim.</span>
@@ -37,7 +39,7 @@
     <h2 class="govuk-heading-m">Declaration</h2>
 
 
-    <p class="govuk-body">I declare that:<br>
+    <p class="govuk-body">I confirm that:<br>
       <ul class="govuk-list govuk-list--bullet">
         <li>I have complied with and will continue to comply with my grant funding agreement.</li>
         <li>I have checked the information is correct and I accept full responsibility for it.</li>
@@ -66,15 +68,33 @@
 
 <br><br><br>
 
-<a href="confirmation.html">
-  <button class="govuk-button" data-module="govuk-button" style="margin-bottom: 40px;">
+
+
+
+
+<div class="govuk-button-group">
+ 
+  <button type="submit" class="govuk-button" data-module="govuk-button">
     Submit claim
   </button>
-</a>
-<br>
-<button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  Cancel
-</button>
+
+  <br>
+  
+  </form>
+  
+  
+  
+    <a href="/fetf/claim/v1-0/index?fetf-status=03&fetf-apply=03b&fetf-agree=03&fetf-claim=02d" class="govuk-link">
+      Cancel
+    
+    </a>
+  </div>
+
+
+
+
+  
+
 
 
 

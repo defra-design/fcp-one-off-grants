@@ -4,7 +4,10 @@
 
 {% block beforeContent %}
 {% include "../../../_includes/phase-banner_alpha.html" %}
-<a href="equipment-list" class="govuk-back-link">Back</a>
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -17,7 +20,7 @@
 
     <form action="/fetf-items-summary" method="post">
 
-    <h1 class="govuk-heading-l">Items details summary</h1>
+    <h1 class="govuk-heading-l">Item summary</h1>
 
     <h2 class="govuk-heading-m">Livestock information</h2>
 
@@ -27,7 +30,7 @@
           Total number of bovine animals
         </dt>
         <dd class="govuk-summary-list__value">
-          40
+          {{data['bovineAnimals']}}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
@@ -38,7 +41,7 @@
           County parish holding number
         </dt>
         <dd class="govuk-summary-list__value">
-          08/123/4567
+          {{data['accountNumber1']}}/{{data['accountNumber2']}}/{{data['accountNumber3']}}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
@@ -46,7 +49,7 @@
       </div>
     </dl>
 
-    <h2 class="govuk-heading-m">Items location</h2>
+    <h2 class="govuk-heading-m">Item location</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -63,7 +66,7 @@
     </dl>
 
 
-    <h2 class="govuk-heading-m">Items contracting</h2>
+    <h2 class="govuk-heading-m">Contracting</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">

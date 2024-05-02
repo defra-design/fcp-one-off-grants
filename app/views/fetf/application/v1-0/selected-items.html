@@ -11,21 +11,13 @@
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-
-    <form action="/selected-items-summary" method="post">
-
     <h1 class="govuk-heading-l">Selected items</h1>
     <p class="govuk-body">The minimum grant you can apply for is £1,000 and the maximum is £50,000.</p>
-
-
-<!-- <h3 class="govuk-heading-l">Equipment summary</h3> -->
-
-
 <table class="govuk-table">
   <caption class="govuk-table__caption govuk-table__caption--m">Items summary</caption>
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Item name</th>
+      <th scope="col" class="govuk-table__header">Item</th>
       <th scope="col" class="govuk-table__header">Code</th>
       <th scope="col" class="govuk-table__header" style="text-align: right;">Quantity</th>
       <th scope="col" class="govuk-table__header" style="text-align: right;">Grant amount</th>
@@ -33,70 +25,45 @@
       <th scope="col" class="govuk-table__header" style="text-align: right;"></th>
     </tr>
   </thead>
-  <tbody class="govuk-table__body">
-    {% set grantTotal = 0 %}
-    {% set scoreTotal = 0 %}
-    {% for item in data['selected-items'] %}
-      {% set grantTotal = grantTotal + item.grantTotal %}
-      {% set scoreTotal = scoreTotal + item.score %}
+    <tbody class="govuk-table__body">
+      {% set grantTotal = 0 %}
+      {% set scoreTotal = 0 %}
+      {% for item in data['selected-items'] %}
+        {% set grantTotal = grantTotal + item.grantTotal %}
+        {% set scoreTotal = scoreTotal + item.score %}
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" >{{ item.title }}</td>
+          <td class="govuk-table__cell">FETF{{ item.itemCode }}</td>
+          <td class="govuk-table__cell" style="text-align: right;">{{ item.quantity }}&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
+          <td class="govuk-table__cell" style="text-align: right;">{{ item.grantTotal | currency }}</td>
+          <td class="govuk-table__cell" style="text-align: right;">{{ item.score }}</td>
+          <td class="govuk-table__cell"><a href="#" class="govuk-body-s" style="text-align: right;">Remove</a></td>
+        </tr>
+      {% endfor %}
       <tr class="govuk-table__row">
-        <td class="govuk-table__cell" >{{ item.title }}</td>
-        <td class="govuk-table__cell">FETF{{ item.itemCode }}</td>
-        <td class="govuk-table__cell" style="text-align: right;">{{ item.quantity }}&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
-        <td class="govuk-table__cell" style="text-align: right;">{{ item.grantTotal | currency }}</td>
-        <td class="govuk-table__cell" style="text-align: right;">{{ item.score }}</td>
-        <td class="govuk-table__cell"><a href="#" class="govuk-body-s" style="text-align: right;">Remove</a></td>
-      </tr>
-    {% endfor %}
-
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Total requested grant amount</th>
+        <th scope="row" class="govuk-table__header">Total requested grant amount</th>
+        <td class="govuk-table__cell"></td>
+        <td class="govuk-table__cell" style="text-align: right;"></td>
+        <td class="govuk-table__header" style="text-align: right;"> {{ grantTotal | currency }}</td>
+        <td class="govuk-table__header" style="text-align: right;">{{ scoreTotal/data['selected-items'].length }}</td>
       <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell" style="text-align: right;"></td>
-      <td class="govuk-table__header" style="text-align: right;"> {{ grantTotal | currency }}</td>
-      <td class="govuk-table__header" style="text-align: right;">{{ scoreTotal/data['selected-items'].length }}</td>
-    <td class="govuk-table__cell"></td>
-    </tr>
-
-
-
-
-    <!-- <tr class="govuk-table__row">
-      <td colspan="2"></td>
-      <td colspan="3" style="padding: 20px 0; border-bottom: solid 1px #b1b4b6;">Requested grant total</td>
-      <td style="text-align: right; border-bottom: solid 1px #b1b4b6;">
-        <span class="govuk-body-l" style="font-weight: bold;">
-          {{ grantTotal | currency }}
-        </span>
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td colspan="2"></td>
-      <td colspan="3" style="padding: 20px 0; border-bottom: solid 1px #b1b4b6;">Score total</td>
-      <td style="text-align: right; border-bottom: solid 1px #b1b4b6;">
-        <span class="govuk-body-l" style="font-weight: bold;">{{ scoreTotal/data['selected-items'].length }}</span>
-      </td>
-    </tr> -->
-  </tbody>
+      </tr>
+    </tbody>
 </table>
 
-<button type="submit" class="govuk-button" data-module="govuk-button">
-  Apply for these items
-</button>
 
-<br>
-
-</form>
-
-
-<span style="clear: both; display: block;">
-  <a href="items/equipment-list">
-  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="viewOtherItems">
-    View more items
-  </button>
+<div class="govuk-button-group">
+  <a href="/fetf/activity-list/v2-0/?fetf-status=01b&fetf-apply=02b&fetf-agree=01&fetf-claim=01" method="post">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+    Apply for these items
+    </button>
   </a>
-</span>
-
+  <a href="items/equipment-list">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="viewOtherItems">
+    Select more items
+    </button>
+  </a>
+</div>
 
 </div>
 </div>

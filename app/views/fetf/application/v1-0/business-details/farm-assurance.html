@@ -4,7 +4,10 @@
 
 {% block beforeContent %}
 {% include "../../../_includes/phase-banner_alpha.html" %}
-<a href="equipment-list" class="govuk-back-link">Back</a>
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
 {% endblock %}
 
 
@@ -27,47 +30,47 @@
               </h2>
             </legend>
             <div id="assurance-scheme-hint" class="govuk-hint">
-              Select all that apply.
+              Select all that apply
             </div>
             <div class="govuk-checkboxes" data-module="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="assurance-scheme" name="assurance-scheme" type="checkbox" value="none">
+                <input class="govuk-checkboxes__input" id="assurance-scheme" name="assurance-scheme" type="checkbox" value="Not part of a farm assurance scheme">
                 <label class="govuk-label govuk-checkboxes__label" for="assurance-scheme">
                   Not part of a farm assurance scheme
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="assurance-scheme-2" name="assurance-scheme" type="checkbox" value="tractor">
+                <input class="govuk-checkboxes__input" id="assurance-scheme-2" name="assurance-scheme" type="checkbox" value="Red Tractor">
                 <label class="govuk-label govuk-checkboxes__label" for="assurance-scheme-2">
                   Red Tractor
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="assurance-scheme-3" name="assurance-scheme" type="checkbox" value="retailer">
+                <input class="govuk-checkboxes__input" id="assurance-scheme-3" name="assurance-scheme" type="checkbox" value="Retailer scheme">
                 <label class="govuk-label govuk-checkboxes__label" for="assurance-scheme-3">
-                  Retailer Scheme
+                  Retailer scheme
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="assurance-scheme-4" name="assurance-scheme" type="checkbox" value="rspca">
+                <input class="govuk-checkboxes__input" id="assurance-scheme-4" name="assurance-scheme" type="checkbox" value="RSPCA Assured">
                 <label class="govuk-label govuk-checkboxes__label" for="assurance-scheme-4">
                   RSPCA Assured
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="assurance-scheme-5" name="assurance-scheme" type="checkbox" value="soil">
+                <input class="govuk-checkboxes__input" id="assurance-scheme-5" name="assurance-scheme" type="checkbox" value="Soil Association">
                 <label class="govuk-label govuk-checkboxes__label" for="assurance-scheme-5">
                   Soil Association
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="assurance-scheme-6" name="assurance-scheme" type="checkbox" value="prefer">
+                <input class="govuk-checkboxes__input" id="assurance-scheme-6" name="assurance-scheme" type="checkbox" value="Prefer not to say">
                 <label class="govuk-label govuk-checkboxes__label" for="assurance-scheme-6">
                   Prefer not to say
                 </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="assurance-scheme-7" name="assurance-scheme" type="checkbox" value="other" data-aria-controls="conditional-contact-3">
+                <input class="govuk-checkboxes__input" id="assurance-scheme-7" name="assurance-scheme" type="checkbox" value="Other" data-aria-controls="conditional-contact-3">
                 <label class="govuk-label govuk-checkboxes__label" for="assurance-scheme-7">
                   Other
                 </label>

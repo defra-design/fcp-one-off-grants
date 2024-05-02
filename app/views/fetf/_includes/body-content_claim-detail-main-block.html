@@ -1,4 +1,11 @@
-<p class="govuk-body">Check and confirm the items you’re claiming for.</p>
+{% set grantTotal = 0 %}
+{% set scoreTotal = 0 %}
+{% for item in data['selected-items'] %}
+  {% set grantTotal = grantTotal + item.grantTotal %}
+  {% set scoreTotal = scoreTotal + item.score %}
+{% endfor %}
+
+
 
 
 <div class="govuk-inset-text">
@@ -19,55 +26,21 @@
 <table class="govuk-table">
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Item(s)</th>
+      <th scope="col" class="govuk-table__header">Items</th>
       <th scope="col" class="govuk-table__header">Code</th>
       <th scope="col" class="govuk-table__header govuk-table__header--numeric">Quantity</th>
       <th scope="col" class="govuk-table__header govuk-table__header--numeric">Grant amount</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
-    {% set grantTotal = 0 %}
-  {% set scoreTotal = 0 %}
-  {% for item in data['selected-items'] %}
-    {% set grantTotal = grantTotal + item.grantTotal %}
-    {% set scoreTotal = scoreTotal + item.score %}
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">{{ item.termName }}</td>
-      <td class="govuk-table__cell">FETF{{ item.itemCode }}</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">{{ item.quantity }}</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">£{{ item.grantValue }}</td>
-    </tr>
+    {% for item in data['selected-items'] %}
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">{{ item.title }}</td>
+        <td class="govuk-table__cell">FETF{{ item.itemCode }}</td>
+        <td class="govuk-table__cell" style="text-align: right;">{{ item.quantity }}</td>
+        <td class="govuk-table__cell" style="text-align: right;">{{ item.grantTotal | currency }}</td>
+      </tr>
     {% endfor %}
-    <!-- <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Salad leaf harvester</td>
-      <td class="govuk-table__cell">FETF8</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">£8,000.00</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Harvesting head</td>
-      <td class="govuk-table__cell">FETF13</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">£3,000.00</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Slurry separators</td>
-      <td class="govuk-table__cell">FETF27</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">£6,000.00</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">Trailing shoe slurry system over 8m</td>
-      <td class="govuk-table__cell">FETF37</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">1</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">£1,500.00</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td scope="row" class="govuk-table__cell">GPS light bar</td>
-      <td class="govuk-table__cell">FETF46</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">3</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric">£1,500.00</td>
-    </tr> -->
     <tr class="govuk-table__row">
       <td scope="row" class="govuk-table__cell"><strong>Total</strong></td>
       <td class="govuk-table__cell"></td>
