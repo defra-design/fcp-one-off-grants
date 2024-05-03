@@ -9,7 +9,7 @@
 
 <span class="content-section">
   <h2 class="govuk-heading-m">Grant payable</h2>
-  <p class="govuk-body">The grant amount is fixed for each item, as set out in Annex 3 of the <a href="#" target="_blank">Farming Equipment and Technology Fund Manual 2023 (opens in new tab)</a>. The items you purchase must meet the minimum specifications.</p>
+  <p class="govuk-body">The grant amount is fixed for each item, as set out in <a href="#" target="_blank">Productivity items and specifications - Farming Equipment and Technology Fund (FETF) 2024 (opens in new tab)</a>. The items you purchase must meet the minimum specifications.</p>
   <p class="govuk-body">By <strong>31 July 2024</strong>, you must have:</p>
   <ul class="govuk-list govuk-list--bullet">
     <li>purchased, installed and have the items operational</li>
@@ -22,7 +22,14 @@
 
 <span class="content-section">
   <h2 class="govuk-heading-m">Site visits</h2>
-  <p class="govuk-body">The location of the item(s) will be at <strong>GL1 2UE</strong>, as set out in your application. We may carry out a site visit at any time, either before and/or after the claim is paid, and up to 5 years following payment of the grant.</p>
+  <p class="govuk-body">The location of the item(s) will be at <strong>
+  {% if data['addressPostcode'] %}
+        {{ data['addressPostcode'] }}
+
+{% else %}
+GL1 2UE
+{% endif %}
+</strong>, as set out in your application. We may carry out a site visit at any time, either before and/or after the claim is paid, and up to 5 years following payment of the grant.</p>
 </span>
 
 

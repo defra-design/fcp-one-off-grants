@@ -16,7 +16,7 @@ module.exports = {
 
   // FETF application data
   'fetf-grant-type': 'Farming Equipment and Technology Fund',
-  'fetf-project-reference': 'FETF-VMA-1234',
+  'fetf-project-reference': 'FETF-VMA-5678',
   'fetf-grant-title': 'Improving Farm Productivity Grant 2024 – Round 1',
 
   // FTF Activity List statuses
