@@ -67,6 +67,23 @@ Upload4
 
       <p class="govuk-body">Upload evidence to show the item has been bought and paid in full, and is in place.</p>
 
+      <br><br>
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m">Item's serial number</label>
+        </h1>
+        <div id="event-name-hint" class="govuk-hint">For example, xxxxx</div>
+        <input class="govuk-input govuk-input--width-10" id="invoice" name="width10" type="text">
+      
+        <script>
+          document.getElementById('invoice').addEventListener('focus', function() {
+            if (this.value === '') {
+              this.value = '1098093470';
+            }
+          });
+        </script>
+      </div>
 
 
     </div>
