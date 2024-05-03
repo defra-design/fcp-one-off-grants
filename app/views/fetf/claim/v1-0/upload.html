@@ -30,10 +30,6 @@
 
 
   <div class="govuk-grid-row">
-
- 
-
-
       <div class="govuk-width-container">
         <main class="govuk-main-wrapper " id="main-content" role="main">
           <div class="govuk-grid-row">
@@ -47,16 +43,6 @@
                 {% for item in data['selected-items'] %}
                   {% set grantTotal = grantTotal + item.grantTotal %}
                   {% set scoreTotal = scoreTotal + item.score %}
-
-
-
-
-
-
-
-
-
-
                 <li class="govuk-task-list__item govuk-task-list__item--with-link">
                   <div class="govuk-task-list__name-and-hint">
                     
@@ -68,7 +54,6 @@
                   {% if (data['01'] == "n") %}
 
                   <!-- Change item.itemCode back to data['test'] -->
-
 
                   <div class="govuk-task-list__status" id="application-details-4-status">
                     <strong class="govuk-tag govuk-tag--blue">
