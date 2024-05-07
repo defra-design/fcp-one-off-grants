@@ -89,6 +89,8 @@ Upload4
     </div>
   </div>
 
+
+<hr style="border: 0.5px solid #000; margin: 10px 0;" class="govuk-grid-column-two-thirds">
 <br><br>
 
 
@@ -111,7 +113,9 @@ function showVisualEvidenceSection() {
 <div class="govuk-grid-row">
 <div class="govuk-grid-column-two-thirds">
 
-  <p class="govuk-label govuk-label--m">Financial evidence</p>
+  
+
+  <p class="govuk-label govuk-label--m">Invoices</p>
   <p class="govuk-body">For example, invoices, receipts and bank statements (you can cross out other transactions)</p>
   <p class="govuk-body" style="color: #505A5F;">Supported file types are PDF, DOC, DOCX, XLS, XLSX or JPG. Maximum file size is 20MB.</p><br>
 
@@ -153,9 +157,9 @@ function showVisualEvidenceSection() {
 <div class="govuk-grid-row">
 <div class="govuk-grid-column-two-thirds">
 
-<p class="govuk-label govuk-label--m">Visual evidence</p>
-<p class="govuk-body">For example, photos and videos showing the item</p>
-<p class="govuk-body" style="color: #505A5F;">Supported file types are JPG, PNG, PDF, MOV or MP4. Maximum file size is 20MB.</p><br>
+<p class="govuk-label govuk-label--m">Payment evidence</p>
+<p class="govuk-body">For example, invoices, receipts and bank statements (you can cross out other transactions)</p>
+<p class="govuk-body" style="color: #505A5F;">Supported file types are PDF, DOC, DOCX, XLS, XLSX or JPG. Maximum file size is 20MB.</p><br>
 
 
 <div id="visualEvidenceContainer" style="display: none;">
@@ -191,7 +195,52 @@ function showVisualEvidenceSection() {
 
 
 
-<br><br><br><br>
+<br><br>
+<hr style="border: 0.5px solid #000; margin: 10px 0;" class="govuk-grid-column-two-thirds">
+<br><br>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  
+  <p class="govuk-label govuk-label--m">Visual evidence</p>
+  <p class="govuk-body">For example, photos and videos showing the item</p>
+  <p class="govuk-body" style="color: #505A5F;">Supported file types are JPG, PNG, PDF, MOV or MP4. Maximum file size is 20MB.</p><br>
+  
+  
+  <div id="visualEvidenceContainer" style="display: none;">
+    <p class="govuk-label govuk-label--s">Files added</p><br>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p class="govuk-body" style="margin-bottom: 0;">Visual evidence 1.jpg , 2MB</p>
+        <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+    </div>
+    <hr style="margin: 20px 0;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p class="govuk-body" style="margin-bottom: 0;">Visual evidence 2.png , 1.5MB</p>
+        <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+    </div>
+    <hr style="margin: 20px 0;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p class="govuk-body" style="margin-bottom: 0;">Visual evidence 3.mp4 , 17MB</p>
+        <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+    </div>
+    <hr style="margin: 20px 0;">
+    <br>
+  </div>
+  
+  
+  
+  <p class="govuk-label govuk-label--s">Upload a file</p>
+  <div class="container">
+    <p class="govuk-body text" style="margin-bottom: 0;">Drag and drop files here or</p>
+    <button type="button" class="govuk-button govuk-button--secondary button" data-module="govuk-button" onclick="showVisualEvidenceSection()">Choose file</button>
+  </div>
+  </div>
+  
+  </div>
+  
+  
+  
+  <br><br><br><br>
 
 
 
