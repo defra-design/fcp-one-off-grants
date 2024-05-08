@@ -14,14 +14,7 @@
 {% block content %}
 
 
-{% for item in data['selected-items'] %}
-{% set show_page = false %}
-{% for item in selected_items %}
-    {% if item.category == "Livestock" %}
-        {% set show_page = true %}
-    {% endif %}
-{% endfor %}
-{% endfor %}
+
 
 
 
