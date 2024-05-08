@@ -44,7 +44,7 @@
                 <li class="govuk-task-list__item govuk-task-list__item--with-link">
                   <div class="govuk-task-list__name-and-hint">
 
-                    <a  id="linked-data" tabindex="-1" class="govuk-link govuk-task-list__link" href="/fetf/claim/v1-0/claim-item-detail2" aria-describedby="before-you-start-1-status">
+                    <a  id="linked-data" tabindex="-1" class="govuk-link govuk-task-list__link" href="/fetf/claim/v1-0/{{ item.termName | lower | replace(' ', '-') }}2" aria-describedby="before-you-start-1-status">
                       {{ item.title }}&nbsp;(FETF{{ item.itemCode }})
                     </a>
                     
