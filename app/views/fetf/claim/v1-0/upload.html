@@ -38,17 +38,19 @@
               <h1 class="govuk-heading-xl">Upload claim evidence</h1>
               <h2 class="govuk-heading-m">Item description</h2>
               <ul class="govuk-task-list">
-                {% set grantTotal = 0 %}
-                {% set scoreTotal = 0 %}
+                
                 {% for item in data['selected-items'] %}
-                  {% set grantTotal = grantTotal + item.grantTotal %}
-                  {% set scoreTotal = scoreTotal + item.score %}
+                  
                 <li class="govuk-task-list__item govuk-task-list__item--with-link">
                   <div class="govuk-task-list__name-and-hint">
-                    
-                    <a  id="linked-data" tabindex="-1" class="govuk-link govuk-task-list__link" href="/fetf/claim/v1-0/{{ item.termName | lower | replace(' ', '-') }}2" aria-describedby="before-you-start-1-status">
+
+                    <a  id="linked-data" tabindex="-1" class="govuk-link govuk-task-list__link" href="/fetf/claim/v1-0/claim-item-detail2" aria-describedby="before-you-start-1-status">
                       {{ item.title }}&nbsp;(FETF{{ item.itemCode }})
                     </a>
+                    
+                    <!-- <a  id="linked-data" tabindex="-1" class="govuk-link govuk-task-list__link" href="/fetf/claim/v1-0/{{ item.termName | lower | replace(' ', '-') }}2" aria-describedby="before-you-start-1-status">
+                      {{ item.title }}&nbsp;(FETF{{ item.itemCode }})
+                    </a> -->
                   </div>
 
                   {% if (data['01'] == "n") %}
