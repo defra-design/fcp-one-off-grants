@@ -18,8 +18,7 @@
 
 
 
-    
-
+ 
     
 
 
@@ -27,15 +26,16 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="/fetf-items-livestock-information" method="post">
+    <form action="/fetf/application/v1-0/item-quantity/ram-pumps" method="post">
 
-      <span class="govuk-caption-l">About your items</span>
-      <h1 class="govuk-heading-l">Livestock information</h1>
+      <span class="govuk-caption-l">{{ item.title }} (FETF{{ item.itemCode }})</span>
+      <h1 class="govuk-heading-l">Livestock items</h1>
+      <p class="govuk-body">Because you selected livestock items, we need to verify your livestock information.</p>
 
       <div class="govuk-form-group">
         <h2 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--m" for="bovine-animals">
-            Total number of bovine animals
+            Total number of animals
           </label>
         </h2>
         <input class="govuk-input govuk-input--width-10" id="bovine-animals" name="bovineAnimals" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">

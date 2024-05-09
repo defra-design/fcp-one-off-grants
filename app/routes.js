@@ -45,6 +45,13 @@ router.get('/fetf/application/v1-0/item-quantity/:termName', (req, res) => {
   res.render('fetf/application/v1-0/item-quantity.html', { item })
 })
 
+// // Added for livestock questions (test)
+// router.get('/fetf/application/v1-0/about-items/:termName', (req, res) => {
+//   const { termName } = req.params
+//   const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
+//   res.render('fetf/application/v1-0/about-items/livestock-information.html', { item })
+// })
+
 // FETF items individual pages END
 
 
@@ -178,11 +185,7 @@ router.post('/fetf-items-complete', function(request, response) {
 
 
 
-// FETF items livestock question
 
-router.post('/fetf-items-livestock-information', function(request, response) {
-  response.redirect("/fetf/application/v1-0/about-items/equipment-address")
-})
 
 
 // FETF items business address question

@@ -51,6 +51,43 @@
     </tbody>
 </table>
 
+<br><br>
+
+{% if item.category and "Livestock" in item.category %}
+
+ 
+<h2 class="govuk-heading-m">Livestock information</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Total number of bovine animals
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['bovineAnimals']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          County parish holding number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{data['accountNumber1']}}/{{data['accountNumber2']}}/{{data['accountNumber3']}}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
+        </dd>
+      </div>
+    </dl>
+    {% else %}
+
+    {% endif %}
+
+
+    
 
 <div class="govuk-button-group">
   <a href="/fetf/activity-list/v2-0/?fetf-status=01b&fetf-apply=02b&fetf-agree=01&fetf-claim=01" method="post">
