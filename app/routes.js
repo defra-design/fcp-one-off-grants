@@ -45,12 +45,18 @@ router.get('/fetf/application/v1-0/item-quantity/:termName', (req, res) => {
   res.render('fetf/application/v1-0/item-quantity.html', { item })
 })
 
-// // Added for livestock questions (test)
-// router.get('/fetf/application/v1-0/about-items/:termName', (req, res) => {
-//   const { termName } = req.params
-//   const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
-//   res.render('fetf/application/v1-0/about-items/livestock-information.html', { item })
-// })
+router.get('/fetf/application/v1-0/item-quantity/:termName', (req, res) => {
+  const { termName } = req.params
+  const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
+  res.render('fetf/application/v1-0/item-quantity.html', { item })
+})
+
+// Added for livestock questions (test)
+router.get('/fetf/application/v1-0/livestock-information/:termName', (req, res) => {
+  const { termName } = req.params
+  const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
+  res.render('fetf/application/v1-0/livestock-information.html', { item })
+})
 
 // FETF items individual pages END
 
@@ -283,4 +289,5 @@ router.get('/fetf/application/v1-0/items/:termName', (req, res) => {
   const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
   res.render('fetf/claim/v1-0/items/claim-item-detail2.html', { item })
 })
+
 

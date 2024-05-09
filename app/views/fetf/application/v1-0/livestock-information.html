@@ -3,7 +3,7 @@
 {% block pageTitle %} Will you store the items at the main business address? {% endblock %}
 
 {% block beforeContent %}
-{% include "../../../_includes/phase-banner_alpha.html" %}
+{% include "../../_includes/phase-banner_alpha.html" %}
 {{ govukBackLink({
   text: "Back",
   href: "javascript:history.back()"
@@ -27,7 +27,7 @@
   <div class="govuk-grid-column-two-thirds">
 
     <form action="/fetf/application/v1-0/item-quantity/ram-pumps" method="post">
-
+      
       <span class="govuk-caption-l">{{ item.title }} (FETF{{ item.itemCode }})</span>
       <h1 class="govuk-heading-l">Livestock items</h1>
       <p class="govuk-body">Because you selected livestock items, we need to verify your livestock information.</p>

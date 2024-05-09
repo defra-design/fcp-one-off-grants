@@ -140,26 +140,26 @@
 
 {% if item.category and "Livestock" in item.category %}
 <div class="govuk-button-group">
-  <a href="/fetf/application/v1-0/about-items/livestock-information" method="get">
-    <button type="submit" class="govuk-button" data-module="govuk-button">
+  <a class="govuk-button" href="/fetf/application/v1-0/livestock-information/{{ item.termName | lower | replace(' ', '-') }}">
+   
     Select this item
-    </button>
+   
   </a>
   {% else %}
 
   
 <div class="govuk-button-group">
-  <a href="/fetf/application/v1-0/item-quantity/{{ item.termName | lower | replace(' ', '-') }}" method="get">
-    <button type="submit" class="govuk-button" data-module="govuk-button">
+  <a class="govuk-button" href="/fetf/application/v1-0/item-quantity/{{ item.termName | lower | replace(' ', '-') }}">
+   
     Select this item
-    </button>
+ 
   </a>
   {% endif %}
 
-  <a href="equipment-list">
-    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="viewOtherItems">
+  <a class="govuk-button govuk-button--secondary" href="equipment-list">
+    
     View other items
-    </button>
+    
   </a>
 </div>
 
