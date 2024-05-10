@@ -45,6 +45,19 @@ router.get('/fetf/application/v1-0/item-quantity/:termName', (req, res) => {
   res.render('fetf/application/v1-0/item-quantity.html', { item })
 })
 
+router.get('/fetf/application/v1-0/item-quantity/:termName', (req, res) => {
+  const { termName } = req.params
+  const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
+  res.render('fetf/application/v1-0/item-quantity.html', { item })
+})
+
+// Added for livestock questions (test)
+router.get('/fetf/application/v1-0/livestock-information/:termName', (req, res) => {
+  const { termName } = req.params
+  const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
+  res.render('fetf/application/v1-0/livestock-information.html', { item })
+})
+
 // FETF items individual pages END
 
 
@@ -178,11 +191,7 @@ router.post('/fetf-items-complete', function(request, response) {
 
 
 
-// FETF items livestock question
 
-router.post('/fetf-items-livestock-information', function(request, response) {
-  response.redirect("/fetf/application/v1-0/about-items/equipment-address")
-})
 
 
 // FETF items business address question
@@ -273,10 +282,12 @@ router.post('/fetf-submit-application', function(request, response) {
 
 module.exports = router
 
-// Claims itemt details
+// Claims item details
 
-router.get('/fetf/application/v1-0/items/:termName', (req, res) => {
+
+router.get('/fetf/claim/v1-0/claim-item-details2/:termName', (req, res) => {
   const { termName } = req.params
   const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
-  res.render('fetf/claim/v1-0/items/claim-item-detail2.html', { item })
+  res.render('/fetf/claim/v1-0/claim-item-detail2.html', { item })
 })
+

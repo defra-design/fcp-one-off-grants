@@ -19,19 +19,21 @@
 
     <form action="/fetf-livestock-schemes" method="post">
 
-      <span class="govuk-caption-l">About your business</span>
-      <h1 class="govuk-heading-l">Livestock health schemes</h1>
+      <span class="govuk-caption-l">Apply</span>
+      
 
       <div class="govuk-form-group">
         <h2 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="livestock-schemes">
-            Which livestock health or disease prevention schemes do you belong to?
+          <label class="govuk-label govuk-label--l" for="livestock-schemes">
+            Do you belong to a livestock health or disease prevention scheme? (optional)
           </label>
         </h2>
         <div id="livestock-schemes-hint" class="govuk-hint">
-          We are collecting details for information purposes only. This may help future scheme design.
+          Enter any schemes. We use this information to help develop grant schemes.
         </div>
-        <textarea class="govuk-textarea" id="livestock-schemes" name="livestockSchemes" aria-describedby="livestock-schemes-hint" rows="3"></textarea>
+        <input class="govuk-input" id="livestock-schemes" name="livestockSchemes" aria-describedby="livestock-schemes-hint" type="text">
+        <br><br>
+        <a href="#" class="govuk-link">Add another scheme</a>
       </div>
 
 

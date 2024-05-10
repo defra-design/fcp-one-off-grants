@@ -19,51 +19,96 @@
 
     <form action="/fetf-land-details" method="post">
 
-      <span class="govuk-caption-l">About your business</span>
-      <h1 class="govuk-heading-l">Land details</h1>
-      <p>Enter your hectares rounded to the approximate whole number in digits.</p>
+      
+      <div class="govuk-form-group">
 
       <div class="govuk-form-group">
-        <h2 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="agriculture-hectares">
-            Agriculture - area of farm in hectares
-          </label>
-        </h2>
-        <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="agriculture-hectares" name="agricultureHectares" type="text" spellcheck="false" inputmode="numeric">
-          <div class="govuk-input__suffix" aria-hidden="true">hectares</div>
-        </div>
-
-        <br><br><br>
-
-        <h2 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="horticulture-hectares">
-            Horticulture - area of nursery in hectares
-          </label>
-        </h2>
-        <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="horticulture-hectares" name="horticultureHectares" type="text" spellcheck="false" inputmode="numeric">
-          <div class="govuk-input__suffix" aria-hidden="true">hectares</div>
-        </div>
-
-        <br><br><br>
-
-        <h2 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="forestry-hectares">
-            Foresty - area of woodland in hectares
-          </label>
-        </h2>
-        <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="forestry-hectares" name="forestryHectares" type="text" spellcheck="false" inputmode="numeric">
-          <div class="govuk-input__suffix" aria-hidden="true">hectares</div>
-        </div>
-
-        <br><br><br>
-
-        <h2 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="forestry-parcels">
-            If you are a forestry owner provide the relevant land parcel IDs
-          </label>
-        </h2>
-        <textarea class="govuk-textarea" id="forestry-parcels" name="forestryParcels" rows="3"></textarea>
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">Apply</span>
+            <h1 class="govuk-fieldset__heading">
+              What do you use your land for?
+            </h1>
+          </legend>
+          <div id="contact-hint" class="govuk-hint">
+            Select all that apply. Enter approximate hectares in whole number.
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+              <label class="govuk-label govuk-checkboxes__label" for="contact">
+                Agriculture
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-email">
+                  Area of farm
+                </label>
+                <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="agriculture-hectares" name="agricultureHectares" type="text" spellcheck="false" inputmode="numeric">
+                  <div class="govuk-input__suffix" aria-hidden="true">hectares</div>
+                </div>
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone" data-aria-controls="conditional-contact-2">
+              <label class="govuk-label govuk-checkboxes__label" for="contact-2">
+                Horticulture
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-2">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-phone">
+                  Area of nursery
+                </label>
+                <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="agriculture-hectares" name="agricultureHectares" type="text" spellcheck="false" inputmode="numeric">
+                  <div class="govuk-input__suffix" aria-hidden="true">hectares</div>
+                </div>
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="text message" data-aria-controls="conditional-contact-3">
+              <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+                Forestry
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-3">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-text">
+                  Area of woodland
+                </label>
+                <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="agriculture-hectares" name="agricultureHectares" type="text" spellcheck="false" inputmode="numeric">
+                  <div class="govuk-input__suffix" aria-hidden="true">hectares</div>
+                </div>
+                <br>
+               
+              </h2>
+              <br>
+              
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="width-4">
+                  Enter relevant land parcel IDs, for example 3903
+                </label>
+                <input class="govuk-input govuk-input--width-4" id="width-4" name="width4" type="text">
+                
+              </div>
+              </div>
+              <br>
+              <a href="#" class="govuk-link">Add another land parcel ID</a>
+            </div>
+          </div>
+          <br>
+        </fieldset>
       </div>
+
+      
+
+    
+
+
+
+
+
 
 
     <button type="submit" class="govuk-button" data-module="govuk-button">

@@ -11,6 +11,7 @@
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+    <span class="govuk-caption-l">Apply</span>
     <h1 class="govuk-heading-l">Selected items</h1>
     <p class="govuk-body">The minimum grant you can apply for is £1,000 and the maximum is £50,000.</p>
 <table class="govuk-table">
@@ -45,12 +46,18 @@
         <td class="govuk-table__cell"></td>
         <td class="govuk-table__cell" style="text-align: right;"></td>
         <td class="govuk-table__header" style="text-align: right;"> {{ grantTotal | currency }}</td>
-        <td class="govuk-table__header" style="text-align: right;">{{ scoreTotal/data['selected-items'].length }}</td>
+        <td class="govuk-table__header" style="text-align: right;">{{ scoreTotal/data['selected-items'].length}}</td>
       <td class="govuk-table__cell"></td>
       </tr>
     </tbody>
 </table>
 
+<br><br>
+
+
+
+
+    
 
 <div class="govuk-button-group">
   <a href="/fetf/activity-list/v2-0/?fetf-status=01b&fetf-apply=02b&fetf-agree=01&fetf-claim=01" method="post">

@@ -67,7 +67,7 @@ Upload4
 
       <p class="govuk-body">Upload evidence to show the item has been bought and paid in full, and is in place.</p>
 
-
+      
 
     </div>
   </div>
@@ -99,6 +99,71 @@ function showVisualEvidenceSection() {
   <p class="govuk-body" style="color: #505A5F;">Supported file types are PDF, DOC, DOCX, XLS, XLSX or JPG. Maximum file size is 20MB.</p><br>
 
 
+  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+      <label class="govuk-label govuk-checkboxes__label" for="contact">
+        Include evidence already uploaded
+      </label>
+    </div>
+    <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+          <h1 class="govuk-fieldset__heading">
+            Slurry separators (FETF27)
+          </h1>
+        </legend>
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="evidence1" name="item1" type="checkbox" value="evidence1">
+            <label class="govuk-label govuk-checkboxes__label" for="evidence1">
+              Financial evidence 1.pdf , 3MB
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="evidence2" name="item1" type="checkbox" value="evidence2">
+            <label class="govuk-label govuk-checkboxes__label" for="evidence2">
+              Financial evidence 2.pdf , 3MB
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="evidence3" name="item1" type="checkbox" value="evidence3">
+            <label class="govuk-label govuk-checkboxes__label" for="evidence3">
+              Financial evidence 3.pdf , 3MB
+            </label>
+          </div>
+        </fieldset>
+
+<br><br>
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h1 class="govuk-fieldset__heading">
+              Salad leaf harvester (FETF8)
+            </h1>
+          </legend>
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="evidence4" name="item2" type="checkbox" value="evidence4">
+              <label class="govuk-label govuk-checkboxes__label" for="evidence4">
+                Financial evidence 1.pdf , 3MB
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="evidence5" name="item2" type="checkbox" value="evidence5">
+              <label class="govuk-label govuk-checkboxes__label" for="evidence5">
+                Financial evidence 2.pdf , 3MB
+              </label>
+            </div>
+            
+          </fieldset>
+          
+      
+      </div>
+    </div>
+
+    <br><br>
+
   <div id="filesAddedContainer" style="display: none;">
       <p class="govuk-label govuk-label--s">Files added</p><br>
       <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -119,6 +184,11 @@ function showVisualEvidenceSection() {
       <br>
   </div>
 
+
+
+
+  
+
   <p class="govuk-label govuk-label--s">Upload a file</p>
   <div class="container">
       <p class="govuk-body text" style="margin-bottom: 0;">Drag and drop files here or</p>
@@ -126,7 +196,14 @@ function showVisualEvidenceSection() {
   </div>
 </div>
 </div>
+
+
+
+  
+</div>
 <br><br>
+
+
 <hr style="border: 0.5px solid #000; margin: 10px 0;" class="govuk-grid-column-two-thirds">
 
 <br><br><br>
@@ -139,6 +216,78 @@ function showVisualEvidenceSection() {
 <p class="govuk-label govuk-label--m">Visual evidence</p>
 <p class="govuk-body">For example, photos and videos showing the item</p>
 <p class="govuk-body" style="color: #505A5F;">Supported file types are JPG, PNG, PDF, MOV or MP4. Maximum file size is 20MB.</p><br>
+
+
+
+
+
+<div class="govuk-checkboxes" data-module="govuk-checkboxes">
+  <div class="govuk-checkboxes__item">
+    <input class="govuk-checkboxes__input" id="visualevidence" name="visualevidence" type="checkbox" value="email" data-aria-controls="conditional-visualevidence">
+    <label class="govuk-label govuk-checkboxes__label" for="visualevidence">
+      Include evidence already uploaded
+    </label>
+  </div>
+  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-visualevidence">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+        <h1 class="govuk-fieldset__heading">
+          Slurry separators (FETF27)
+        </h1>
+      </legend>
+      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="evidence6" name="item3" type="checkbox" value="evidence6">
+          <label class="govuk-label govuk-checkboxes__label" for="evidence6">
+            Financial evidence 1.pdf , 3MB
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="evidence7" name="item3" type="checkbox" value="evidence7">
+          <label class="govuk-label govuk-checkboxes__label" for="evidence7">
+            Financial evidence 2.pdf , 3MB
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="evidence8" name="item3" type="checkbox" value="evidence8">
+          <label class="govuk-label govuk-checkboxes__label" for="evidence8">
+            Financial evidence 3.pdf , 3MB
+          </label>
+        </div>
+      </fieldset>
+
+<br><br>
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+          <h1 class="govuk-fieldset__heading">
+            Salad leaf harvester (FETF8)
+          </h1>
+        </legend>
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="evidence9" name="item4" type="checkbox" value="evidence9">
+            <label class="govuk-label govuk-checkboxes__label" for="evidence9">
+              Financial evidence 1.pdf , 3MB
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="evidence10" name="item4" type="checkbox" value="evidence10">
+            <label class="govuk-label govuk-checkboxes__label" for="evidence10">
+              Financial evidence 2.pdf , 3MB
+            </label>
+          </div>
+          
+        </fieldset>
+    
+    </div>
+  </div>
+  <br><br>
+
+
+
+
+
 
 
 <div id="visualEvidenceContainer" style="display: none;">
@@ -172,7 +321,7 @@ function showVisualEvidenceSection() {
 
 </div>
 
-
+</div>
 
 <br><br><br><br>
 
@@ -188,7 +337,7 @@ function showVisualEvidenceSection() {
 
 
 
-
+  
 
 
     </body>
