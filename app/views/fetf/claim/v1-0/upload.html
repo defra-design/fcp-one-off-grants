@@ -48,14 +48,12 @@
                       {{ item.title }}&nbsp;(FETF{{ item.itemCode }})
                     </a>
                     
-                    <!-- <a  id="linked-data" tabindex="-1" class="govuk-link govuk-task-list__link" href="/fetf/claim/v1-0/{{ item.termName | lower | replace(' ', '-') }}2" aria-describedby="before-you-start-1-status">
-                      {{ item.title }}&nbsp;(FETF{{ item.itemCode }})
-                    </a> -->
+                   
                   </div>
-
+                  
                   {% if (data['01'] == "n") %}
 
-                  <!-- Change item.itemCode back to data['test'] -->
+               
 
                   <div class="govuk-task-list__status" id="application-details-4-status">
                     <strong class="govuk-tag govuk-tag--blue">
@@ -79,6 +77,9 @@
                 </li>
 
                 {% endif %}
+
+
+
                 {% endfor %}
                 
               </ul>
