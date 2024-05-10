@@ -291,3 +291,29 @@ router.get('/fetf/claim/v1-0/claim-item-details2/:termName', (req, res) => {
   res.render('/fetf/claim/v1-0/claim-item-detail2.html', { item })
 })
 
+
+
+
+
+// FETF item quantity livestock
+
+router.post('/fetf-add-to-selected-items-livestock', function(request, response) {
+  var quantity = Number(request.body['quantity'])
+  var termName = request.body['termName']
+  var itemExists = false
+  for (var selectedItem of request.session.data['selected-items']){
+    if (selectedItem.termName == termName) {
+      itemExists = true
+      selectedItem.quantity += quantity
+      selectedItem.grantTotal = Number(selectedItem.quantity) * Number(selectedItem.grantValue.replace(',',''))
+    }
+  }
+  if (itemExists == false){
+    const item = _.findWhere(data, {termName: termName})
+    item.quantity = quantity
+    item.grantTotal = Number(item.quantity) * Number(item.grantValue.replace(',',''))
+    request.session.data['selected-items'].push(item)
+  }
+  
+  response.redirect("/fetf/application/v1-0/selected-items-livestock")
+})

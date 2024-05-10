@@ -26,6 +26,8 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+    
+
 
     <span class="govuk-caption-xl">Submit claim</span>
     <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Check your claim evidence</h1>
@@ -36,11 +38,9 @@
 
 <br><br>
 
-{% set grantTotal = 0 %}
-                {% set scoreTotal = 0 %}
+
                 {% for item in data['selected-items'] %}
-                  {% set grantTotal = grantTotal + item.grantTotal %}
-                  {% set scoreTotal = scoreTotal + item.score %}
+                 
 
 
 
@@ -71,6 +71,13 @@
                
           
            
+
+
+          {% if item.serialNumber %}
+          
+          
+        
+
          
        
               <div class="govuk-summary-list__row">
@@ -79,9 +86,18 @@
                 </dt>
     
                 <dd class="govuk-summary-list__value">
-                  01070982031
+                
+                  {{ data['serial-number-item'] or "1239879834" }}
+                
+    
                 </dd>
+
+
+
+                
+
                 {% if (data['progress'] == "submitted") %}{% else %}
+
                 <dd class="govuk-summary-list__actions">
                   <a class="govuk-link" href="/_common/not-testing.html">
                     Change<span class="govuk-visually-hidden"> address</span>
@@ -91,13 +107,13 @@
               </div>
 
 
-             
+              {% endif %}
 
 
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Invoices
+              Financial evidence
             </dt>
        
             <dd class="govuk-summary-list__value">
@@ -114,24 +130,7 @@
             {% endif %}
           </div>
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Payment evidence
-            </dt>
-       
-            <dd class="govuk-summary-list__value">
-              Financial evidence 1.pdf , 3MB<br>
-              Financial evidence 2.pdf , 3MB<br>
-              Financial evidence 3.pdf , 3MB
-            </dd>
-            {% if (data['progress'] == "submitted") %}{% else %}
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="/_common/not-testing.html">
-                Change<span class="govuk-visually-hidden"> name</span>
-              </a>
-            </dd>
-            {% endif %}
-          </div>
+          
        
 
 
