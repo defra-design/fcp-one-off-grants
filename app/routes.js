@@ -284,10 +284,10 @@ module.exports = router
 
 // Claims item details
 
-router.get('/fetf/application/v1-0/items/:termName', (req, res) => {
+
+router.get('/fetf/claim/v1-0/claim-item-details2/:termName', (req, res) => {
   const { termName } = req.params
   const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
-  res.render('fetf/claim/v1-0/items/claim-item-detail2.html', { item })
+  res.render('/fetf/claim/v1-0/claim-item-detail2.html', { item })
 })
-
 

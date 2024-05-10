@@ -49,7 +49,13 @@ Upload1
   </p>
 </div>
 
-<a href="#" class="govuk-back-link">Back</a>
+
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
 
 
 <br><br>
@@ -78,6 +84,21 @@ Upload1
   </div>
 
 <br><br>
+
+
+{% if item.serialNumber %}
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="event-name">
+      Item's serial number
+    </label>
+  </h1>
+  <input class="govuk-input govuk-input--width-20" id="event-name" name="eventName" type="text">
+</div>
+
+<br><br>
+
+{% endif %}
 
 
 <script>
@@ -201,7 +222,7 @@ function showVisualEvidenceSection() {
 </div>
 <br><br>
 </div>
-<hr style="border: 0.5px solid #000; margin: 10px 0;" class="govuk-grid-column-two-thirds">
+
 
 <br><br><br>
 
@@ -322,7 +343,7 @@ function showVisualEvidenceSection() {
 
 
 
-     <a href="upload?01=c&02=n&03=n&04=n&05=n&06=n">
+     <a href="/fetf/claim/v1-0/upload?01=c&02=n&03=n&04=n&05=n&06=n">
         <button class="govuk-button">
           Save and continue
         </button>

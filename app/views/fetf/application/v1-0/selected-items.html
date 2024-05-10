@@ -46,7 +46,7 @@
         <td class="govuk-table__cell"></td>
         <td class="govuk-table__cell" style="text-align: right;"></td>
         <td class="govuk-table__header" style="text-align: right;"> {{ grantTotal | currency }}</td>
-        <td class="govuk-table__header" style="text-align: right;">{{ scoreTotal/data['selected-items'].length }}</td>
+        <td class="govuk-table__header" style="text-align: right;">{{ scoreTotal/data['selected-items'].length}}</td>
       <td class="govuk-table__cell"></td>
       </tr>
     </tbody>
@@ -54,38 +54,7 @@
 
 <br><br>
 
-{% if item.category and "Livestock" in item.category %}
 
-<h2 class="govuk-heading-m">Livestock information</h2>
-
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Total number of bovine animals
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{data['bovineAnimals']}}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          County parish holding number
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{data['accountNumber1']}}/{{data['accountNumber2']}}/{{data['accountNumber3']}}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
-        </dd>
-      </div>
-    </dl>
-
-
-
-    {% endif %} 
 
 
     
