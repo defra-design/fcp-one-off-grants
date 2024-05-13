@@ -215,7 +215,7 @@ router.post('/fetf-items-contracting', function(request, response) {
   if (aboutContracting == "yes"){
       response.redirect("/fetf/application/v1-0/about-items/equipment-contractor-details")
   } else {
-      response.redirect("/fetf/application/v1-0/about-items/equipment-summary")
+      response.redirect("/fetf/application/v1-0/about-items/livestock-information")
   }
 })
 
@@ -223,8 +223,16 @@ router.post('/fetf-items-contracting', function(request, response) {
 // FETF items contracting other question
 
 router.post('/fetf-contractor-details', function(request, response) {
+  response.redirect("/fetf/application/v1-0/about-items/livestock-information")
+})
+
+
+// FETF items contracting other question
+
+router.post('/fetf-livestock-information', function(request, response) {
   response.redirect("/fetf/application/v1-0/about-items/equipment-summary")
 })
+
 
 // FETF items summary
 
@@ -327,12 +335,7 @@ router.post('/fetf-business-structure', function(request, response) {
 // FETF business structure
 
 router.post('/fetf-land-details', function(request, response) {
-  response.redirect("/fetf/application/v1-0/business-details/livestock-information")
-})
-
-// FETF business structure
-
-router.post('/fetf-livestock-information', function(request, response) {
   response.redirect("/fetf/application/v1-0/business-details/farm-assurance")
 })
+
 
