@@ -28,10 +28,11 @@
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Business structure description
+          Who is applying?
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['structure'] }}
+          Landowner
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -40,6 +41,7 @@
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['employeesNumber'] }}
+10
         </dd>
       </div>
     </dl>
@@ -54,7 +56,7 @@
           Agriculture - area of farm in hectares
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['agricultureHectares'] }}
+          35{{ data['agricultureHectares'] }}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -62,7 +64,7 @@
           Horticulture - area of nursery in hectares
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['horticultureHectares'] }}
+          23{{ data['horticultureHectares'] }}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -70,7 +72,7 @@
           Forestry - area of woodland in hectares
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['forestryHectares'] }}
+         50 {{ data['forestryHectares'] }}
         </dd>
       </div>
     </dl>
@@ -94,7 +96,7 @@
           Total number of animals
         </dt>
         <dd class="govuk-summary-list__value">
-          {{data['bovineAnimals']}}
+          30{{data['bovineAnimals']}}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -102,7 +104,7 @@
           County parish holding number
         </dt>
         <dd class="govuk-summary-list__value">
-          {{data['accountNumber1']}}/{{data['accountNumber2']}}/{{data['accountNumber3']}}
+          08{{data['accountNumber1']}}123{{data['accountNumber2']}}/4567{{data['accountNumber3']}}
         </dd>
       </div>
     </dl>
@@ -118,7 +120,7 @@
           Which farm assurance schemes do you belong to?
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['assurance-scheme'] }}
+          Red Tractor{{ data['assurance-scheme'] }}
         </dd>
       </div>
     </dl>
@@ -134,7 +136,7 @@
           Which livestock health or disease prevention schemes do you belong to?
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['livestockSchemes'] }}
+          The National Animal Disease Information Service {{ data['livestockSchemes'] }}
         </dd>
       </div>
     </dl>
