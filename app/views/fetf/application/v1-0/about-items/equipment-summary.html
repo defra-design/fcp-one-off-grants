@@ -32,12 +32,26 @@
           Stored at main address
         </dt>
         <dd class="govuk-summary-list__value">
-          Yes
+        {{ data['willYouStoreAtBusinessAddress'] or "Yes" }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
         </dd>
       </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Where will the items be stored?
+        </dt>
+        <dd class="govuk-summary-list__value">
+        {{ data['addressPostcode'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
+        </dd>
+      </div>
+
+
     </dl>
 
 
@@ -49,7 +63,31 @@
           Used for contracting
         </dt>
         <dd class="govuk-summary-list__value">
-          No
+          {{ data['willYouUseForContracting'] or "Yes" }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
+        </dd>
+      </div>
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Type of contracting work
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['contractingWork'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Are you are a member of a professional organisation for contractors?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['contractingProfessionalOrganisation'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>

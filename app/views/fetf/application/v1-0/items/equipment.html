@@ -138,14 +138,6 @@
 <p class="govuk-body"><strong>Serial number:</strong> You must provide this item’s serial number when you submit your claim for payment.</p>
 {% endif %}
 
-{% if item.category and "Livestock" in item.category %}
-<div class="govuk-button-group">
-  <a class="govuk-button" href="/fetf/application/v1-0/livestock-information/{{ item.termName | lower | replace(' ', '-') }}">
-   
-    Select this item
-   
-  </a>
-  {% else %}
 
   
 <div class="govuk-button-group">
@@ -154,7 +146,7 @@
     Select this item
  
   </a>
-  {% endif %}
+ 
 
   <a class="govuk-button govuk-button--secondary" href="equipment-list">
     

@@ -51,12 +51,7 @@ router.get('/fetf/application/v1-0/item-quantity/:termName', (req, res) => {
   res.render('fetf/application/v1-0/item-quantity.html', { item })
 })
 
-// Added for livestock questions (test)
-router.get('/fetf/application/v1-0/livestock-information/:termName', (req, res) => {
-  const { termName } = req.params
-  const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
-  res.render('fetf/application/v1-0/livestock-information.html', { item })
-})
+
 
 // FETF items individual pages END
 
@@ -238,18 +233,9 @@ router.post('/fetf-items-summary', function(request, response) {
 })
 
 
-// FETF business structure
-
-router.post('/fetf-business-structure', function(request, response) {
-  response.redirect("/fetf/application/v1-0/business-details/land-details")
-})
 
 
-// FETF business structure
 
-router.post('/fetf-land-details', function(request, response) {
-  response.redirect("/fetf/application/v1-0/business-details/farm-assurance")
-})
 
 // FETF farm assurance schemes
 
@@ -268,7 +254,7 @@ router.post('/fetf-livestock-schemes', function(request, response) {
 // FETF check business details
 
 router.post('/fetf-check-business-details', function(request, response) {
-  response.redirect("/fetf/activity-list/v2-0/?fetf-status=01b&fetf-apply=02f&fetf-agree=01&fetf-claim=01")
+  response.redirect("/fetf/activity-list/v2-0/?fetf-status=01b&fetf-apply=02a&fetf-agree=01&fetf-claim=01")
 })
 
 // FETF submit application
@@ -317,3 +303,36 @@ router.post('/fetf-add-to-selected-items-livestock', function(request, response)
   
   response.redirect("/fetf/application/v1-0/selected-items-livestock")
 })
+
+
+
+// Added for livestock questions (test)
+router.get('/fetf/application/v1-0/livestock-information/:termName', (req, res) => {
+  const { termName } = req.params
+  const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
+  res.render('fetf/application/v1-0/livestock-information.html', { item })
+})
+
+
+// FETF business structure
+
+router.post('/fetf-business-structure', function(request, response) {
+  response.redirect("/fetf/application/v1-0/business-details/land-details")
+})
+
+
+
+
+
+// FETF business structure
+
+router.post('/fetf-land-details', function(request, response) {
+  response.redirect("/fetf/application/v1-0/business-details/livestock-information")
+})
+
+// FETF business structure
+
+router.post('/fetf-livestock-information', function(request, response) {
+  response.redirect("/fetf/application/v1-0/business-details/farm-assurance")
+})
+
