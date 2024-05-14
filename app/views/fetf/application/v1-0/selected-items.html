@@ -19,7 +19,7 @@
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Item</th>
-      <th scope="col" class="govuk-table__header">Code</th>
+      <th scope="col" class="govuk-table__header" class="hide-on-mobile">Code</th>
       <th scope="col" class="govuk-table__header" style="text-align: right;">Quantity</th>
       <th scope="col" class="govuk-table__header" style="text-align: right;">Grant amount</th>
       <th scope="col" class="govuk-table__header" style="text-align: right;">Score</th>
@@ -34,7 +34,7 @@
         {% set scoreTotal = scoreTotal + item.score %}
         <tr class="govuk-table__row">
           <td class="govuk-table__cell" >{{ item.title }}</td>
-          <td class="govuk-table__cell">FETF{{ item.itemCode }}</td>
+          <td class="govuk-table__cell" class="hide-on-mobile">FETF{{ item.itemCode }}</td>
           <td class="govuk-table__cell" style="text-align: right;">{{ item.quantity }}&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
           <td class="govuk-table__cell" style="text-align: right;">{{ item.grantTotal | currency }}</td>
           <td class="govuk-table__cell" style="text-align: right;">{{ item.score }}</td>
@@ -70,17 +70,17 @@
   
 
 <div class="govuk-button-group">
-  <a href="/fetf/activity-list/v2-0/?fetf-status=01b&fetf-apply=02b&fetf-agree=01&fetf-claim=01" method="post">
-    <button type="submit" class="govuk-button" data-module="govuk-button">
+  <a class="govuk-button" href="/fetf/activity-list/v2-0/?fetf-status=01b&fetf-apply=02b&fetf-agree=01&fetf-claim=01" >
     Apply for these items
-    </button>
   </a>
-  <a href="items/equipment-list">
-    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="viewOtherItems">
+  <a class="govuk-button govuk-button--secondary" href="items/equipment-list">
     Select more items
-    </button>
   </a>
 </div>
+
+
+
+
 
 
 </div>
