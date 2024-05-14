@@ -456,12 +456,12 @@ function showVisualEvidenceSection() {
 
 
 
-
-     <a href="/fetf/claim/v1-0/upload?01=c">
+<form action="/fetf/set-status" method="post">
+  <input type="hidden" name="termName" value="{{ item.termName }}">
         <button class="govuk-button">
           Save and continue
         </button>
-      </a>
+    </form>
 
 
 

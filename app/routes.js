@@ -339,3 +339,16 @@ router.post('/fetf-land-details', function(request, response) {
 })
 
 
+
+//Claim task status
+
+router.post('/fetf/set-status', function(request, response) {
+  var termName = request.body['termName']
+  for (var selectedItem of request.session.data['selected-items']){
+    if (selectedItem.termName == termName) {
+      selectedItem.status = "Completed"
+    }
+  }
+  
+  response.redirect("/fetf/claim/v1-0/upload")
+})
