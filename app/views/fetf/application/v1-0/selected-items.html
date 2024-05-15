@@ -15,39 +15,41 @@
     <h1 class="govuk-heading-l">Selected items</h1>
     <p class="govuk-body">The minimum grant you can apply for is £1,000 and the maximum is £50,000.</p>
 <table class="govuk-table">
+
+
   <caption class="govuk-table__caption govuk-table__caption--m">Items summary</caption>
   <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
+    <tr class=".govuk-table-row-selected-item">
       <th scope="col" class="govuk-table__header">Item</th>
-      <th scope="col" class="govuk-table__header" class="hide-on-mobile">Code</th>
-      <th scope="col" class="govuk-table__header" style="text-align: right;">Quantity</th>
-      <th scope="col" class="govuk-table__header" style="text-align: right;">Grant amount</th>
-      <th scope="col" class="govuk-table__header" style="text-align: right;">Score</th>
-      <th scope="col" class="govuk-table__header" style="text-align: right;"></th>
+      <th scope="col" class="govuk-table__header"id="selected-item" >Code</th>
+      <th scope="col" class="govuk-table__header" id="selected-item">Quantity</th>
+      <th scope="col" class="govuk-table__header" id="selected-item" >Grant amount</th>
+      <th scope="col" class="govuk-table__header" id="selected-item" >Score</th>
+      <th scope="col" class="govuk-table__header" ></th>
     </tr>
   </thead>
-    <tbody class="govuk-table__body">
+    <tbody class="govuk-table__body" >
       {% set grantTotal = 0 %}
       {% set scoreTotal = 0 %}
       {% for item in data['selected-items'] %}
         {% set grantTotal = grantTotal + item.grantTotal %}
         {% set scoreTotal = scoreTotal + item.score %}
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" >{{ item.title }}</td>
-          <td class="govuk-table__cell" class="hide-on-mobile">FETF{{ item.itemCode }}</td>
-          <td class="govuk-table__cell" style="text-align: right;">{{ item.quantity }}&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
-          <td class="govuk-table__cell" style="text-align: right;">{{ item.grantTotal | currency }}</td>
-          <td class="govuk-table__cell" style="text-align: right;">{{ item.score }}</td>
+        <tr class="govuk-table__row" id="selected-items__row">
+          <td class="govuk-table__cell add-item" id="selected-item-bold">{{ item.title }}</td>
+          <td class="govuk-table__cell add-code" id="selected-item" >FETF{{ item.itemCode }}</td>
+          <td class="govuk-table__cell add-quantity" id="selected-item">{{ item.quantity }}&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
+          <td class="govuk-table__cell add-grant" id="selected-item">{{ item.grantTotal | currency }}</td>
+          <td class="govuk-table__cell add-score" id="selected-item">{{ item.score }}</td>
           <td class="govuk-table__cell"><a href="#" class="govuk-body-s" style="text-align: right;">Remove</a></td>
         </tr>
       {% endfor %}
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">Total requested grant amount</th>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell" style="text-align: right;"></td>
-        <td class="govuk-table__header" style="text-align: right;"> {{ grantTotal | currency }}</td>
-        <td class="govuk-table__header" style="text-align: right;">{{ scoreTotal/data['selected-items'].length}}</td>
-      <td class="govuk-table__cell"></td>
+      <tr class="govuk-table__row" id="selected-items__row">
+        <th scope="row" class="govuk-table__cell" id="mobile-hide"><strong>Total requested grant amount</strong></th>
+        <td class="govuk-table__cell" id="mobile-hide"></td>
+        <td class="govuk-table__cell" id="mobile-hide"></td>
+        <td class="govuk-table__cell add-total-grant"id="selected-item" ><strong> {{ grantTotal | currency }}</strong></td>
+        <td class="govuk-table__cell add-total-score" id="selected-item"><strong>{{ scoreTotal/data['selected-items'].length}}</strong></td>
+      <td class="govuk-table__cell" id="mobile-hide"></td>
       </tr>
     </tbody>
 </table>
@@ -86,5 +88,10 @@
 </div>
 </div>
 </main>
+
+
+
+
+
 
 {% endblock %}

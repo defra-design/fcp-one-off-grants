@@ -59,6 +59,96 @@
 }
 
 
+
+
+// Selected items 
+
+#selected-item {
+  text-align: right;
+}
+
+#selected-item-left {
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+#selected-item {
+  border-bottom:none;
+  text-align: left;
+}
+
+#selected-item-bold {
+  border-bottom:none;
+  text-align: left;
+  font-weight: bold;
+}
+
+#selected-item-left {
+  border-bottom:none;
+}
+
+.govuk-table__header {
+  display: none;
+}
+
+
+
+#selected-items__row {
+  display: flex;
+  flex-direction: column;
+ 
+  
+}
+
+#mobile-hide {
+  display: none;
+}
+
+
+
+.add-item::before {
+  content: "Item: "; /* Change this to the text you want to add */
+  font-weight: bold;
+}
+.add-code::before {
+  content: "Code: "; /* Change this to the text you want to add */
+  font-weight: bold;
+}
+
+.add-quantity::before {
+  content: "Quantity: "; /* Change this to the text you want to add */
+  font-weight: bold;
+}
+
+.add-grant::before {
+  content: "Grant amount: "; /* Change this to the text you want to add */
+  font-weight: bold;
+}
+
+.add-total-grant::before {
+  content: "Total requested grant amount: "; /* Change this to the text you want to add */
+  font-weight: bold;
+}
+
+.add-score::before {
+  content: "Score: "; /* Change this to the text you want to add */
+  font-weight: bold;
+}
+
+.add-total-score::before {
+  content: "Total score: "; /* Change this to the text you want to add */
+  font-weight: bold;
+}
+}
+
+
+
+
+
+
+
+
+
 // Task list pattern
 
 .govuk-prototype-kit-task-list {
@@ -195,14 +285,15 @@
   }
 }
 
-.drag-and-drop {
-max-width:585px;
-min-height: 110px;
-position:relative;
-border:3px dashed black;
-padding: 20px;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content:flex-start;
-}
+// .drag-and-drop {
+// max-width:585px;
+// min-height: 110px;
+// position:relative;
+// border:3px dashed black;
+// padding: 20px;
+// display: flex;
+// flex-direction: column;
+// align-items: flex-start;
+// justify-content:flex-start;
+// }
+
