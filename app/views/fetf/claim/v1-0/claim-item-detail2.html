@@ -106,7 +106,15 @@ Upload1
 <script>
 function showFilesAddedSection() {
   const filesAddedContainer = document.getElementById('filesAddedContainer');
+  const conditionalContactCheckbox = document.getElementById('conditional-contact');
   filesAddedContainer.style.display = 'block';
+  conditionalContactCheckbox.checked = false;
+  
+}
+
+function showFilesPaymentsSection() {
+  const filesPaymentContainer = document.getElementById('filesPaymentContainer');
+  filesPaymentContainer.style.display = 'block';
 }
 
 function showVisualEvidenceSection() {
@@ -127,112 +135,401 @@ function showVisualEvidenceSection() {
   <p class="govuk-body" style="color: #505A5F;">Supported file types are PDF, DOC, DOCX, XLS, XLSX or JPG. Maximum file size is 20MB.</p><br>
 
 
-
-
-  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
-      <label class="govuk-label govuk-checkboxes__label" for="contact">
-        Include evidence already uploaded
-      </label>
-    </div>
-    <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-          <h1 class="govuk-fieldset__heading">
-            Slurry separators (FETF27)
-          </h1>
-        </legend>
-        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="evidence1" name="item1" type="checkbox" value="evidence1">
-            <label class="govuk-label govuk-checkboxes__label" for="evidence1">
-              Invoice evidence 1.pdf , 3MB
-            </label>
-          </div>
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="evidence2" name="item1" type="checkbox" value="evidence2">
-            <label class="govuk-label govuk-checkboxes__label" for="evidence2">
-              Invoice evidence 2.pdf , 3MB
-            </label>
-          </div>
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="evidence3" name="item1" type="checkbox" value="evidence3">
-            <label class="govuk-label govuk-checkboxes__label" for="evidence3">
-              Invoice evidence 3.pdf , 3MB
-            </label>
-          </div>
-        </fieldset>
-
-<br><br>
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-            <h1 class="govuk-fieldset__heading">
-              Salad leaf harvester (FETF8)
-            </h1>
-          </legend>
-          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="evidence4" name="item2" type="checkbox" value="evidence4">
-              <label class="govuk-label govuk-checkboxes__label" for="evidence4">
-                Invoice evidence 1.pdf , 3MB
+       
+  
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label--s" for="documents">
+                Upload a file
               </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="evidence5" name="item2" type="checkbox" value="evidence5">
-              <label class="govuk-label govuk-checkboxes__label" for="evidence5">
-                Invoice evidence 2.pdf , 3MB
-              </label>
-            </div>
+
+<br>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-checkboxes__label" for="contact">
+                    Include evidence already uploaded
+                  </label>
+                  
+                </div>
+                <br>
+
+
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        <h1 class="govuk-fieldset__heading">
+                          Slurry separators (FETF27)
+                        </h1>
+                      </legend>
+                      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="evidence1" name="item1" type="checkbox" value="evidence1">
+                          <label class="govuk-label govuk-checkboxes__label" for="evidence1">
+                            Invoice evidence 1.pdf , 3MB
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="evidence2" name="item1" type="checkbox" value="evidence2">
+                          <label class="govuk-label govuk-checkboxes__label" for="evidence2">
+                            Invoice evidence 2.pdf , 3MB
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="evidence3" name="item1" type="checkbox" value="evidence3">
+                          <label class="govuk-label govuk-checkboxes__label" for="evidence3">
+                            Invoice evidence 3.pdf , 3MB
+                          </label>
+                        </div>
+                    </fieldset>
             
-          </fieldset>
+            <br><br>
+                    <fieldset class="govuk-fieldset">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                        <h1 class="govuk-fieldset__heading">
+                          Salad leaf harvester (FETF8)
+                        </h1>
+                      </legend>
+                      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="evidence4" name="item2" type="checkbox" value="evidence4">
+                          <label class="govuk-label govuk-checkboxes__label" for="evidence4">
+                            Invoice evidence 1.pdf , 3MB
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="evidence5" name="item2" type="checkbox" value="evidence5">
+                          <label class="govuk-label govuk-checkboxes__label" for="evidence5">
+                            Invoice evidence 2.pdf , 3MB
+                          </label>
+                        </div>
+                        
+                      </fieldset>
+                  </div>
+                </div>
+            
+              
+            
+
+
+  
+              <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="documents" type="file" multiple="">
+            </div>
+            <br><br>
+
+            <div id="filesAddedContainer" style="display: none;">
+              <p class="govuk-label govuk-label--s">Files added</p><br>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <p class="govuk-body" style="margin-bottom: 0;">Slurry separators (FETF27), Invoice evidence 1.pdf , 3MB</p>
+                  <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+              </div>
+              <hr style="margin: 20px 0;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <p class="govuk-body" style="margin-bottom: 0;">Slurry separators (FETF27),Invoice evidence 2.pdf , 3MB</p>
+                  <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+              </div>
+              <hr style="margin: 20px 0;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <p class="govuk-body" style="margin-bottom: 0;">Slurry separators (FETF27),Invoice evidence 3.pdf , 3MB</p>
+                  <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+              </div>
+              <hr style="margin: 20px 0;">
+              <br>
+          </div>
+
+  
+            <button type="submit" class="govuk-button govuk-button--secondary moj-multi-file-upload__button" data-module="govuk-button" onclick="showFilesAddedSection()">
+              Upload files
+            </button>
+  
+        
+
+    
+
+</div>
+</div>
+<br><br>
+</div>
+
+
+
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  
+    <p class="govuk-label govuk-label--m">Payments</p>
+    <p class="govuk-body">For example, bank statements (you can cross out other transactions)</p>
+  <p class="govuk-body" style="color: #505A5F;">Supported file types are PDF, DOC, DOCX, XLS, XLSX or JPG. Maximum file size is 20MB.</p><br>
+
+  
+         
+    
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--s" for="documents">
+                  Upload a file
+                </label>
+  
+  <br>
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="payment1" name="payment" type="checkbox" value="email" data-aria-controls="conditional-payment">
+                    <label class="govuk-label govuk-checkboxes__label" for="payment1">
+                      Include evidence already uploaded
+                    </label>
+                    
+                  </div>
+                  <br>
+  
+  
+                  <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-payment">
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                          <h1 class="govuk-fieldset__heading">
+                            Slurry separators (FETF27)
+                          </h1>
+                        </legend>
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="evidence1" name="item1" type="checkbox" value="evidence1">
+                            <label class="govuk-label govuk-checkboxes__label" for="evidence1">
+                              Payment evidence 1.pdf , 3MB
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="evidence2" name="item1" type="checkbox" value="evidence2">
+                            <label class="govuk-label govuk-checkboxes__label" for="evidence2">
+                              Payment evidence 2.pdf , 3MB
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="evidence3" name="item1" type="checkbox" value="evidence3">
+                            <label class="govuk-label govuk-checkboxes__label" for="evidence3">
+                              Payment evidence 3.pdf , 3MB
+                            </label>
+                          </div>
+                      </fieldset>
+              
+              <br><br>
+                      <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                          <h1 class="govuk-fieldset__heading">
+                            Salad leaf harvester (FETF8)
+                          </h1>
+                        </legend>
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="evidence4" name="item2" type="checkbox" value="evidence4">
+                            <label class="govuk-label govuk-checkboxes__label" for="evidence4">
+                              Payment evidence 1.pdf , 3MB
+                            </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="evidence5" name="item2" type="checkbox" value="evidence5">
+                            <label class="govuk-label govuk-checkboxes__label" for="evidence5">
+                              Payment evidence 2.pdf , 3MB
+                            </label>
+                          </div>
+                          
+                        </fieldset>
+                    </div>
+                  </div>
+              
+                
+              
+  
+  
+    
+                <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="documents" type="file" multiple="">
+              </div>
+              <br><br>
+  
+              <div id="filesPaymentContainer" style="display: none;">
+                <p class="govuk-label govuk-label--s">Files added</p><br>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <p class="govuk-body" style="margin-bottom: 0;">Slurry separators (FETF27), Payment evidence 1.pdf , 3MB</p>
+                    <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+                </div>
+                <hr style="margin: 20px 0;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <p class="govuk-body" style="margin-bottom: 0;">Slurry separators (FETF27),Invoice evidence 2.pdf , 3MB</p>
+                    <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+                </div>
+                <hr style="margin: 20px 0;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <p class="govuk-body" style="margin-bottom: 0;">Slurry separators (FETF27),Invoice evidence 3.pdf , 3MB</p>
+                    <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+                </div>
+                <hr style="margin: 20px 0;">
+                <br>
+            </div>
+  
+    
+              <button type="submit" class="govuk-button govuk-button--secondary moj-multi-file-upload__button" data-module="govuk-button" onclick="showFilesPaymentsSection()">
+                Upload files
+              </button>
+    
           
       
-      </div>
-    </div>
-
-    <br><br>
-
-  <div id="filesAddedContainer" style="display: none;">
-      <p class="govuk-label govuk-label--s">Files added</p><br>
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-          <p class="govuk-body" style="margin-bottom: 0;">Invoice evidence 1.pdf , 3MB</p>
-          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
-      </div>
-      <hr style="margin: 20px 0;">
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-          <p class="govuk-body" style="margin-bottom: 0;">Invoice evidence 2.pdf , 3MB</p>
-          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
-      </div>
-      <hr style="margin: 20px 0;">
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-          <p class="govuk-body" style="margin-bottom: 0;">Invoice evidence 3.pdf , 3MB</p>
-          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
-      </div>
-      <hr style="margin: 20px 0;">
-      <br>
+  
   </div>
-
-  <p class="govuk-label govuk-label--s">Upload a file</p>
-  <div class="container">
-      <p class="govuk-body text" style="margin-bottom: 0;">Drag and drop files here or</p>
-      <button type="button" class="govuk-button govuk-button--secondary button" data-module="govuk-button" onclick="showFilesAddedSection()">Choose file</button>
   </div>
   <br><br>
-</div>
-</div>
-<br><br>
-</div>
-
-
-<br><br><br>
+  </div>
 
 
 
 
 
 
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    
+      <p class="govuk-label govuk-label--m">Visual evidence</p>
+<p class="govuk-body">For example, photos and videos showing the item</p>
+<p class="govuk-body" style="color: #505A5F;">Supported file types are JPG, PNG, PDF, MOV or MP4. Maximum file size is 20MB.</p><br>
+    
+    
+           
+      
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label--s" for="documents">
+                    Upload a file
+                  </label>
+    
+    <br>
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="visual1" name="visual" type="checkbox" value="email" data-aria-controls="conditional-visual">
+                      <label class="govuk-label govuk-checkboxes__label" for="visual1">
+                        Include evidence already uploaded
+                      </label>
+                      
+                    </div>
+                    <br>
+    
+    
+                    <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-visual">
+                      <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                            <h1 class="govuk-fieldset__heading">
+                              Slurry separators (FETF27)
+                            </h1>
+                          </legend>
+                          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="evidence1" name="item1" type="checkbox" value="evidence1">
+                              <label class="govuk-label govuk-checkboxes__label" for="evidence1">
+                                Visual evidence 1.pdf , 3MB
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="evidence2" name="item1" type="checkbox" value="evidence2">
+                              <label class="govuk-label govuk-checkboxes__label" for="evidence2">
+                                Visual evidence 2.pdf , 3MB
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="evidence3" name="item1" type="checkbox" value="evidence3">
+                              <label class="govuk-label govuk-checkboxes__label" for="evidence3">
+                                Visual evidence 3.pdf , 3MB
+                              </label>
+                            </div>
+                        </fieldset>
+                
+                <br><br>
+                        <fieldset class="govuk-fieldset">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                            <h1 class="govuk-fieldset__heading">
+                              Salad leaf harvester (FETF8)
+                            </h1>
+                          </legend>
+                          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="evidence4" name="item2" type="checkbox" value="evidence4">
+                              <label class="govuk-label govuk-checkboxes__label" for="evidence4">
+                                Visual evidence 1.pdf , 3MB
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="evidence5" name="item2" type="checkbox" value="evidence5">
+                              <label class="govuk-label govuk-checkboxes__label" for="evidence5">
+                                Visual evidence 2.pdf , 3MB
+                              </label>
+                            </div>
+                            
+                          </fieldset>
+                      </div>
+                    </div>
+                
+                  
+                
+    
+    
+      
+                  <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="documents" type="file" multiple="">
+                </div>
+                <br><br>
+    
+                <div id="visualEvidenceContainer" style="display: none;">
+                  <p class="govuk-label govuk-label--s">Files added</p><br>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <p class="govuk-body" style="margin-bottom: 0;">Slurry separators (FETF27), Visual evidence 1.pdf , 3MB</p>
+                      <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+                  </div>
+                  <hr style="margin: 20px 0;">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <p class="govuk-body" style="margin-bottom: 0;">Slurry separators (FETF27), Visual evidence 2.pdf , 3MB</p>
+                      <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+                  </div>
+                  <hr style="margin: 20px 0;">
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <p class="govuk-body" style="margin-bottom: 0;">Slurry separators (FETF27), Visual evidence 3.pdf , 3MB</p>
+                      <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+                  </div>
+                  <hr style="margin: 20px 0;">
+                  <br>
+              </div>
+    
+      
+                <button type="submit" class="govuk-button govuk-button--secondary moj-multi-file-upload__button" data-module="govuk-button" onclick="showVisualEvidenceSection()">
+                  Upload files
+                </button>
+      
+            
+        
+    
+    </div>
+    </div>
+    <br><br>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
   <p class="govuk-label govuk-label--m">Payment evidence</p>
   <p class="govuk-body">For example, bank statements (you can cross out other transactions)</p>
@@ -303,42 +600,63 @@ function showVisualEvidenceSection() {
       
       </div>
     </div>
+  </div>
+
 
     <br><br>
 
-  <div id="filesAddedContainer" style="display: none;">
-      <p class="govuk-label govuk-label--s">Files added</p><br>
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-          <p class="govuk-body" style="margin-bottom: 0;">Payment evidence 1.pdf , 3MB</p>
-          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
-      </div>
-      <hr style="margin: 20px 0;">
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-          <p class="govuk-body" style="margin-bottom: 0;">Payment evidence 2.pdf , 3MB</p>
-          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
-      </div>
-      <hr style="margin: 20px 0;">
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-          <p class="govuk-body" style="margin-bottom: 0;">Payment evidence 3.pdf , 3MB</p>
-          <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
-      </div>
-      <hr style="margin: 20px 0;">
-      <br>
+
+
+
+    
+
+  
+  
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-label--s" for="documents">
+      Upload a file
+    </label>
+
+    <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="documents" type="file" multiple="">
   </div>
 
-  <p class="govuk-label govuk-label--s">Upload a file</p>
-  <div class="container">
-      <p class="govuk-body text" style="margin-bottom: 0;">Drag and drop files here or</p>
-      <button type="button" class="govuk-button govuk-button--secondary button" data-module="govuk-button" onclick="showFilesAddedSection()">Choose file</button>
-  </div>
-  <br><br>
+  <div id="filesPaymentContainer" style="display: none;">
+    <p class="govuk-label govuk-label--s">Files added</p><br>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p class="govuk-body" style="margin-bottom: 0;">Payment evidence 1.pdf , 3MB</p>
+        <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+    </div>
+    <hr style="margin: 20px 0;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p class="govuk-body" style="margin-bottom: 0;">Payment evidence 2.pdf , 3MB</p>
+        <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+    </div>
+    <hr style="margin: 20px 0;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p class="govuk-body" style="margin-bottom: 0;">Payment evidence 3.pdf , 3MB</p>
+        <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
+    </div>
+    <hr style="margin: 20px 0;">
+    <br>
 </div>
 
-<br><br>
+  <button type="submit" class="govuk-button govuk-button--secondary moj-multi-file-upload__button" data-module="govuk-button" onclick="showFilesPaymentsSection()">
+    Upload file
+  </button>
+
+  
+ 
+</div>
 
 
 
-<br><br><br>
+
+
+
+
+
 
 
 
@@ -417,41 +735,34 @@ function showVisualEvidenceSection() {
 
 
 
-<div id="visualEvidenceContainer" style="display: none;">
-  <p class="govuk-label govuk-label--s">Files added</p><br>
-  <div style="display: flex; justify-content: space-between; align-items: center;">
-      <p class="govuk-body" style="margin-bottom: 0;">Visual evidence 1.jpg , 2MB</p>
-      <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
-  </div>
-  <hr style="margin: 20px 0;">
-  <div style="display: flex; justify-content: space-between; align-items: center;">
-      <p class="govuk-body" style="margin-bottom: 0;">Visual evidence 2.png , 1.5MB</p>
-      <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
-  </div>
-  <hr style="margin: 20px 0;">
-  <div style="display: flex; justify-content: space-between; align-items: center;">
-      <p class="govuk-body" style="margin-bottom: 0;">Visual evidence 3.mp4 , 17MB</p>
-      <p class="govuk-body" style="margin-bottom: 0;"><a href="#" class="govuk-link">Delete file</a></p>
-  </div>
-  <hr style="margin: 20px 0;">
-  <br>
+
+
+
+
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-label--s" for="documents">
+    Upload a file
+  </label>
+
+  <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="documents" type="file" multiple="">
 </div>
 
 
 
-<p class="govuk-label govuk-label--s">Upload a file</p>
-<div class="container">
-  <p class="govuk-body text" style="margin-bottom: 0;">Drag and drop files here or</p>
-  <button type="button" class="govuk-button govuk-button--secondary button" data-module="govuk-button" onclick="showVisualEvidenceSection()">Choose file</button>
-</div>
+<button type="submit" class="govuk-button govuk-button--secondary moj-multi-file-upload__button" data-module="govuk-button" onclick="showVisualEvidenceSection()">
+  Upload file
+</button>
 </div>
 
 </div>
 </div>
 
+ -->
 
 
-<br><br><br><br>
 
 
 
@@ -474,8 +785,15 @@ function showVisualEvidenceSection() {
 
 
 
-
 </main>
+
+
+
+
+
+
+
+
 
 
 {% endblock %}

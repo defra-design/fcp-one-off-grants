@@ -194,3 +194,15 @@
     display: none;
   }
 }
+
+.drag-and-drop {
+max-width:585px;
+min-height: 110px;
+position:relative;
+border:3px dashed black;
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content:flex-start;
+}
