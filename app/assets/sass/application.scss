@@ -83,6 +83,8 @@
   font-weight: bold;
 }
 
+
+
 #selected-item-left {
   border-bottom:none;
 }
@@ -138,6 +140,13 @@
 .add-total-score::before {
   content: "Total score: "; /* Change this to the text you want to add */
   font-weight: bold;
+}
+
+.add-hr::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #b1b4b6; /* Customize the color and style of the horizontal rule */
+  margin-top: 8px; /* Adjust the spacing as needed */
 }
 }
 
