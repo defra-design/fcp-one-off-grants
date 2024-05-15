@@ -87,7 +87,7 @@
           Are you are a member of a professional organisation for contractors?
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['contractingProfessionalOrganisation'] }}
+          {{ data['contact'] }}, {{ data['contractingProfessionalOrganisation'] }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> answer</span></a>
@@ -108,7 +108,7 @@
           Total number of animals
         </dt>
         <dd class="govuk-summary-list__value">
-          30{{data['bovineAnimals']}}
+          {{data['bovineAnimals']}}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -116,7 +116,7 @@
           County parish holding number
         </dt>
         <dd class="govuk-summary-list__value">
-          {{data['accountNumber1']}}{{data['accountNumber2']}}/{{data['accountNumber3']}}
+          {{data['accountNumber1']}}/{{data['accountNumber2']}}/{{data['accountNumber3']}}
         </dd>
       </div>
     </dl>
