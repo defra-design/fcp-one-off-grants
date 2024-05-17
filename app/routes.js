@@ -191,9 +191,9 @@ router.post('/fetf-items-complete', function(request, response) {
 
 // FETF items business address question
 
-router.post('/fetf-items-business-address', function(request, response) {
-  var aboutBusinessLocation = request.session.data['willYouStoreAtBusinessAddress']
-  if (aboutBusinessLocation == "yes"){
+router.post('/fetf/fetf-items-business-address', function(request, response) {
+  var aboutBusinessLocation = request.session.data['stored-business-address']
+  if (aboutBusinessLocation == "Yes"){
       response.redirect("/fetf/application/v1-0/about-items/equipment-contracting")
   } else {
       response.redirect("/fetf/application/v1-0/about-items/equipment-location-details")
