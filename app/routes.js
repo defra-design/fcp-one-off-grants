@@ -201,6 +201,10 @@ router.post('/fetf-items-business-address', function(request, response) {
 })
 
 
+
+
+
+
 // FETF items other locations
 
 router.post('/fetf-items-other-locations', function(request, response) {
@@ -210,14 +214,17 @@ router.post('/fetf-items-other-locations', function(request, response) {
 
 // FETF items contracting question
 
-router.post('/fetf-items-contracting', function(request, response) {
-  var aboutContracting = request.session.data['willYouUseForContracting']
-  if (aboutContracting == "yes"){
-      response.redirect("/fetf/application/v1-0/about-items/equipment-contractor-details")
+router.post('/fetf/fetf-items-contracting', function(req, res) {
+  var aboutContracting = req.session.data['for-contracting']
+  if (aboutContracting == "Yes"){
+      res.redirect("/fetf/application/v1-0/about-items/equipment-contractor-details")
   } else {
-      response.redirect("/fetf/application/v1-0/about-items/livestock-information")
+      res.redirect("/fetf/application/v1-0/about-items/livestock-information")
   }
 })
+
+
+
 
 
 // FETF items contracting other question
