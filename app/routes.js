@@ -354,3 +354,32 @@ router.post('/fetf/set-status', function(request, response) {
 })
 
 
+
+//Feedback fetf
+
+router.post('/fetf/feedback-question', function(req, res) {
+
+  var giveFeedback = req.session.data['give-feedback']
+
+
+  if (giveFeedback == "true"){
+
+    res.redirect('/fetf/feedback-submit')
+  } else {
+    res.redirect('/fetf/help')
+  }
+
+})
+
+//Feedback ftf
+
+router.post('/ftf/feedback-question', function(req, res) {
+  var giveFeedback = req.session.data['give-feedback']
+
+  if (giveFeedback == "true"){
+    res.redirect('/ftf/feedback-submit')
+  } else {
+    res.redirect('/ftf/help')
+  }
+
+})
