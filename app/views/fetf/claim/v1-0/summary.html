@@ -113,13 +113,33 @@
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Financial evidence
+              Invoices
             </dt>
        
             <dd class="govuk-summary-list__value">
-              Financial evidence 1.pdf , 3MB<br>
-              Financial evidence 2.pdf , 3MB<br>
-              Financial evidence 3.pdf , 3MB
+              Invoices 1.pdf , 3MB<br>
+              Invoices 2.pdf , 3MB<br>
+              Invoices 3.pdf , 3MB
+            </dd>
+            {% if (data['progress'] == "submitted") %}{% else %}
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="/_common/not-testing.html">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+            {% endif %}
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Payments
+            </dt>
+       
+            <dd class="govuk-summary-list__value">
+              Payments 1.pdf , 3MB<br>
+              Payments 2.pdf , 3MB<br>
+              Payments 3.pdf , 3MB
             </dd>
             {% if (data['progress'] == "submitted") %}{% else %}
             <dd class="govuk-summary-list__actions">
