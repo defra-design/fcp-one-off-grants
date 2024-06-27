@@ -1,0 +1,165 @@
+{% extends "layouts/main-application-round-2.html" %}
+
+{% set pageName="Eligible" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+
+    
+<br>
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      
+
+
+
+      <div class="govuk-grid-column-two-thirds">
+      
+      
+      
+      
+      
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What do you want to change?
+              </h1>
+            </legend>
+            <div id="waste-hint" class="govuk-hint">
+              Select all that apply.
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="change" name="change" type="checkbox" value="claim">
+                <label class="govuk-label govuk-checkboxes__label" for="change">
+                  Change a claim
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="change-2" name="change" type="checkbox" value="claim-dates">
+                <label class="govuk-label govuk-checkboxes__label" for="change-2">
+                  Change claim dates
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="change-3" name="change" type="checkbox" value="item">
+                <label class="govuk-label govuk-checkboxes__label" for="change-3">
+                  Change an item
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="change-4" name="change" type="checkbox" value="match-funding">
+                <label class="govuk-label govuk-checkboxes__label" for="change-4">
+                  Change to match funding
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="change-5" name="change" type="checkbox" value="specification">
+                <label class="govuk-label govuk-checkboxes__label" for="change-5">
+                  Change to specification
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="change-6" name="change" type="checkbox" value="outputs">
+                <label class="govuk-label govuk-checkboxes__label" for="change-6">
+                  Change to outputs
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="change-7" name="change" type="checkbox" value="delay">
+                <label class="govuk-label govuk-checkboxes__label" for="change-7">
+                  Delay to outputs
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="change-8" name="change" type="checkbox" value="decrease">
+                <label class="govuk-label govuk-checkboxes__label" for="change-8">
+                  Decrease grant amount
+                </label>
+              </div>
+              
+              
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="change-9" name="contact" type="checkbox" value="other" data-aria-controls="conditional-change-9">
+                <label class="govuk-label govuk-checkboxes__label" for="change-9">
+                  Other
+                </label>
+              </div>
+              
+
+
+            </div>
+            
+          </fieldset>
+        </div>
+
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="more-detail">
+              Explain why you need the change
+            </label>
+          </h1>
+          
+          <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+      
+        <a href="describe-reason">
+          <button class="govuk-button" data-module="govuk-button" style="margin-bottom: 40px;">
+            Continue
+          </button>
+        </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      </div>
+     
+      
+
+
+
+    
+    </div>
+  </main>
+</div>
+
+
+
+
+</main>
+
+{% endblock %}

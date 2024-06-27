@@ -294,6 +294,45 @@
   }
 }
 
+
+.app-contact-panel {
+  @include govuk-responsive-margin(9, "top");
+  padding-top: govuk-spacing(3);
+  border-top: 2px solid govuk-colour("blue");
+}
+
+.app-contact-panel__heading,
+.app-contact-panel__body,
+.app-contact-panel__link {
+  max-width: 100%;
+}
+
+.app-contact-panel__heading {
+  @extend %govuk-heading-m;
+  padding-top: 10px;
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.app-contact-panel__body:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 40.0625em) {
+  .app-prose-scope h3, .app-contact-panel__heading, .govuk-heading-m {
+      margin-bottom: 20px;
+  }
+}
+@media (min-width: 40.0625em) {
+  .app-prose-scope h3, .app-contact-panel__heading, .govuk-heading-m {
+      font-size: 1.5rem;
+      line-height: 1.25;
+  }
+}
+
+
 // .drag-and-drop {
 // max-width:585px;
 // min-height: 110px;
