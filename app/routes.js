@@ -393,3 +393,32 @@ router.post('/ftf/feedback-question', function(req, res) {
 
 
 
+// FTF help triage
+
+router.post('/ftf-help-triage', function(request, response) {
+  var helpTriage = request.session.data['whatDoYouNeedHelpWith']
+
+  if (helpTriage == "request a change to my Grant Funding Agreement"){
+    response.redirect('/ftf/change-request/select-reason')
+  } else {
+    response.redirect('/_common/not-testing')
+  }
+  
+  
+})
+
+
+// FTF select reason
+
+router.post('/ftf-select-reason', function(request, response) {
+  response.redirect('/ftf/change-request/describe-reason')
+})
+
+// FTF describe reason
+
+router.post('/ftf-describe-reason', function(request, response) {
+  response.redirect('/ftf/change-request/check-answers')
+})
+
+
+

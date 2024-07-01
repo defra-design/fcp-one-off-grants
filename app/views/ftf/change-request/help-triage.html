@@ -1,6 +1,7 @@
+
 {% extends "layouts/main-application-round-2.html" %}
 
-{% set pageName="Eligible" %}
+{% set pageName="Help" %}
 
 {% block content %}
 
@@ -21,93 +22,63 @@
 
 
 
-    
-<br>
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-<div class="govuk-width-container">
-  <main class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-      </div>
-    </div>
+    <form action="/ftf-help-triage" method="post">
 
-    <div class="govuk-grid-row">
       
 
+            {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
+            {{ govukRadios({
+              name: "whatDoYouNeedHelpWith",
+              fieldset: {
+                legend: {
+                  text: "What do you need help with?",
+                  isPageHeading: true,
+                  classes: "govuk-fieldset__legend--l"
+                }
+              },
+              items: [
+                {
+                  value: "general help",
+                  text: "General help"
+                },
+                {
+                  value: "report a problem",
+                  text: "Report a problem"
+                },
+                {
+                  value: "request a change to my Grant Funding Agreement",
+                  text: "Request a change to my Grant Funding Agreement"
+                }
+              ]
+            }) }}
 
-      <div class="govuk-grid-column-two-thirds">
-      
-      
-      
-      
-      
-      
+            {% from "govuk/components/button/macro.njk" import govukButton %}
 
-
-
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    What do you need help with?
-                  </h1>
-                </legend>
-                <div class="govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="needHelp" name="needHelp" type="radio" value="General help">
-                    <label class="govuk-label govuk-radios__label" for="needHelp">
-                      General help
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="needHelp-2" name="needHelp" type="radio" value="Report a problem">
-                    <label class="govuk-label govuk-radios__label" for="needHelp-2">
-                      Report a problem
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="needHelp-3" name="needHelp" type="radio" value="Request a change to my Grant Funding">
-                    <label class="govuk-label govuk-radios__label" for="needHelp-3">
-                      Request a change to my Grant Funding Agreement
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-      
-           
-      
-        <a href="select-reason">
-          <button class="govuk-button" data-module="govuk-button" style="margin-bottom: 40px;">
-            Continue
-          </button>
-        </a>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      </div>
-     
-      
+{{ govukButton({
+  text: "Save and continue"
+}) }}
 
 
 
-    
-    </div>
-  </main>
+
+   
+    </form>
+
+  </div>
+
 </div>
-
 
 
 
 </main>
 
 {% endblock %}
+
+
+
+
