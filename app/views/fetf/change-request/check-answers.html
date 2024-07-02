@@ -1,0 +1,278 @@
+{% extends "layouts/main-application-round-2.html" %}
+
+{% set pageName="Eligible" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Check your answers</h1>
+
+
+
+
+      <h2 class="govuk-heading-m">Change to claim date</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+        {
+          key: {
+            text: "Change type"
+          },
+          value: {
+            text: "Change to claim date"
+          },
+          actions: {
+            items: [
+              {
+                href: "select-reason",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Explain why you need the change"
+          },
+          value: {
+            text: data['explainChange']
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        
+        {
+            key: {
+              text: "When do you want to make your claim?"
+            },
+            value: {
+              text: data['claim-date']or "27 3 2025"
+            },
+            actions: {
+              items: [
+                {
+                  href: "claim-date",
+                  text: "Change",
+                  visuallyHiddenText: "name"
+                }
+              ]
+            }
+          }
+          
+
+        ]
+      }) }}
+
+      
+
+      <h2 class="govuk-heading-m">Change to items</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+        {
+          key: {
+            text: "Change type"
+          },
+          value: {
+            text: "Change to items"
+          },
+          actions: {
+            items: [
+              {
+                href: "select-reason",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Explain why you need the change"
+          },
+          value: {
+            text: data['explainChange']
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        
+        {
+            key: {
+              text: "What do you want to change?"
+            },
+            value: {
+              text: xxx
+            },
+            actions: {
+              items: [
+                {
+                  href: "claim-date",
+                  text: "Change",
+                  visuallyHiddenText: "name"
+                }
+              ]
+            }
+          },
+        
+          {
+              key: {
+                text: "Evidence"
+              },
+              value: {
+                text: "file.jpeg"
+              },
+              actions: {
+                items: [
+                  {
+                    href: "upload-evidence",
+                    text: "Change",
+                    visuallyHiddenText: "uploaded evidence"
+                  }
+                ]
+              }
+            }
+          
+
+        ]
+      }) }}
+
+
+
+      <h2 class="govuk-heading-m">Other changes</h2>
+
+      {{ govukSummaryList({
+        classes: "govuk-!-margin-bottom-9",
+        rows: [
+        {
+          key: {
+            text: "Change type"
+          },
+          value: {
+            text: "Other"
+          },
+          actions: {
+            items: [
+              {
+                href: "select-reason",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Explain why you need the change"
+          },
+          value: {
+            text: data['explainChange']
+          },
+          actions: {
+            items: [
+              {
+                href: "#",
+                text: "Change",
+                visuallyHiddenText: "name"
+              }
+            ]
+          }
+        },
+        
+        {
+            key: {
+              text: "Describe the changes in detail"
+            },
+            value: {
+              text: data['claim-date'] or "27 3 2025"
+            },
+            actions: {
+              items: [
+                {
+                  href: "claim-date",
+                  text: "Change",
+                  visuallyHiddenText: "name"
+                }
+              ]
+            }
+          },
+
+          {
+            key: {
+              text: "Evidence"
+            },
+            value: {
+              text: "file.jpeg"
+            },
+            actions: {
+              items: [
+                {
+                  href: "upload-evidence",
+                  text: "Change",
+                  visuallyHiddenText: "uploaded evidence"
+                }
+              ]
+            }
+          }
+          
+
+        ]
+      }) }}
+
+
+      <h2 class="govuk-heading-m">Now send your application</h2>
+
+      <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="/form-handler" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        {{ govukButton({
+          text: "Accept and send"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
+

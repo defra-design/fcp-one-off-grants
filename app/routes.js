@@ -422,3 +422,77 @@ router.post('/ftf-describe-reason', function(request, response) {
 
 
 
+
+// FETF help triage
+
+router.post('/fetf-help-triage', function(request, response) {
+  var helpTriage = request.session.data['whatDoYouNeedHelpWithFetf']
+
+  if (helpTriage == "request a change to my Grant Funding Agreement"){
+    response.redirect('/fetf/change-request/select-reason')
+  } else {
+    response.redirect('/_common/not-testing')
+  }
+  
+  
+})
+
+
+// FETF select reason
+
+
+
+
+router.post('/fetf-select-reason', function(request, response) {
+  var changeType = request.session.data['whatDoYouWantToChangeFetf']
+
+  if (changeType == "change to claim date"){
+    response.redirect('/fetf/change-request/claim-date')
+  } 
+  else if (changeType == "change to items"){
+    response.redirect('/fetf/change-request/selected-items')
+  } 
+  else {
+    response.redirect('/fetf/change-request/describe-reason')
+  }
+  
+  
+})
+
+// FETF describe reason
+
+router.post('/fetf-describe-reason', function(request, response) {
+  response.redirect('/fetf/change-request/another-change')
+})
+
+// FETF claim date
+
+router.post('/claim-date-change', function(request, response) {
+  response.redirect('/fetf/change-request/another-change')
+})
+
+// FETF make another change?
+
+
+
+router.post('/fetf-another-change', function(request, response) {
+  var otherChange = request.session.data['anotherChange']
+
+  if (otherChange == "yes"){
+    response.redirect('/fetf/change-request/select-reason.html')
+  } 
+  
+  else {
+    response.redirect('/fetf/change-request/check-answers')
+  }
+  
+  
+})
+
+
+
+
+
+
+
+
