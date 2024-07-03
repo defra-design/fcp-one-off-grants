@@ -27,6 +27,8 @@ router.get('/fetf/application/v1-0/items/equipment-list', (req, res) => {
     res.render('fetf/application/v1-0/items/equipment-list.html', { groupedData, sortedData, allData });
 })
 
+
+
 // router.get('/:principleTitle', (req, res) => {
 //     const { principleTitle } = req.params
 //     const item = _.findWhere(data, {principleTitle: capitalizeFirstLetter(principleTitle.replace('-', ' '))})
@@ -487,6 +489,37 @@ router.post('/fetf-another-change', function(request, response) {
   }
   
   
+})
+
+
+
+
+
+// FETF Change request  equipment list
+
+router.get('/fetf/change-request/equipment-list', (req, res) => {
+  const sortedData = _.sortBy(data, 'principleTitle')
+  const groupedData = _.groupBy(sortedData, 'sectionNumber')
+  const allData = _.sortBy(data, 'sectionNumber')
+  res.render('fetf/change-request/equipment-list.html', { groupedData, sortedData, allData });
+})
+
+
+//issue with this section of code
+
+// router.get('/fetf/change-request/:termName', (req, res) => {
+//   const { termName } = req.params
+//   const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
+//   res.render('fetf/change-request/equipment.html', { item })
+// })
+
+//issue end
+
+
+router.get('/fetf/change-request/item-quantity/:termName', (req, res) => {
+const { termName } = req.params
+const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
+res.render('fetf/change-request/item-quantity.html', { item })
 })
 
 

@@ -35,17 +35,25 @@
     <div class="govuk-grid-column-two-thirds">
 
 
+      {% if data.filteredResults.length %}
+
+      {% set data = data.filteredResults %}
+      
+      {% else %}
+      
+      {% set data = allData %}
+      
+      {% endif %}
 
 
-
-<h2 class="govuk-heading-m">20 results found</h2>
+<h2 class="govuk-heading-m">{{data.length}} results found</h2>
   <hr style="margin-bottom: 20px;">
-
+  {% for item in data %}
 
 
 <span style="clear: both; display: inline-block;">
 <h3 id="linked-data" tabindex="-1" class="govuk-heading-m">
-  <a href="/fetf/change-request/equipment" class="govuk-link">{{ item.title }} (FETF{{ item.itemCode }})</a>
+  <a href="{{ item.termName | lower | replace(' ', '-') }}" class="govuk-link">{{ item.title }} (FETF{{ item.itemCode }})</a>
 </h3>
 
 <p class="govuk-body">{{ item.summary }}</p>
@@ -65,7 +73,7 @@
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" style="margin: 0 0 20px;">
 
 
-
+{% endfor %}
 
 <nav class="govuk-pagination" role="navigation" aria-label="Pagination">
   <div class="govuk-pagination__prev">
