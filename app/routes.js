@@ -505,15 +505,13 @@ router.get('/fetf/change-request/equipment-list', (req, res) => {
 })
 
 
-//issue with this section of code
-
 router.get('/fetf/change-request/equipment/:termName', (req, res) => {
   const { termName } = req.params
   const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
   res.render('fetf/change-request/equipment.html', { item })
 })
 
-//issue end
+
 
 
 router.get('/fetf/change-request/item-quantity/:termName', (req, res) => {
@@ -523,7 +521,11 @@ res.render('fetf/change-request/item-quantity.html', { item })
 })
 
 
+// FETF claim date
 
+router.post('/fetf-add-to-changed-items', function(request, response) {
+  response.redirect('/fetf/change-request/another-change')
+})
 
 
 
