@@ -507,11 +507,11 @@ router.get('/fetf/change-request/equipment-list', (req, res) => {
 
 //issue with this section of code
 
-// router.get('/fetf/change-request/:termName', (req, res) => {
-//   const { termName } = req.params
-//   const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
-//   res.render('fetf/change-request/equipment.html', { item })
-// })
+router.get('/fetf/change-request/equipment/:termName', (req, res) => {
+  const { termName } = req.params
+  const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
+  res.render('fetf/change-request/equipment.html', { item })
+})
 
 //issue end
 
