@@ -24,6 +24,43 @@
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+   
+    {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+    {% set grantTotal = 0 %}
+    {% set scoreTotal = 0 %}
+    {% for item in data['selected-items'] %}
+      {% set grantTotal = grantTotal + item.grantTotal %}
+      {% set scoreTotal = scoreTotal + item.score %}
+    {% endfor %}
+
+    {% if grantTotal > 50000 %}
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Your items are above the maximum grant amount of £50,000",
+            href: "#"
+          }
+        ]
+      }) }}
+    {% endif %}
+
+    {% if grantTotal < 1000 %}
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: [
+          {
+            text: "Your items do not meet the minimum grant amount of £1,000",
+            href: "#"
+          }
+        ]
+      }) }}
+    {% endif %}
+
+
+  
+
     <span class="govuk-caption-l">Apply</span>
     <h1 class="govuk-heading-l">What do you want to change?</h1>
     <p class="govuk-body">The minimum grant you can apply for is £1,000 and the maximum is £50,000.</p>

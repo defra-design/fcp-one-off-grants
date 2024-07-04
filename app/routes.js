@@ -523,11 +523,33 @@ res.render('fetf/change-request/item-quantity.html', { item })
 
 // FETF claim date
 
+// router.post('/fetf-add-to-changed-items', function(request, response) {
+//   response.redirect('/fetf/change-request/selected-items')
+// })
+
+
+
+// FETF add item to change request
+
 router.post('/fetf-add-to-changed-items', function(request, response) {
-  response.redirect('/fetf/change-request/another-change')
+  var quantity = Number(request.body['quantity'])
+  var termName = request.body['termName']
+  var itemExists = false
+  for (var selectedItem of request.session.data['selected-items']){
+    if (selectedItem.termName == termName) {
+      itemExists = true
+      selectedItem.quantity += quantity
+      selectedItem.grantTotal = Number(selectedItem.quantity) * Number(selectedItem.grantValue.replace(',',''))
+    }
+  }
+  if (itemExists == false){
+    const item = _.findWhere(data, {termName: termName})
+    item.quantity = quantity
+    item.grantTotal = Number(item.quantity) * Number(item.grantValue.replace(',',''))
+    request.session.data['selected-items'].push(item)
+  }
+  
+  response.redirect("/fetf/change-request/selected-items")
 })
-
-
-
 
 
