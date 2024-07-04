@@ -258,16 +258,16 @@
       }) }}
 
 
-      <h2 class="govuk-heading-m">Now send your application</h2>
+      <h2 class="govuk-heading-m">Now send your help request</h2>
 
-      <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      <p class="govuk-body">The RPA will review your request and let you know the outcomes. You cannot request another change until this request is resolved.</p>
 
-      <form action="/form-handler" method="post" novalidate>
+      <form action="thank-you" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
         {{ govukButton({
-          text: "Accept and send"
+          text: "Send"
         }) }}
 
       </form>
