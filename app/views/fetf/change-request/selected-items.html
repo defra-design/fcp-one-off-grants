@@ -59,7 +59,7 @@
       }) }}
    
 
-    {% elseif grantTotal < 1000 %}
+    {% elseif grantTotal >= 1 and grantTotal <= 1000 %}
       {{ govukErrorSummary({
         titleText: "There is a problem",
         errorList: [
