@@ -34,7 +34,20 @@
       {% set scoreTotal = scoreTotal + item.score %}
     {% endfor %}
 
-    {% if grantTotal > 50000 %}
+    {% if scoreTotal/data['selected-items'].length < 55 %}
+    {{ govukErrorSummary({
+      titleText: "There is a problem",
+      errorList: [
+        {
+          text: "Your score is below the minimum threshold of 55, which makes you ineligiable",
+          href: "#"
+        }
+      ]
+    }) }}
+ 
+
+
+    {% elseif grantTotal > 50000 %}
       {{ govukErrorSummary({
         titleText: "There is a problem",
         errorList: [
@@ -44,9 +57,9 @@
           }
         ]
       }) }}
-    {% endif %}
+   
 
-    {% if grantTotal < 1000 %}
+    {% elseif grantTotal < 1000 %}
       {{ govukErrorSummary({
         titleText: "There is a problem",
         errorList: [
@@ -57,6 +70,9 @@
         ]
       }) }}
     {% endif %}
+
+   
+  
 
 
   
