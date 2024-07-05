@@ -58,7 +58,7 @@
             text: "Explain why you need the change"
           },
           value: {
-            text: data['explainChange']
+            text: data['explainChange'] or "Supplier delays"
           },
           actions: {
             items: [
@@ -76,7 +76,7 @@
               text: "When do you want to make your claim?"
             },
             value: {
-              text: data['claim-date']or "27 3 2025"
+              text: data['claim-date'] or "27 3 2025"
             },
             actions: {
               items: [
@@ -122,7 +122,7 @@
             text: "Explain why you need the change"
           },
           value: {
-            text: data['explainChange']
+            text: data['explainChange'] or "Supplier out of stock on previous item"
           },
           actions: {
             items: [
@@ -140,7 +140,7 @@
               text: "What do you want to change?"
             },
             value: {
-              text: xxx
+              text: "Tray filler, row seeder, tree shears, trailers small and water treatment"
             },
             actions: {
               items: [
@@ -155,7 +155,7 @@
         
           {
               key: {
-                text: "Evidence"
+                text: "Uploaded evidence (optional)"
               },
               value: {
                 text: "file.jpeg"
@@ -204,7 +204,7 @@
             text: "Explain why you need the change"
           },
           value: {
-            text: data['explainChange']
+            text: data['explainChange'] or "Supplier delays"
           },
           actions: {
             items: [
@@ -222,7 +222,7 @@
               text: "Describe the changes in detail"
             },
             value: {
-              text: data['claim-date'] or "27 3 2025"
+              text: "There is an issue with the supplier"
             },
             actions: {
               items: [
@@ -237,7 +237,7 @@
 
           {
             key: {
-              text: "Evidence"
+              text: "Uploaded evidence (optional)"
             },
             value: {
               text: "file.jpeg"
@@ -267,7 +267,7 @@
         <input type="hidden" name="answers-checked" value="true">
 
         {{ govukButton({
-          text: "Send"
+          text: "Send request"
         }) }}
 
       </form>
