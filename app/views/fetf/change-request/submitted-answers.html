@@ -15,18 +15,14 @@
   </p>
 </div>
 
-{{ govukBackLink({
-  text: "Back",
-  href: "javascript:history.back()"
-}) }}
-
+<br><br><br>
 
 
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h1 class="govuk-heading-l">Check your answers</h1>
+      <h1 class="govuk-heading-l">Your request for change</h1>
 
 
 
@@ -42,15 +38,6 @@
           },
           value: {
             text: "Change to claim date"
-          },
-          actions: {
-            items: [
-              {
-                href: "select-reason",
-                text: "Change",
-                visuallyHiddenText: "name"
-              }
-            ]
           }
         },
         {
@@ -59,15 +46,6 @@
           },
           value: {
             text: data['explainChange'] or "Supplier delays"
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "name"
-              }
-            ]
           }
         },
         
@@ -77,15 +55,6 @@
             },
             value: {
               text: data['claim-date'] or "27 3 2025"
-            },
-            actions: {
-              items: [
-                {
-                  href: "claim-date",
-                  text: "Change",
-                  visuallyHiddenText: "name"
-                }
-              ]
             }
           }
           
@@ -106,15 +75,6 @@
           },
           value: {
             text: "Change to items"
-          },
-          actions: {
-            items: [
-              {
-                href: "select-reason",
-                text: "Change",
-                visuallyHiddenText: "name"
-              }
-            ]
           }
         },
         {
@@ -123,15 +83,6 @@
           },
           value: {
             text: data['explainChange'] or "Supplier out of stock on previous item"
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "name"
-              }
-            ]
           }
         },
         
@@ -141,15 +92,6 @@
             },
             value: {
               text: "Tray filler, row seeder, tree shears, trailers small and water treatment"
-            },
-            actions: {
-              items: [
-                {
-                  href: "claim-date",
-                  text: "Change",
-                  visuallyHiddenText: "name"
-                }
-              ]
             }
           },
         
@@ -159,15 +101,6 @@
               },
               value: {
                 text: "file.jpeg"
-              },
-              actions: {
-                items: [
-                  {
-                    href: "upload-evidence",
-                    text: "Change",
-                    visuallyHiddenText: "uploaded evidence"
-                  }
-                ]
               }
             }
           
@@ -188,15 +121,6 @@
           },
           value: {
             text: "Other"
-          },
-          actions: {
-            items: [
-              {
-                href: "select-reason",
-                text: "Change",
-                visuallyHiddenText: "name"
-              }
-            ]
           }
         },
         {
@@ -205,15 +129,6 @@
           },
           value: {
             text: data['explainChange'] or "Supplier delays"
-          },
-          actions: {
-            items: [
-              {
-                href: "#",
-                text: "Change",
-                visuallyHiddenText: "name"
-              }
-            ]
           }
         
           }
@@ -222,20 +137,8 @@
         ]
       }) }}
 
-
-      <h2 class="govuk-heading-m">Now send your help request</h2>
-
-      <p class="govuk-body">The RPA will review your request and let you know the outcomes. You cannot request another change until this request is resolved.</p>
-
-      <form action="thank-you" method="post" novalidate>
-
-        <input type="hidden" name="answers-checked" value="true">
-
-        {{ govukButton({
-          text: "Send request"
-        }) }}
-
-      </form>
+<a href="../../fetf/activity-list/v2-0/index?fetf-status=02&fetf-apply=03b&fetf-agree=02a&fetf-claim=01" class="govuk-link">Go to your task list</a>
+      
 
     </div>
   </div>

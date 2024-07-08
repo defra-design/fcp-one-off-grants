@@ -455,7 +455,7 @@ router.post('/fetf-select-reason', function(request, response) {
     response.redirect('/fetf/change-request/selected-items')
   } 
   else {
-    response.redirect('/fetf/change-request/describe-reason')
+    response.redirect('/fetf/change-request/another-change')
   }
   
   
