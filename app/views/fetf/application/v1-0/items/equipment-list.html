@@ -14,14 +14,15 @@
 {% block content %}
 
 {{ govukBackLink({
-  text: "Back to items selected",
-  href: "/fetf/application/v1-0/selected-items"
+  text: "Back",
+  href: "javascript:history.back()"
 }) }}
 <main class="govuk-main-wrapper">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <span class="govuk-caption-l">Apply</span>
       <h1 class="govuk-heading-l" style="margin-bottom:30px;">Select items</h1>
+      <a class="govuk-link" href="/fetf/application/v1-0/selected-items">View selected items (0)</a>
       <div class="govuk-inset-text">
         The minimum grant you can apply for is £1,000 and the maximum grant is £50,000.
       </div>
