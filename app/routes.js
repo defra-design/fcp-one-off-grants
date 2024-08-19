@@ -552,5 +552,150 @@ router.post('/fetf-add-to-changed-items', function(request, response) {
   response.redirect("/fetf/change-request/selected-items")
 })
 
+// new routes to spin off
+
+router.get('/selectBusinessAddress1', function (req, res) {
+  if (req.session.data.nameNo1 !== '') {
+    res.redirect('/fetf/rewrite/check-details/confirm-business-address');
+    }
+  else 
+    res.redirect('/fetf/rewrite/check-details/select-business-address');
+});
+
+router.get('/dataSetPrepop1', function (req, res) {
+
+
+  req.session.data.busName = 'Penywell Farm';
+  req.session.data.bNumber = '01674775345';
+  req.session.data.sbi = '272727276';
+  req.session.data.vatNo = 'GB123456789';
+  req.session.data.chNumber = '09876543';
+  req.session.data.cIncNo = '01234567';
+  req.session.data.legalStatus = 'Limited company';
+  req.session.data.nameNo1 = 'Penywell Farm';
+  req.session.data.postcode1 = 'SH45 1YH';
+
+  req.session.data.yourName = 'John Smith';
+  req.session.data.email = 'john.smith@gmail.com';
+  req.session.data.mNumber = '07701234567';
+  req.session.data.lNumber = '01674775377';
+
+  req.session.data.structure = 'Landowner';
+  req.session.data.employeesNumber = '12';
+  req.session.data.agricultureHectares = '22';
+  req.session.data.horticultureHectares = '5';
+  req.session.data.forestryHectares = '';
+  req.session.data.assuranceScheme = 'Red Tractor';
+  req.session.data.animals = 'Yes';
+  req.session.data.animalsNo = '10000';
+  req.session.data.accountNumber1 = '11';
+  req.session.data.accountNumber2 = '453';
+  req.session.data.accountNumber3 = '8787';
+  req.session.data.livestockSchemes = 'Laid in Britain'; 
+  req.session.data.useLand = 'Agriculture'; 
+
+  res.redirect('/fetf/rewrite/login');
+  
+}); 
+
+// FETF check business details
+
+router.post('/fetf-check-business-details1', function(request, response) {
+  response.redirect("/fetf/rewrite/task-list?fetf-status=01b&fetf-apply=02a&fetf-agree=01&fetf-claim=01")
+})
+
+router.get('/addItem1', function (req, res) {
+  req.session.data.itemName1 = 'Direct drill 4m (FETF205)'; 
+  req.session.data.itemValue1 = '17,845.00';
+  if (req.session.data.itemNo1 === '1') {
+    req.session.data.Total = '17,845.00';
+    }
+  else 
+    req.session.data.Total = '35,690.00';
+
+  res.redirect('/fetf/rewrite/select-items/item-list-add');
+});
+
+// changed FETF item filtering
+
+router.post('/equipmentListApplyFilters', (req, res) => {
+  if (req.session.data.clearFilters == "true") {
+    req.session.data.section = ""
+    req.session.data.role = ""
+    req.session.data.disciplines = ""
+    req.session.data.filteredResults = ""
+    req.session.data.clearFilters = ""
+  } else {
+
+  console.log('success test')
+  
+  const allData = _.sortBy(data, 'sectionNumber')
+  console.log(data.length)
+  // console.log(allData)
+
+  // let filteredResults = ''
+  // console.log(filteredResults)
+
+//filters
+let categoryFilter = req.session.data.category
+
+//set global scope of filtered results
+let filteredResults = [];
+
+//loop through each of the objects
+for (i of allData) {
+  // console.log(i.disciplines);
+  //if the object contains a matching value from the filter then add it to the filtered results array
+
+  if (typeof categoryFilter === 'undefined') {
+    categoryFilter= ""
+ }  
+  if (i.category.some((value) => categoryFilter.includes(value))) {
+    filteredResults.push(i);
+  }
+}
+
+console.log(categoryFilter);
+  
+  req.session.data.filteredResults = filteredResults
+  
+}
+  res.redirect('/fetf/rewrite/select-items/equipment-list') 
+})
+
+
+router.get('/fetf/rewrite/select-items/items/:termName', (req, res) => {
+    const { termName } = req.params
+    const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
+    res.render('fetf/rewrite/select-items/equipment.html', { item })
+})
+
+
+
+router.post('/fetf-add-to-selected-items1', function(request, response) {
+  var quantity = Number(request.body['quantity'])
+  var termName = request.body['termName']
+  var itemExists = false
+  console.log(quantity)
+  console.log(termName)
+  for (var selectedItem of request.session.data['selected-items']){
+    if (selectedItem.termName == termName) {
+      itemExists = true
+      selectedItem.quantity += quantity
+      selectedItem.grantTotal = Number(selectedItem.quantity) * Number(selectedItem.grantValue.replace(',',''))
+    }
+  }
+  if (itemExists == false){
+    const item = _.findWhere(data, {termName: termName})
+    item.quantity = quantity
+    item.grantTotal = Number(item.quantity) * Number(item.grantValue.replace(',',''))
+    request.session.data['selected-items'].push(item)
+  }
+  
+  response.redirect("/fetf/rewrite/select-items/selected-items")
+})
+
+// FETF items filters END
+
 
 
