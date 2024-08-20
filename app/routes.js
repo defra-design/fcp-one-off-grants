@@ -604,17 +604,13 @@ router.post('/fetf-check-business-details1', function(request, response) {
   response.redirect("/fetf/rewrite/task-list?fetf-status=01b&fetf-apply=02a&fetf-agree=01&fetf-claim=01")
 })
 
-router.get('/addItem1', function (req, res) {
-  req.session.data.itemName1 = 'Direct drill 4m (FETF205)'; 
-  req.session.data.itemValue1 = '17,845.00';
-  if (req.session.data.itemNo1 === '1') {
-    req.session.data.Total = '17,845.00';
-    }
-  else 
-    req.session.data.Total = '35,690.00';
+router.get('/checkTaskComplete1', function (req, res) {
 
-  res.redirect('/fetf/rewrite/select-items/item-list-add');
+  req.session.data.checkComplete = 'Yes';
+  res.redirect('/fetf/rewrite/task-list');
+
 });
+
 
 // changed FETF item filtering
 
@@ -694,6 +690,26 @@ router.post('/fetf-add-to-selected-items1', function(request, response) {
   
   response.redirect("/fetf/rewrite/select-items/selected-items")
 })
+
+router.get('/moreItems1', function (req, res) {
+
+  if (req.session.data.addAnother === 'Yes') {
+    res.redirect('/fetf/rewrite/select-items/item-list-add');
+    }
+  else 
+    res.redirect('/selectTaskComplete1');
+});
+
+
+router.get('/selectTaskComplete1', function (req, res) {
+
+  req.session.data.selectComplete = 'Yes';
+  res.redirect('/fetf/rewrite/task-list');
+
+});
+
+
+
 
 // FETF items filters END
 
