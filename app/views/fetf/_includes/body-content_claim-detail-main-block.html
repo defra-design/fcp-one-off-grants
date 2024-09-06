@@ -35,9 +35,9 @@
   <tbody class="govuk-table__body">
     {% for item in data['selected-items'] %}
       <tr class="govuk-table__row">
-        <td class="govuk-table__cell">{{ item.title }}</td>
-        <td class="govuk-table__cell">FETF{{ item.itemCode }}</td>
-        <td class="govuk-table__cell" style="text-align: right;">{{ item.quantity }}</td>
+        <td class="govuk-table__cell">{{ item.title or "N/A" }}</td>
+        <td class="govuk-table__cell">FETF{{ item.itemCode or "N/A" }}</td>
+        <td class="govuk-table__cell" style="text-align: right;">{{ item.quantity or "N/A"}}</td>
         <td class="govuk-table__cell" style="text-align: right;">{{ item.grantTotal | currency }}</td>
       </tr>
     {% endfor %}
@@ -45,7 +45,7 @@
       <td scope="row" class="govuk-table__cell"><strong>Total</strong></td>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell govuk-table__cell--numeric"></td>
-      <td class="govuk-table__cell govuk-table__cell--numeric"><strong>{{ grantTotal | currency }}</strong></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><strong>{{ grantTotal | currency  or "N/A"}}</strong></td>
     </tr>
   </tbody>
 </table>
