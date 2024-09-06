@@ -58,58 +58,31 @@
           </div>
         {% endif %}
     </li>
-
+    <li class="govuk-task-list__item">
+      <div class="govuk-task-list__name-and-hint">
+        <div><a class="govuk-link govuk-task-list__link" href="check-details/check-your-personal-details" aria-describedby="application-details-2-status">About your farm</a></div>
+      </div>
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
+    </li>
+  
 
 
     <li class="govuk-task-list__item ">
-        {% if (data.itemsComplete == 'Yes') %}
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="select-items/item-list-add" aria-describedby="application-details-2-status">Select your items</a>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-1-status">
-           Completed
-          </div>
-        {% else %}
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="select-items/which-item-types" aria-describedby="application-details-2-status">Select your items</a>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-1-status">
-            <strong class="govuk-tag govuk-tag--blue">
-             Not yet started
-            </strong>
-          </div>
-        {% endif %}
-    </li>
-  
-    <li class="govuk-task-list__item">
       <div class="govuk-task-list__name-and-hint">
-        <div>About your items</div>
+        <div><a class="govuk-link govuk-task-list__link" href="select-items/which-item-types" aria-describedby="application-details-2-status">Select your items</a></div>
       </div>
-      <div class="govuk-task-list__status govuk-task-list__status--cannot-start-yet" id="application-details-3-status">
-        Cannot start yet
-      </div>
-    </li>
-
-        <li class="govuk-task-list__item ">
-        {% if (data.evComplete == 'Yes') %}
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="upload-evidence/evidence-add" aria-describedby="application-details-2-status">Upload financial evidence</a>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-1-status">
-           Completed
-          </div>
-        {% else %}
-          <div class="govuk-task-list__name-and-hint">
-            <a class="govuk-link govuk-task-list__link" href="upload-evidence/upload-start" aria-describedby="application-details-2-status">Upload financial evidence</a>
-          </div>
-          <div class="govuk-task-list__status" id="company-details-1-status">
-            <strong class="govuk-tag govuk-tag--blue">
-             Not yet started
-            </strong>
-          </div>
-        {% endif %}
+        <div class="govuk-task-list__status" id="application-details-4-status">
+          <strong class="govuk-tag govuk-tag--blue">
+            Not yet started
+          </strong>
+        </div>
     </li>
   
+
     
   
     <li class="govuk-task-list__item">
