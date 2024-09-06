@@ -715,3 +715,34 @@ router.get('/selectTaskComplete1', function (req, res) {
 
 
 
+
+// FETF grassland upload triage
+
+router.post('/fetf/claim/v1-1/grassland-invoice-answer', function(request, response) {
+  var grasslandUploadReuse = request.session.data['grasslandUpload']
+
+  if (grasslandUploadReuse == "reuse"){
+    response.redirect('/fetf/claim/v1-1/grassland-upload-reuse')
+  } else {
+    response.redirect('/fetf/claim/v1-1/grassland-invoice-files')
+  }
+  
+  
+})
+
+
+// FETF invoice-1 add another triage
+
+router.post('/fetf/claim/v1-1/invoice1-answer', function(request, response) {
+  var invoiceAddAnother = request.session.data['invoice1Add']
+
+  if (invoiceAddAnother == "yes"){
+    response.redirect('/fetf/claim/v1-1/invoice-2')
+  } else {
+    response.redirect('/fetf/claim/v1-1/check-answers-invoice')
+  }
+  
+  
+})
+
+
