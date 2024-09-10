@@ -386,8 +386,12 @@
 
 
 
-
-
+.thumbnail {
+  width: 60px;
+  height: auto; /* This will maintain the aspect ratio */
+  border: 1px solid #b1b4b6;
+  margin-right: 10px;
+}
 
 
 

@@ -847,3 +847,61 @@ router.post('/fetf/claim/v1-1/photos/upload5-answer', function(request, response
 })
 
 
+// FETF v1-2 invoice for item 2 triage
+
+router.post('/fetf/claim/v1-2/item2/invoice-answer', function(request, response) {
+  var item2Invoice = request.session.data['item2InvoiceMethod']
+
+  if (item2Invoice == "yes"){
+    response.redirect('/fetf/claim/v1-2/item2/previous-invoices')
+  } else {
+    response.redirect('/fetf/claim/v1-2/item2/invoice')
+  }
+  
+  
+})
+
+// FETF v1-2 invoice check triage
+
+router.post('/fetf/claim/v1-1/item2/check-invoice-answer', function(request, response) {
+  var item2InvoiceCheck = request.session.data['item2InvoiceCheck']
+
+  if (item2InvoiceCheck == "yes"){
+    response.redirect('/fetf/claim/v1-2/item2/invoice-file-added')
+  } else {
+    response.redirect('/fetf/claim/v1-2/item2/upload-method-serial')
+  }
+  
+  
+})
+
+
+// FETF v1-2 statement for item 2 triage
+
+router.post('/fetf/claim/v1-2/item2/statement-answer', function(request, response) {
+  var item2Statement = request.session.data['item2StatementMethod']
+
+  if (item2Statement == "yes"){
+    response.redirect('/fetf/claim/v1-2/item2/previous-statements')
+  } else {
+    response.redirect('/fetf/claim/v1-2/item2/statement')
+  }
+  
+  
+})
+
+
+
+// FETF v1-2 statement - check if the second one if correct
+
+router.post('/fetf/claim/v1-1/item2/check-statement2-answer', function(request, response) {
+  var item2Statement2 = request.session.data['item2Statement2']
+
+  if (item2Statement2 == "yes"){
+    response.redirect('/fetf/claim/v1-2/item2/check-statement2')
+  } else {
+    response.redirect('/fetf/claim/v1-2/item2/upload-method-statement')
+  }
+  
+  
+})
