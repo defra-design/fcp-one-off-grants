@@ -1,4 +1,4 @@
-{% extends "layouts/main-fetf.html" %}
+{% extends "layouts/main-claim-v1-1.html" %}
 
 {% set pageName="Submit" %}
 
@@ -27,24 +27,14 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="/fetf/claim/v1-0/confirmation" method="post">
-
-    <span class="govuk-caption-xl">Claim for a FETF Grant</span>
+    <form action="/fetf/claim/v1-1/confirmation" method="post">
     <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Submit claim</h1>
-    <span class="govuk-body">Read and agree to submit your claim.</span>
-
-<br><br><br>
-
-
-    <h2 class="govuk-heading-m">Declaration</h2>
-
-
-    <p class="govuk-body">I confirm that:<br>
+    <p class="govuk-body">By submitting this claim, you confirm that you understand and agree with the following statements:<br>
       <ul class="govuk-list govuk-list--bullet">
-        <li>I have complied with and will continue to comply with my grant funding agreement.</li>
-        <li>I have checked the information is correct and I accept full responsibility for it.</li>
-        <li>I understand that under the terms of my grant funding agreement, payment may be withheld and/or recovered if I have breached my grant funding agreement.</li>
-        <li>I am submitting invoices, records, accounts and other required evidence (for example photographs) relevant to this claim, and will keep copies of that evidence in accordance with my grant funding agreement.</li>
+        <li>I have read, understood and accept the <a href="#">terms and conditions</a> and the <a href="">privacy policy</a></li>
+        <li>the information I have provided is true and correct to the best of my knowledge</li>
+        <li>I will not receive money for my claim if I break the terms of my grant funding agreement</li>
+        <li>my information and details might be audited and reviewed, and shared with others to prevent and detect fraud</li>
       </ul>
       <br>
 
@@ -53,20 +43,9 @@
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
           <span class="govuk-warning-text__assistive"></span>
-          If you knowingly or recklessly make a false statement to obtain payments to yourself or others, you risk prosecution, termination of any resulting agreement, and recovery of any monies paid to you under the scheme. You may be excluded from this scheme and from other financial assistance under the Agriculture Act 2020 for up to two years.        </strong>
+          You could face prosecution, be banned from applying for other grants or have to return grant payments if you provide false or misleading information in this claim.</strong>
         </div>
 
-
-    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="waste">
-          I understand and agree with the above statements
-        </label>
-      </div>
-
-
-<br><br><br>
 
 
 
@@ -75,7 +54,7 @@
 <div class="govuk-button-group">
  
   <button type="submit" class="govuk-button" data-module="govuk-button">
-    Submit claim
+    Accept and submit
   </button>
 
   <br>
@@ -84,10 +63,7 @@
   
   
   
-    <a href="/fetf/claim/v1-0/index?fetf-status=03&fetf-apply=03b&fetf-agree=03&fetf-claim=02d" class="govuk-link">
-      Cancel
     
-    </a>
   </div>
 
 
