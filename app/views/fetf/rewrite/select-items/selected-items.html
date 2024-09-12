@@ -12,7 +12,7 @@
   text: "Back",
   href: "javascript:history.back()"
 }) }}
-
+<form method="post" novalidate action="/moreItems1">
 <main class="govuk-main-wrapper">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -41,7 +41,7 @@
         {% set scoreTotal = scoreTotal + item.score %}
         <tr class="govuk-table__row" id="selected-items__row">
           <td class="govuk-table__cell add-item" id="selected-item-bold">{{ item.title }}</td>
-          <td class="govuk-table__cell add-code" id="selected-item" >FETF{{ item.itemCode }}</td>
+          <td class="govuk-table__cell add-code" id="selected-item" >{{ item.itemCode }}</td>
           <td class="govuk-table__cell add-quantity" id="selected-item">{{ item.quantity }}&nbsp;&nbsp;</td>
           <td class="govuk-table__cell add-grant" id="selected-item">{{ item.grantTotal | currency }}</td>
           <td class="govuk-table__cell add-score" id="selected-item">{{ item.score }}</td>
@@ -52,7 +52,8 @@
         <th scope="row" class="govuk-table__cell" id="mobile-hide"><strong>Total requested grant amount</strong></th>
         <td class="govuk-table__cell" id="mobile-hide"></td>
         <td class="govuk-table__cell" id="mobile-hide"></td>
-        <td class="govuk-table__cell add-total-grant"id="selected-item" ><strong> {{ grantTotal | currency }}</strong></td>
+        <td class="govuk-table__cell add-total-grant"id="selected-item" ><strong> {{ grantTotal | currency }}</strong><input type="hidden" name="grantTotal" value="{{ grantTotal }}"></td>
+
         <td class="govuk-table__cell add-total-score" id="selected-item"><strong>{{ scoreTotal/data['selected-items'].length}}</strong></td>
       <td class="govuk-table__cell" id="mobile-hide"></td>
       </tr>
@@ -76,7 +77,7 @@
 
   
 
-<form method="post" novalidate action="/moreItems1">
+
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -85,13 +86,13 @@
 
       <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
+          <input class="govuk-radios__input" id="add-another" name="addAnother" type="radio" value="Yes">
           <label class="govuk-label govuk-radios__label" for="add-another">
             Yes
           </label>
         </div>
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
+          <input class="govuk-radios__input" id="add-another-2" name="addAnother" type="radio" value="No">
           <label class="govuk-label govuk-radios__label" for="add-another-2">
             No
           </label>

@@ -694,24 +694,41 @@ router.post('/fetf-add-to-selected-items1', function(request, response) {
 router.get('/moreItems1', function (req, res) {
 
   if (req.session.data.addAnother === 'Yes') {
-    res.redirect('/fetf/rewrite/select-items/item-list-add');
+    res.redirect('/fetf/rewrite/select-items/which-item-types');
     }
   else 
-    res.redirect('/selectTaskComplete1');
-});
-
-
-router.get('/selectTaskComplete1', function (req, res) {
-
-  req.session.data.selectComplete = 'Yes';
-  res.redirect('/fetf/rewrite/task-list');
+    if (req.session.data.grantTotal > 25000){
+      req.session.data.uploadFin = 'Yes';
+    }
+    req.session.data.selectComplete = 'Yes';
+    res.redirect('/fetf/rewrite/task-list');
 
 });
+
 
 
 
 
 // FETF items filters END
+
+router.post('/fetf/fetf-items-business-address1', function(request, response) {
+  var aboutBusinessLocation = request.session.data['stored-business-address']
+  if (aboutBusinessLocation == "Yes"){
+      response.redirect("/fetf/rewrite/about-items/equipment-contracting")
+  } else {
+      response.redirect("/fetf/rewrite/about-items/equipment-location-details")
+  }
+})
+
+router.post('/fetf/fetf-items-contracting1', function(req, res) {
+  if (req.session.data.forContracting === 'Yes'){
+      res.redirect("/fetf/rewrite/about-items/equipment-contractor-details")
+  } else {
+      res.redirect("/fetf/rewrite/about-items/livestock-information")
+  }
+})
+
+
 
 
 
@@ -744,6 +761,7 @@ router.post('/fetf/claim/v1-1/invoice/invoice1-answer', function(request, respon
   
   
 })
+
 
 // FETF bank statement upload1 add another triage
 
@@ -905,3 +923,4 @@ router.post('/fetf/claim/v1-1/item2/check-statement2-answer', function(request, 
   
   
 })
+
