@@ -333,15 +333,65 @@
 }
 
 
-// .drag-and-drop {
-// max-width:585px;
-// min-height: 110px;
-// position:relative;
-// border:3px dashed black;
-// padding: 20px;
-// display: flex;
-// flex-direction: column;
-// align-items: flex-start;
-// justify-content:flex-start;
-// }
+//images style
+
+.photo-guide-photos {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.photo-guide-photos ul {
+  display: flex;
+  overflow: hidden;
+  margin-left: -8px;
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.photo-guide-photos ul li {
+  flex: 1;
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+  margin-bottom: em(20);
+  padding-left: 8px;
+}
+
+.photo-guide-photos img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.photo-guide-photos .result {
+  font-size: 12px;
+  width: 100%;
+  color: #0b0c0c;
+}
+
+.photo-guide-photos .result .approved {
+  background-image: url(/public/images/icon-thick-tick.svg);
+}
+
+.photo-guide-photos .result .approved, .photo-guide-photos .result .failed {
+  margin: 0;
+  padding: 4px 0 4px 30px;
+  background-repeat: no-repeat;
+  background-position: left 0 top 6px;
+  background-size: 20px;
+}
+
+.photo-guide-photos .result .failed {
+  background-image: url(/public/images/icon-thick-cross.svg);
+}
+
+
+
+.thumbnail {
+  width: 60px;
+  height: auto; /* This will maintain the aspect ratio */
+  border: 1px solid #b1b4b6;
+  margin-right: 10px;
+}
+
+
 

@@ -62,9 +62,11 @@
 
 
     <li class="govuk-task-list__item ">
+
         {% if (data.selectComplete == 'Yes') %}
           <div class="govuk-task-list__name-and-hint">
             <a class="govuk-link govuk-task-list__link" href="select-items/selected-items" aria-describedby="application-details-2-status">Select your items</a>
+
           </div>
           <div class="govuk-task-list__status" id="company-details-1-status">
            Completed
@@ -108,6 +110,26 @@
             
              Cannot start yet
             
+          </div>
+        {% endif %}
+    </li>
+
+        <li class="govuk-task-list__item ">
+        {% if (data.evComplete == 'Yes') %}
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="upload-evidence/evidence-add" aria-describedby="application-details-2-status">Upload financial evidence</a>
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+           Completed
+          </div>
+        {% else %}
+          <div class="govuk-task-list__name-and-hint">
+            <a class="govuk-link govuk-task-list__link" href="upload-evidence/upload-start" aria-describedby="application-details-2-status">Upload financial evidence</a>
+          </div>
+          <div class="govuk-task-list__status" id="company-details-1-status">
+            <strong class="govuk-tag govuk-tag--blue">
+             Not yet started
+            </strong>
           </div>
         {% endif %}
     </li>

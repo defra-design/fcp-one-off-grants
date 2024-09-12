@@ -1,4 +1,5 @@
-{% extends "layouts/main-fetf.html" %}
+{% extends "layouts/main-claim-v1-1.html" %}
+
 
 {% block pageTitle %}
 Check claim details
@@ -22,7 +23,7 @@ Check claim details
         <form method="post" action="/fetf/claim/v1-1/?fetf-status=03&fetf-apply=03b&fetf-agree=03&fetf-claim=01a">
 
         <!-- <span class="govuk-caption-xl">Submit claim</span> -->
-        <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Check items you're claiming for</h1>
+        <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">Do you want to submit a claim for all these items?</h1>
 
       
 
@@ -36,18 +37,18 @@ Check claim details
 
         
         
+        <p class="govuk-body">These are the items on your grant funding agreement.</p>
         
         
         
-        
-        <span class="content-section">
-          <p class="govuk-body">These are the items on your grant funding agreement</p>
+        <!-- <span class="content-section">
+         
         
         
         <p class="govuk-body">You can <a href="#">change or remove an item</a> if it's not available as long as your claim total is still between £1,000 and £50,000.</p>
 
         <p class="govuk-body">You must make any changes before you submit this claim.</p>
-        <p class="govuk-body">You cannot add items.</p>
+        <p class="govuk-body">You cannot add items.</p> -->
         
         <!-- TABLE CONTENT -->
         <table class="govuk-table">
@@ -93,6 +94,35 @@ Check claim details
         </table>
         
         <br>
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+          No, I need to change or remove items
+        </label>
+      </div>
+    
+    </div>
+  </fieldset>
+</div>
+
+
+
+
+
+
+
+
         
         
         
@@ -100,7 +130,7 @@ Check claim details
         
 
         {{govukButton({
-          text: "Continue"
+          text: "Save and continue"
       })}}
 
 

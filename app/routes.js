@@ -733,7 +733,7 @@ router.post('/fetf/fetf-items-contracting1', function(req, res) {
 
 
 
-// FETF grassland upload triage
+// FETF grassland upload triage (not in use)
 
 router.post('/fetf/claim/v1-1/grassland-invoice-answer', function(request, response) {
   var grasslandUploadReuse = request.session.data['grasslandUpload']
@@ -750,13 +750,175 @@ router.post('/fetf/claim/v1-1/grassland-invoice-answer', function(request, respo
 
 // FETF invoice-1 add another triage
 
-router.post('/fetf/claim/v1-1/invoice1-answer', function(request, response) {
+router.post('/fetf/claim/v1-1/invoice/invoice1-answer', function(request, response) {
   var invoiceAddAnother = request.session.data['invoice1Add']
 
   if (invoiceAddAnother == "yes"){
-    response.redirect('/fetf/claim/v1-1/invoice-2')
+    response.redirect('/fetf/claim/v1-1/invoice/invoice-2')
   } else {
-    response.redirect('/fetf/claim/v1-1/check-answers-invoice')
+    response.redirect('/fetf/claim/v1-1/invoice/check-answers-invoice')
+  }
+  
+  
+})
+
+
+// FETF bank statement upload1 add another triage
+
+router.post('/fetf/claim/v1-1/statement/upload1-answer', function(request, response) {
+  var statement1AddAnother = request.session.data['statement1Add']
+
+  if (statement1AddAnother == "yes"){
+    response.redirect('/fetf/claim/v1-1/statement/upload2')
+  } else {
+    response.redirect('/fetf/claim/v1-1/statement/check-answers')
+  }
+  
+  
+})
+
+
+// FETF bank statement upload2 add another triage
+
+router.post('/fetf/claim/v1-1/statement/upload2-answer', function(request, response) {
+  var statement2AddAnother = request.session.data['statement2Add']
+
+  if (statement2AddAnother == "yes"){
+    response.redirect('/fetf/claim/v1-1/statement/upload3')
+  } else {
+    response.redirect('/fetf/claim/v1-1/statement/check-answers')
+  }
+  
+  
+})
+
+
+// FETF photo upload1 add another triage
+
+router.post('/fetf/claim/v1-1/photos/upload1-answer', function(request, response) {
+  var photo1AddAnother = request.session.data['photo1Add']
+
+  if (photo1AddAnother == "yes"){
+    response.redirect('/fetf/claim/v1-1/photos/upload2')
+  } else {
+    response.redirect('/fetf/claim/v1-1/photos/check-answers')
+  }
+  
+  
+})
+
+// FETF photo upload2 add another triage
+
+router.post('/fetf/claim/v1-1/photos/upload2-answer', function(request, response) {
+  var photo2AddAnother = request.session.data['photo2Add']
+
+  if (photo2AddAnother == "yes"){
+    response.redirect('/fetf/claim/v1-1/photos/upload3')
+  } else {
+    response.redirect('/fetf/claim/v1-1/photos/check-answers')
+  }
+  
+  
+})
+
+// FETF photo upload3 add another triage
+
+router.post('/fetf/claim/v1-1/photos/upload3-answer', function(request, response) {
+  var photo3AddAnother = request.session.data['photo3Add']
+
+  if (photo3AddAnother == "yes"){
+    response.redirect('/fetf/claim/v1-1/photos/upload4')
+  } else {
+    response.redirect('/fetf/claim/v1-1/photos/check-answers')
+  }
+  
+  
+})
+
+// FETF photo upload4 add another triage
+
+router.post('/fetf/claim/v1-1/photos/upload4-answer', function(request, response) {
+  var photo4AddAnother = request.session.data['photo4Add']
+
+  if (photo4AddAnother == "yes"){
+    response.redirect('/fetf/claim/v1-1/photos/upload5')
+  } else {
+    response.redirect('/fetf/claim/v1-1/photos/check-answers')
+  }
+  
+  
+})
+
+
+// FETF photo upload5 add another triage
+
+router.post('/fetf/claim/v1-1/photos/upload5-answer', function(request, response) {
+  var photo5AddAnother = request.session.data['photo5Add']
+
+  if (photo5AddAnother == "yes"){
+    response.redirect('/fetf/claim/v1-1/photos/upload6')
+  } else {
+    response.redirect('/fetf/claim/v1-1/photos/check-answers')
+  }
+  
+  
+})
+
+
+// FETF v1-2 invoice for item 2 triage
+
+router.post('/fetf/claim/v1-2/item2/invoice-answer', function(request, response) {
+  var item2Invoice = request.session.data['item2InvoiceMethod']
+
+  if (item2Invoice == "yes"){
+    response.redirect('/fetf/claim/v1-2/item2/previous-invoices')
+  } else {
+    response.redirect('/fetf/claim/v1-2/item2/invoice')
+  }
+  
+  
+})
+
+// FETF v1-2 invoice check triage
+
+router.post('/fetf/claim/v1-1/item2/check-invoice-answer', function(request, response) {
+  var item2InvoiceCheck = request.session.data['item2InvoiceCheck']
+
+  if (item2InvoiceCheck == "yes"){
+    response.redirect('/fetf/claim/v1-2/item2/invoice-file-added')
+  } else {
+    response.redirect('/fetf/claim/v1-2/item2/upload-method-serial')
+  }
+  
+  
+})
+
+
+// FETF v1-2 statement for item 2 triage
+
+router.post('/fetf/claim/v1-2/item2/statement-answer', function(request, response) {
+  var item2Statement = request.session.data['item2StatementMethod']
+
+  if (item2Statement == "yes"){
+    response.redirect('/fetf/claim/v1-2/item2/previous-statements')
+  } else {
+    response.redirect('/fetf/claim/v1-2/item2/statement')
+  }
+  
+  
+})
+
+
+
+// FETF v1-2 statement - check if the second one if correct
+
+router.post('/fetf/claim/v1-1/item2/check-statement2-answer', function(request, response) {
+  var item2Statement2 = request.session.data['item2Statement2']
+
+  if (item2Statement2 == "yes"){
+    response.redirect('/fetf/claim/v1-2/item2/check-statement2')
+  } else {
+    response.redirect('/fetf/claim/v1-2/item2/upload-method-statement')
   }
   
   
