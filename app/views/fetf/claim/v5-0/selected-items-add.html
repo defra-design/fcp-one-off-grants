@@ -27,12 +27,21 @@
    
     {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
 
-    {% set grantTotal = 0 %}
-    {% set scoreTotal = 0 %}
-    {% for item in data['selected-items'] %}
-      {% set grantTotal = grantTotal + item.grantTotal %}
-      {% set scoreTotal = scoreTotal + item.score %}
-    {% endfor %}
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
 
     
     {% if scoreTotal/data['selected-items'].length < 50 %}
@@ -87,16 +96,37 @@
   <thead class="govuk-table__head">
     <tr class=".govuk-table-row-selected-item">
       <th scope="col" class="govuk-table__header">Item</th>
-      <th scope="col" class="govuk-table__header"id="selected-item" >Code</th>
-      <th scope="col" class="govuk-table__header" id="selected-item">Quantity</th>
-      <th scope="col" class="govuk-table__header" id="selected-item" >Grant amount</th>
-      <th scope="col" class="govuk-table__header" id="selected-item" >Score</th>
+      <th scope="col" class="govuk-table__header"id="selected-items-dummy" >Code</th>
+      <th scope="col" class="govuk-table__header" id="selected-items-dummy">Quantity</th>
+      <th scope="col" class="govuk-table__header" id="selected-items-dummy" >Grant amount</th>
+      <th scope="col" class="govuk-table__header" id="selected-items-dummy" >Score</th>
       <th scope="col" class="govuk-table__header" ></th>
     </tr>
   </thead>
     <tbody class="govuk-table__body" >
 
- 
+ <!-- Dummy row -->
+      
+      <tr class="govuk-table__row" id="selected-items-dummy__row">
+        <td class="govuk-table__cell add-item" id="selected-items-dummy-bold">Bracken roller</td>
+        <td class="govuk-table__cell add-code" id="selected-items-dummy" >FETF414</td>
+        <td class="govuk-table__cell add-quantity" id="selected-items-dummy">3&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
+        <td class="govuk-table__cell add-grant" id="selected-items-dummy">£2,608.20</td>
+        <td class="govuk-table__cell add-score" id="selected-items-dummy">65</td>
+        <td class="govuk-table__cell"><a href="#" class="govuk-body-s" style="text-align: right;">Remove</a></td>
+      </tr>
+
+      <tr class="govuk-table__row" id="selected-items-dummy__row">
+        <td class="govuk-table__cell add-item" id="selected-items-dummy-bold">Electronic tray filling machine</td>
+        <td class="govuk-table__cell add-code" id="selected-items-dummy" >FETF1</td>
+        <td class="govuk-table__cell add-quantity" id="selected-items-dummy">3&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
+        <td class="govuk-table__cell add-grant" id="selected-items-dummy">£7,422.00</td>
+        <td class="govuk-table__cell add-score" id="selected-items-dummy">65</td>
+        <td class="govuk-table__cell"><a href="#" class="govuk-body-s" style="text-align: right;">Remove</a></td>
+      </tr>
+
+     
+<!-- End of dummy row -->
 
 
 
@@ -104,26 +134,13 @@
 
 
 
-      {% set grantTotal = 0 %}
-      {% set scoreTotal = 0 %}
-      {% for item in data['selected-items'] %}
-        {% set grantTotal = grantTotal + item.grantTotal  %}
-        {% set scoreTotal = scoreTotal + item.score %}
-        <tr class="govuk-table__row" id="selected-items__row">
-          <td class="govuk-table__cell add-item" id="selected-item-bold">{{ item.title }}</td>
-          <td class="govuk-table__cell add-code" id="selected-item" >FETF{{ item.itemCode }}</td>
-          <td class="govuk-table__cell add-quantity" id="selected-item">{{ item.quantity }}&nbsp;&nbsp;<a href="edit" class="govuk-body-s">Edit</a></td>
-          <td class="govuk-table__cell add-grant" id="selected-item">{{ item.grantTotal | currency }}</td>
-          <td class="govuk-table__cell add-score" id="selected-item">{{ item.score }}</td>
-          <td class="govuk-table__cell"><a href="selected-items-no-errors.html" class="govuk-body-s" style="text-align: right;">Remove</a></td>
-        </tr>
-      {% endfor %}
-      <tr class="govuk-table__row" id="selected-items__row">
+      
+      <tr class="govuk-table__row" id="selected-items-dummy__row">
         <th scope="row" class="govuk-table__cell" id="mobile-hide"><strong>Total requested grant amount</strong></th>
         <td class="govuk-table__cell" id="mobile-hide"></td>
         <td class="govuk-table__cell" id="mobile-hide"></td>
-        <td class="govuk-table__cell add-total-grant"id="selected-item" ><strong> {{ (grantTotal + 14844) | currency }}</strong></td>
-        <td class="govuk-table__cell add-total-score" id="selected-item"><strong>{{ (scoreTotal + 65)/(data['selected-items'].length +1)}}</strong></td>
+        <td class="govuk-table__cell add-total-grant"id="selected-item-dummy" ><strong> £2,608.20</strong></td>
+        <td class="govuk-table__cell add-total-score" id="selected-item-dummy"><strong>65</strong></td>
       <td class="govuk-table__cell" id="mobile-hide"></td>
       </tr>
     </tbody>
@@ -150,7 +167,7 @@
   <a class="govuk-button" href="upload-evidence" >
     Apply for these items
   </a>
-  <a class="govuk-button govuk-button--secondary" href="/fetf/change-request/equipment-list">
+  <a class="govuk-button govuk-button--secondary" href="/fetf/claim/v5-0/equipment-list">
     Select more items
   </a>
 </div>

@@ -1,0 +1,59 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% set pageName="Help" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="/_common/not-testing.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+<form action="selected-items" method="post">
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+   
+    {% from "govuk/components/error-summary/macro.njk" import govukErrorSummary %}
+
+    
+
+
+   
+    <h1 class="govuk-heading-l">Before you make a change</h1>
+    <p class="govuk-body">If you want to make a change to your items, it will need to be reviewed by the RPA.  </p>
+
+
+    <p class="govuk-body">You will need to wait to hear back from the RPA before continuing with your new claim. </p>
+      
+
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+
+
+</form>
+
+
+
+</div>
+</div>
+</main>
+
+
+
+
+
+
+{% endblock %}
