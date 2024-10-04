@@ -1,0 +1,155 @@
+{% extends "layouts/main-claim-v5-0.html" %}
+
+{% block pageTitle %}
+Upload4
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+  .container {
+      width: 585px;
+      height: 110px;
+      position: relative;
+      border: 3px dashed black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+  }
+
+  .text {
+      text-align: left;
+      margin-top: 40px;
+  }
+
+  .button {
+      padding: 8px 12px;
+      border: none;
+      cursor: pointer;
+      margin-top: -30px;
+      margin-left: 230px;
+  }
+</style>
+
+
+
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+<br><br>
+
+
+  
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+        <h1 class="govuk-heading-xl">Check bracken roller evidence</h1>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Serial numbers
+            </dt>
+            <dd class="govuk-summary-list__value">
+              234234343234<br>
+              234234343235<br>
+              234234343236<br>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">serial numbers</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Invoices
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a href="invoice-return.html">Upload invoice</a>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#"><span class="govuk-visually-hidden"> name</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Statements
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Statement1.pdf, 55 KB<br>
+              Statement2.pdf, 55 KB
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Photos
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Bracken1.pdf, 5.1 MB<br>
+              Bracken2.pdf, 3.8 MB<br>
+              Bracken3.pdf, 5.5 MB
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+            </dd>
+          </div>
+          </dl>
+
+
+
+        
+        
+        
+        <!-- <form action="/form-handler" method="post" novalidate>
+          <input type="hidden" name="answers-checked" value="true"> -->
+          <a href="/fetf/claim/v5-0/?fetf-status=03&fetf-apply=03b&fetf-agree=03&fetf-claim=01b">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Save and continue
+          </button>
+          </a>
+        <!-- </form> -->
+        
+     
+    </div>
+  </main>
+</div>
+
+
+
+
+
+
+
+      
+
+  
+
+
+
+{% endblock %}
+
+
+
+
+
+

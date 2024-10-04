@@ -1,0 +1,18 @@
+{
+  "termName": "Bracken roller",
+  "sectionNumber": "414",
+  "itemCode": "414",
+  "title": "Bracken roller",
+  "summary": "Bracken roller",
+  "category": ["Livestock"],
+  "grantValue": "869.40",
+  "grantPercentage": "60",
+  "averageValue": " 1,449.00",
+  "score": 58,
+  "eligible": {
+    "eligibleBullet01": "be a bracken roller",
+    "eligibleBullet02": "have a minimum 1.5m working width",
+    "eligibleBullet03": "have a roller or cylinder design with an uneven or ridged surface for bashing and bruising bracken",
+    "eligibleBullet04": "be able to be towed by an ATV or tractor"
+  }
+}

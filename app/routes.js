@@ -1108,3 +1108,105 @@ router.post('/fetf/claim/v1-2-1/item3/check-statement2-answer', function(request
   
 })
 
+
+
+
+
+
+
+
+// FETF v5-0 invoice for item  triage
+
+router.post('/fetf/claim/v5-0/item3/invoice-answer', function(request, response) {
+  var item2Invoice = request.session.data['item3InvoiceMethod']
+
+  if (item2Invoice == "yes"){
+    response.redirect('/fetf/claim/v5-0/item3/previous-invoices')
+  } else {
+    response.redirect('/fetf/claim/v5-0/item3/invoice')
+  }
+  
+  
+})
+
+// FETF v5-0 invoice check triage
+
+router.post('/fetf/claim/v5-0/item3/check-invoice-answer', function(request, response) {
+  var item3InvoiceCheck = request.session.data['item3InvoiceCheck']
+
+  if (item3InvoiceCheck == "yes"){
+    response.redirect('/fetf/claim/v5-0/item3/invoice-file-added')
+  } else {
+    response.redirect('/fetf/claim/v5-0/item3/upload-method-serial')
+  }
+  
+  
+})
+
+
+// FETF v5-0 statement for item 3 triage
+
+router.post('/fetf/claim/v5-0/item3/statement-answer', function(request, response) {
+  var item2Statement = request.session.data['item3StatementMethod']
+
+  if (item2Statement == "yes"){
+    response.redirect('/fetf/claim/v5-0/item3/previous-statements')
+  } else {
+    response.redirect('/fetf/claim/v5-0/item3/statement')
+  }
+  
+  
+})
+
+
+
+// FETF v5-0 statement - check if the second one if correct
+
+router.post('/fetf/claim/v5-0/item3/check-statement2-answer', function(request, response) {
+  var item2Statement2 = request.session.data['item3Statement2']
+
+  if (item2Statement2 == "yes"){
+    response.redirect('/fetf/claim/v5-0/item3/check-statement2')
+  } else {
+    response.redirect('/fetf/claim/v5-0/item3/upload-method-statement')
+  }
+  
+  
+})
+
+
+// FETF v5-0 Confirm items - change request
+
+router.post('/fetf/claim/v5-0/claim-items-answer', function(request, response) {
+  var makeChange = request.session.data['make-change']
+
+  if (makeChange == "yes"){
+    response.redirect('/fetf/claim/v5-0/?fetf-status=03&fetf-apply=03b&fetf-agree=03&fetf-claim=01a')
+  } else {
+    response.redirect('/fetf/claim/v5-0/before-change')
+  }
+  
+  
+})
+
+// FETF v5-0 make changes to items from GFA
+
+router.get('/fetf/claim/v5-0/equipment-list', (req, res) => {
+  const sortedData = _.sortBy(data, 'principleTitle')
+  const groupedData = _.groupBy(sortedData, 'sectionNumber')
+  const allData = _.sortBy(data, 'sectionNumber')
+  res.render('fetf/claim/v5-0/equipment-list.html', { groupedData, sortedData, allData });
+})
+
+
+router.get('/fetf/claim/v5-0/equipment/:termName', (req, res) => {
+  const { termName } = req.params
+  const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
+  res.render('fetf/claim/v5-0/equipment.html', { item })
+})
+
+router.get('/fetf/claim/v5-0/item-quantity/:termName', (req, res) => {
+  const { termName } = req.params
+  const item = _.findWhere(data, {termName: capitalizeFirstLetter(termName.replace('-', ' '))})
+  res.render('fetf/claim/v5-0/item-quantity.html', { item })
+  })

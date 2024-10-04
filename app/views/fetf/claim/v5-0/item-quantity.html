@@ -1,0 +1,87 @@
+{% extends "layouts/main-fetf.html" %}
+
+{% block pageTitle %} Select item quantity {% endblock %}
+
+{% block beforeContent %}
+{% include "fetf/_includes/phase-banner_alpha.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="../../v5-0/selected-items-add" method="post">
+      <input type="hidden" name="termName" value="{{ item.termName }}">
+
+    <span class="govuk-caption-l">{{ item.title }} (FETF{{ item.itemCode }})</span>
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="quantity">
+      How many do you need?
+    </label>
+  </h1>
+  <div id="event-name-hint" class="govuk-hint">
+    Maximum quantity: 3
+  </div>
+  <div class="govuk-input__wrapper">
+    <input class="govuk-input govuk-input--width-5" id="quantity" name="quantity" type="text" spellcheck="false">
+    <div class="govuk-input__suffix" aria-hidden="true">item quantity</div>
+  </div>
+</div>
+
+
+<div class="govuk-button-group">
+<button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+<br>
+
+</form>
+
+
+
+  
+</div>
+
+
+
+
+
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <div class="full-panel">
+      <div class="selected-items-panel">
+          <h3 class="govuk-heading-s">Your selected items</h3>
+                  <p>3 × Bracken rollers
+                      <a href="#" class="govuk-body-s">Edit</a>
+                  </p>
+          <hr>
+          <p>Total amount: <b>£2,608.20</b></p>
+      </div>
+      <p class="govuk-body-s">The minimum grant you can apply for is £1,000 and the maximum grant is £50,000.</p>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+</main>
+
+{% endblock %}
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+{
+  "termName": "Variable rate controller for seed drills",
+  "sectionNumber": "50",
+  "itemCode": "50",
+  "title": "Variable rate controller for seed drills, sprayers and fertiliser spreaders",
+  "summary": "Variable rate controller for seed drills, sprayers and fertiliser spreaders",
+  "category": ["Resource and energy management"],
+  "grantValue": "2,917.80",
+  "grantPercentage": "60",
+  "averageValue": "4,863.00",
+  "score": 57,
+  "eligible": {
+    "eligibleBullet01": "be a variable rate controller for seed drills, sprayers and fertiliser spreaders",
+    "eligibleBullet02": "electronically vary and control the application rate of chemical or seed",
+    "eligibleBullet03": "be able to be retrofitted to an existing implement to control application rates",
+    "eligibleBullet04": "change the rate of application automatically without operator input ",
+    "eligibleBullet05": "record and download application rates to a computer or tablet",
+    "eligibleBullet06": "provide sectional control",
+    "eligibleBullet07": "have either an in-cab display or ISOBUS connection",
+    "eligibleBullet08": "include equipment to fit on to the applicator to provide section control",
+    "eligibleBullet09": "have a variable rate controller"
+  }
+}
