@@ -1,0 +1,161 @@
+{% extends "layouts/main-claim-v5-0.html" %}
+{% set pageName="Submit" %}
+
+{% block content %}
+
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="../index.html">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+}) }}
+
+
+
+<main class="govuk-main-wrapper">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/fetf/claim/v5-0/submit" method="post">
+      <div class="govuk-width-container">
+       
+        
+              <h1 class="govuk-heading-l">Check your answers before submitting your claim</h1>
+              <h2 class="govuk-heading-m">Bracken roller evidence</h2>
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Serial numbers
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    234234343234<br>
+                    234234343235<br>
+                    234234343236<br>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Invoices
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    SupplierA-invoice.pdf, 117 KB
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Statements
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Statement1.pdf, 55 KB<br>
+                    Statement2.pdf, 55 KB
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> customer reference</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Photos
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Bracken1.pdf, 5.1 MB<br>
+                    Bracken2.pdf, 3.8 MB<br>
+                    Bracken3.pdf, 5.5 MB<br>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                  </dd>
+                </div>
+              </dl>
+              <h2 class="govuk-heading-m">Variable rate controller evidence</h2>
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Serial numbers
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    234234343234
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Invoices
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    SupplierA-invoice.pdf, 117 KB
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Statements
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Statement1.pdf, 55 KB<br>
+                    Statement2.pdf, 55 KB
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> customer reference</span></a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Photos
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Controller1.pdf, 5.1 MB<br>
+                    Controller2.pdf, 3.8 MB<br>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+                  </dd>
+                </div>
+              </dl>
+              
+                <input type="hidden" name="answers-checked" value="true">
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                  Save and continue
+                </button>
+              </form>
+            </div>
+          
+  
+
+  
+  
+  
+    
+  </div>
+
+
+
+
+  
+
+
+
+
+</main>
+
+{% endblock %}
